@@ -203,3 +203,59 @@ def draw_route(
 
 
 __all__.append('draw_route')
+
+
+def compare_routes(
+    G: nx.Graph,
+    aoc_route,
+    dij_route,
+    pos=None,
+    layout_seed: Optional[int] = 42,
+    aoc_color: str = 'orange',
+    dij_color: str = 'dodgerblue',
+    title: Optional[str] = None,
+    node_size: int = 220,
+    route_node_size: int = 120,
+    route_width: float = 3.5,
+    figsize=(9, 6),
+):
+    """Draw the graph and overlay two routes for comparison.
+
+    Parameters
+    - G: networkx Graph
+    - aoc_route: ordered list of nodes for the AOC route
+    - dij_route: ordered list of nodes for the Dijkstra route
+    - pos: optional layout positions mapping; if None, computed with spring_layout(layout_seed)
+    - aoc_color/dij_color: colors for the two routes
+    - title: optional plot title
+    - node_size/route_node_size/route_width: styling parameters
+    - figsize: figure size
+    """
+    if pos is None:
+        pos = nx.spring_layout(G, seed=layout_seed)
+
+    plt.figure(figsize=figsize)
+    # base graph
+    nx.draw_networkx_nodes(G, pos, node_color='lightgray', node_size=node_size)
+    nx.draw_networkx_labels(G, pos, font_size=8)
+    nx.draw_networkx_edges(G, pos, edge_color='lightgray', alpha=0.6)
+
+    def _draw_path(path, color):
+        if not isinstance(path, (list, tuple)) or len(path) < 2:
+            return
+        eds = list(zip(path[:-1], path[1:]))
+        eds_existing = [e for e in eds if G.has_edge(e[0], e[1]) or G.has_edge(e[1], e[0])]
+        if eds_existing:
+            nx.draw_networkx_edges(G, pos, edgelist=eds_existing, edge_color=color, width=route_width, alpha=0.9)
+        nx.draw_networkx_nodes(G, pos, nodelist=path, node_color=color, node_size=route_node_size)
+
+    _draw_path(aoc_route, aoc_color)
+    _draw_path(dij_route, dij_color)
+
+    plt.title(title or 'AOC vs Dijkstra')
+    plt.axis('off')
+    plt.tight_layout()
+    plt.show()
+
+
+__all__.append('compare_routes')

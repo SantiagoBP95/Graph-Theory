@@ -57,8 +57,8 @@ class Auto:
 		# extract station locations from the Estaciones container
 		E_nodos = [x.ubicacion for x in E.total]
 		if self.ubicacion in E_nodos:
-			# already at a station
-			return self.ubicacion
+			# already at a station: return a route list for consistency
+			return [self.ubicacion]
 		else:
 			for i in range(n):
 				Ch = [self.ubicacion]
@@ -111,7 +111,8 @@ class Auto:
 
 		E_nodos = [x.ubicacion for x in E.total]
 		if self.ubicacion in E_nodos:
-			result = self.ubicacion
+			# already at a station: return a route list; when measuring time, return (route_list, 0.0)
+			result = [self.ubicacion]
 			return (result, 0.0) if measure_time else result
 
 		start_time = time.perf_counter() if measure_time else None
