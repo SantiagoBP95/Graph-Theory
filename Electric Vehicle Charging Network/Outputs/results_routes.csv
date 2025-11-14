@@ -1,13 +1,1001 @@
 placa,ubicacion,bateria,aoc_route,aoc_time,dijkstra_route,dijkstra_time,aoc_route_len,dijkstra_route_len,nearest_antena,dist_to_antena
-car0,Kennedy,84,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0003054000007978175,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0007554999974672683,2,2,KPAMS,18.5
-car1,San Cristobal,71,"['San Cristobal', 'Martires', 'Santa Fe']",0.0002494000000297092,"['San Cristobal', 'Martires', 'Santa Fe']",8.069999967119657e-05,2,2,KPAMS,18.5
-car2,Engativa,53,"['Engativa', 'Santa Fe']",9.91000015346799e-05,"['Engativa', 'Teusaquillo']",6.149999899207614e-05,1,1,TFSC,13.3
-car3,San Cristobal,58,"['San Cristobal', 'Martires', 'Santa Fe']",0.00014480000027106144,"['San Cristobal', 'Martires', 'Santa Fe']",6.479999865405262e-05,2,2,KPAMS,18.5
-car4,San Cristobal,85,"['San Cristobal', 'Martires', 'Santa Fe']",0.00016820000018924475,"['San Cristobal', 'Martires', 'Santa Fe']",6.380000195349567e-05,2,2,KPAMS,18.5
-car5,Martires,94,"['Martires', 'Santa Fe']",0.0002592000018921681,"['Martires', 'Santa Fe']",5.500000042957254e-05,1,1,KPAMS,8.0
-car6,Candelaria,60,"['Candelaria', 'Teusaquillo']",7.450000339304097e-05,"['Candelaria', 'Teusaquillo']",4.939999780617654e-05,1,1,TFSC,13.3
-car7,Barrios Unidos,77,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.800000043469481e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.5800002883188426e-05,2,2,TFSC,23.5
-car8,Antonio Nariño,88,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.0002505000011296943,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.349999966914766e-05,2,2,KPAMS,18.5
-car9,Candelaria,54,"['Candelaria', 'Teusaquillo']",9.890000001178123e-05,"['Candelaria', 'Teusaquillo']",5.1300001359777525e-05,1,1,TFSC,13.3
-car10,Ciudad Bolivar,70,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.000279799998679664,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.999999823165126e-05,5,3,KPAMS,48.8
-car11,Barrios Unidos,78,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.780000254977494e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.6000000768108293e-05,2,2,TFSC,23.5
+car0,Kennedy,84,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00037989999691490084,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00013760000001639128,2,2,KPAMS,18.5
+car1,San Cristobal,71,"['San Cristobal', 'Martires', 'Santa Fe']",0.0003207000008842442,"['San Cristobal', 'Martires', 'Santa Fe']",0.00012419999984558672,2,2,KPAMS,18.5
+car2,Engativa,53,"['Engativa', 'Teusaquillo']",0.0001494999996793922,"['Engativa', 'Teusaquillo']",0.00010769999789772555,1,1,TFSC,13.3
+car3,San Cristobal,58,"['San Cristobal', 'Martires', 'Santa Fe']",0.00030360000164364465,"['San Cristobal', 'Martires', 'Santa Fe']",0.00010580000162008218,2,2,KPAMS,18.5
+car4,San Cristobal,85,"['San Cristobal', 'Martires', 'Santa Fe']",0.0002731000022322405,"['San Cristobal', 'Martires', 'Santa Fe']",9.73999995039776e-05,2,2,KPAMS,18.5
+car5,Martires,94,"['Martires', 'Santa Fe']",0.0002527999968151562,"['Martires', 'Santa Fe']",6.170000051497482e-05,1,1,KPAMS,8.0
+car6,Candelaria,60,"['Candelaria', 'Santa Fe']",0.00011040000026696362,"['Candelaria', 'Teusaquillo']",7.660000119358301e-05,1,1,TFSC,13.3
+car7,Barrios Unidos,77,"['Barrios Unidos', 'Engativa', 'Santa Fe']",0.0001354000014543999,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",6.379999831551686e-05,2,2,TFSC,23.5
+car8,Antonio Nariño,88,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00030899999910616316,"['Antonio Nariño', 'Martires', 'Santa Fe']",8.130000060191378e-05,2,2,KPAMS,18.5
+car9,Candelaria,54,"['Candelaria', 'Santa Fe']",9.489999865763821e-05,"['Candelaria', 'Teusaquillo']",6.219999704626389e-05,1,1,TFSC,13.3
+car10,Ciudad Bolivar,70,"['Ciudad Bolivar', 'Tunjuelito', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00045700000191573054,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0001157000006060116,6,3,KPAMS,48.8
+car11,Barrios Unidos,78,"['Barrios Unidos', 'Engativa', 'Fontibon']",0.00013240000043879263,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.389999831910245e-05,2,2,TFSC,23.5
+car12,Barrios Unidos,52,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",0.00015690000145696104,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",8.789999992586672e-05,2,2,TFSC,23.5
+car13,Engativa,92,"['Engativa', 'Santa Fe']",0.00013780000153928995,"['Engativa', 'Teusaquillo']",8.200000229408033e-05,1,1,TFSC,13.3
+car14,Candelaria,58,"['Candelaria', 'Teusaquillo']",0.0001244000013684854,"['Candelaria', 'Teusaquillo']",7.479999840143137e-05,1,1,TFSC,13.3
+car15,Antonio Nariño,68,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00034580000283312984,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00011029999950551428,2,2,KPAMS,18.5
+car16,Puente Aranda,86,"['Puente Aranda', 'Santa Fe']",0.0003418000014789868,"['Puente Aranda', 'Santa Fe']",9.709999721962959e-05,1,1,KPAMS,8.0
+car17,Puente Aranda,66,"['Puente Aranda', 'Santa Fe']",0.0004055999997945037,"['Puente Aranda', 'Santa Fe']",9.030000001075678e-05,1,1,KPAMS,8.0
+car18,Usme,52,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Martires', 'Puente Aranda', 'Santa Fe']",0.000325400000292575,"['Usme', 'Rafael Uribe']",9.330000102636404e-05,5,1,RU,25.0
+car19,Kennedy,71,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00046149999980116263,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00010309999925084412,2,2,KPAMS,18.5
+car20,Martires,80,"['Martires', 'Santa Fe']",0.0003288000007160008,"['Martires', 'Santa Fe']",5.7999997807201e-05,1,1,KPAMS,8.0
+car21,Tunjuelito,88,"['Tunjuelito', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.0002201000024797395,"['Tunjuelito', 'Rafael Uribe']",7.03999976394698e-05,4,1,RU,36.0
+car22,Bosa,83,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0003304999991087243,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.480000229203142e-05,3,3,KPAMS,42.5
+car23,Candelaria,70,"['Candelaria', 'Santa Fe']",7.380000170087442e-05,"['Candelaria', 'Teusaquillo']",5.0400001782691106e-05,1,1,TFSC,13.3
+car24,Tunjuelito,75,"['Tunjuelito', 'Puente Aranda', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.0002521999995224178,"['Tunjuelito', 'Rafael Uribe']",7.410000034724362e-05,5,1,RU,36.0
+car25,Antonio Nariño,82,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.0002752999971562531,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.589999975403771e-05,2,2,KPAMS,18.5
+car26,Kennedy,93,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.000228899996727705,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.289999873843044e-05,2,2,KPAMS,18.5
+car27,Tunjuelito,90,"['Tunjuelito', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.0004907000002276618,"['Tunjuelito', 'Rafael Uribe']",0.0001187999987450894,5,1,RU,36.0
+car28,Puente Aranda,88,"['Puente Aranda', 'Santa Fe']",0.0003345000004628673,"['Puente Aranda', 'Santa Fe']",7.459999687853269e-05,1,1,KPAMS,8.0
+car29,Tunjuelito,83,"['Tunjuelito', 'Antonio Nariño', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00038920000224607065,"['Tunjuelito', 'Rafael Uribe']",0.00013519999993150122,4,1,RU,36.0
+car30,San Cristobal,76,"['San Cristobal', 'Martires', 'Santa Fe']",0.00032469999860040843,"['San Cristobal', 'Martires', 'Santa Fe']",0.00012860000060754828,2,2,KPAMS,18.5
+car31,Candelaria,82,"['Candelaria', 'Santa Fe']",0.00012029999925289303,"['Candelaria', 'Teusaquillo']",0.00015029999849502929,1,1,TFSC,13.3
+car32,Tunjuelito,98,"['Tunjuelito', 'Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.0004318999999668449,"['Tunjuelito', 'Rafael Uribe']",8.569999772589654e-05,3,1,RU,36.0
+car33,Ciudad Bolivar,61,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00032300000020768493,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",9.100000170292333e-05,4,3,KPAMS,48.8
+car34,Puente Aranda,55,"['Puente Aranda', 'Santa Fe']",0.00027889999910257757,"['Puente Aranda', 'Santa Fe']",6.750000102329068e-05,1,1,KPAMS,8.0
+car35,Usme,92,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00018289999934495427,"['Usme', 'Rafael Uribe']",5.750000127591193e-05,4,1,RU,25.0
+car36,San Cristobal,60,"['San Cristobal', 'Martires', 'Santa Fe']",0.00019070000053034164,"['San Cristobal', 'Martires', 'Santa Fe']",6.410000059986487e-05,2,2,KPAMS,18.5
+car37,Kennedy,71,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002144999998563435,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.230000144569203e-05,2,2,KPAMS,18.5
+car38,Barrios Unidos,75,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",0.00010169999950448982,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.839999721501954e-05,2,2,TFSC,23.5
+car39,Puente Aranda,96,"['Puente Aranda', 'Santa Fe']",0.0003144000002066605,"['Puente Aranda', 'Santa Fe']",9.370000043418258e-05,1,1,KPAMS,8.0
+car40,Bosa,74,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0005631999993056525,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.00011330000052112155,3,3,KPAMS,42.5
+car41,San Cristobal,99,"['San Cristobal', 'Martires', 'Santa Fe']",0.000351099999534199,"['San Cristobal', 'Martires', 'Santa Fe']",0.00010920000204350799,2,2,KPAMS,18.5
+car42,Martires,51,"['Martires', 'Santa Fe']",0.0003285999991931021,"['Martires', 'Santa Fe']",9.239999781129882e-05,1,1,KPAMS,8.0
+car43,Barrios Unidos,87,"['Barrios Unidos', 'Engativa', 'Santa Fe']",0.00014169999849400483,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.060000229510479e-05,2,2,TFSC,23.5
+car44,San Cristobal,90,"['San Cristobal', 'Martires', 'Santa Fe']",0.00033959999927901663,"['San Cristobal', 'Martires', 'Santa Fe']",0.00010689999908208847,2,2,KPAMS,18.5
+car45,San Cristobal,50,"['San Cristobal', 'Martires', 'Santa Fe']",0.00034219999724882655,"['San Cristobal', 'Martires', 'Santa Fe']",0.00010639999891282059,2,2,KPAMS,18.5
+car46,Antonio Nariño,64,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.0004197999987809453,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.0001235999989148695,2,2,KPAMS,18.5
+car47,Kennedy,84,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0004606000002240762,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00012849999984609894,2,2,KPAMS,18.5
+car48,Candelaria,96,"['Candelaria', 'Teusaquillo']",0.00011829999857582152,"['Candelaria', 'Teusaquillo']",7.729999924777076e-05,1,1,TFSC,13.3
+car49,Usme,90,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00017870000010589138,"['Usme', 'Rafael Uribe']",6.619999840040691e-05,4,1,RU,25.0
+car50,Tunjuelito,81,"['Tunjuelito', 'Antonio Nariño', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00025129999994533136,"['Tunjuelito', 'Rafael Uribe']",7.639999967068434e-05,4,1,RU,36.0
+car51,Martires,96,"['Martires', 'Santa Fe']",0.00025119999918388203,"['Martires', 'Santa Fe']",5.980000059935264e-05,1,1,KPAMS,8.0
+car52,Puente Aranda,84,"['Puente Aranda', 'Santa Fe']",0.0002618000034999568,"['Puente Aranda', 'Santa Fe']",6.040000153006986e-05,1,1,KPAMS,8.0
+car53,Engativa,61,"['Engativa', 'Santa Fe']",0.000112599998828955,"['Engativa', 'Teusaquillo']",6.330000178422779e-05,1,1,TFSC,13.3
+car54,Puente Aranda,84,"['Puente Aranda', 'Santa Fe']",0.0002471000007062685,"['Puente Aranda', 'Santa Fe']",7.689999983995222e-05,1,1,KPAMS,8.0
+car55,Puente Aranda,74,"['Puente Aranda', 'Santa Fe']",0.00024359999952139333,"['Puente Aranda', 'Santa Fe']",5.929999679210596e-05,1,1,KPAMS,8.0
+car56,Candelaria,52,"['Candelaria', 'Santa Fe']",8.05000017862767e-05,"['Candelaria', 'Teusaquillo']",5.339999916031957e-05,1,1,TFSC,13.3
+car57,Puente Aranda,58,"['Puente Aranda', 'Santa Fe']",0.00023130000045057386,"['Puente Aranda', 'Santa Fe']",5.379999856813811e-05,1,1,KPAMS,8.0
+car58,Candelaria,62,"['Candelaria', 'Teusaquillo']",7.779999941703863e-05,"['Candelaria', 'Teusaquillo']",5.01000031363219e-05,1,1,TFSC,13.3
+car59,San Cristobal,66,"['San Cristobal', 'Martires', 'Santa Fe']",0.00017389999993611127,"['San Cristobal', 'Martires', 'Santa Fe']",6.429999848478474e-05,2,2,KPAMS,18.5
+car60,Usme,93,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00016799999866634607,"['Usme', 'Rafael Uribe']",5.660000169882551e-05,5,1,RU,25.0
+car61,Tunjuelito,77,"['Tunjuelito', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00023910000163596123,"['Tunjuelito', 'Rafael Uribe']",7.030000051599927e-05,5,1,RU,36.0
+car62,Candelaria,76,"['Candelaria', 'Teusaquillo']",7.989999721758068e-05,"['Candelaria', 'Teusaquillo']",5.0499998906161636e-05,1,1,TFSC,13.3
+car63,Bosa,56,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0003679000001284294,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",8.579999848734587e-05,3,3,KPAMS,42.5
+car64,Kennedy,54,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002749999985098839,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.84000006003771e-05,2,2,KPAMS,18.5
+car65,Ciudad Bolivar,72,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002829000004567206,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",7.330000153160654e-05,3,3,KPAMS,48.8
+car66,Barrios Unidos,55,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",0.00010379999730503187,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",7.00999989931006e-05,2,2,TFSC,23.5
+car67,Candelaria,77,"['Candelaria', 'Teusaquillo']",8.55999969644472e-05,"['Candelaria', 'Teusaquillo']",5.839999721501954e-05,1,1,TFSC,13.3
+car68,Antonio Nariño,84,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00029010000071139075,"['Antonio Nariño', 'Martires', 'Santa Fe']",7.069999992381781e-05,2,2,KPAMS,18.5
+car69,Kennedy,54,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00029259999791975133,"['Kennedy', 'Puente Aranda', 'Santa Fe']",9.100000170292333e-05,2,2,KPAMS,18.5
+car70,Tunjuelito,94,"['Tunjuelito', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.0003316000002087094,"['Tunjuelito', 'Rafael Uribe']",8.10999990790151e-05,4,1,RU,36.0
+car71,Candelaria,75,"['Candelaria', 'Teusaquillo']",7.74000000092201e-05,"['Candelaria', 'Teusaquillo']",6.969999958528206e-05,1,1,TFSC,13.3
+car72,Usme,70,"['Usme', 'San Cristobal', 'Martires', 'Santa Fe']",0.00024110000231303275,"['Usme', 'Rafael Uribe']",5.94000011915341e-05,3,1,RU,25.0
+car73,Candelaria,80,"['Candelaria', 'Teusaquillo']",7.439999899361283e-05,"['Candelaria', 'Teusaquillo']",4.819999958272092e-05,1,1,TFSC,13.3
+car74,Kennedy,98,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00025239999740733765,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.450000000768341e-05,2,2,KPAMS,18.5
+car75,Antonio Nariño,71,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00043089999962830916,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00013919999764766544,2,2,KPAMS,18.5
+car76,Candelaria,72,"['Candelaria', 'Teusaquillo']",7.959999857121147e-05,"['Candelaria', 'Teusaquillo']",5.129999772179872e-05,1,1,TFSC,13.3
+car77,Tunjuelito,90,"['Tunjuelito', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0002502999996067956,"['Tunjuelito', 'Rafael Uribe']",6.800000119255856e-05,3,1,RU,36.0
+car78,Antonio Nariño,60,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00022560000070370734,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.370000119204633e-05,2,2,KPAMS,18.5
+car79,Ciudad Bolivar,54,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.00032329999885405414,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",7.219999679364264e-05,3,3,KPAMS,48.8
+car80,Engativa,93,"['Engativa', 'Teusaquillo']",0.000103599999420112,"['Engativa', 'Teusaquillo']",5.889999738428742e-05,1,1,TFSC,13.3
+car81,Tunjuelito,73,"['Tunjuelito', 'Antonio Nariño', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0002688000022317283,"['Tunjuelito', 'Rafael Uribe']",7.259999983943999e-05,4,1,RU,36.0
+car82,Ciudad Bolivar,65,"['Ciudad Bolivar', 'Tunjuelito', 'Antonio Nariño', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00030440000045928173,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.760000178474002e-05,5,3,KPAMS,48.8
+car83,Tunjuelito,55,"['Tunjuelito', 'Puente Aranda', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.00023810000129742548,"['Tunjuelito', 'Rafael Uribe']",6.910000229254365e-05,5,1,RU,36.0
+car84,Kennedy,53,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002567000010458287,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.08000009378884e-05,2,2,KPAMS,18.5
+car85,Kennedy,74,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002257999985886272,"['Kennedy', 'Puente Aranda', 'Santa Fe']",5.909999890718609e-05,2,2,KPAMS,18.5
+car86,Engativa,69,"['Engativa', 'Santa Fe']",9.239999781129882e-05,"['Engativa', 'Teusaquillo']",5.4699998145224527e-05,1,1,TFSC,13.3
+car87,Usme,91,"['Usme', 'San Cristobal', 'Martires', 'Santa Fe']",0.00018319999799132347,"['Usme', 'Rafael Uribe']",6.469999789260328e-05,3,1,RU,25.0
+car88,Antonio Nariño,99,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.0003667999990284443,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.0001109000004362315,2,2,KPAMS,18.5
+car89,Engativa,73,"['Engativa', 'Teusaquillo']",0.00014170000213198364,"['Engativa', 'Teusaquillo']",8.569999772589654e-05,1,1,TFSC,13.3
+car90,San Cristobal,84,"['San Cristobal', 'Martires', 'Santa Fe']",0.00027860000045620836,"['San Cristobal', 'Martires', 'Santa Fe']",9.750000026542693e-05,2,2,KPAMS,18.5
+car91,Barrios Unidos,83,"['Barrios Unidos', 'Engativa', 'Santa Fe']",0.00013729999773204327,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",8.200000229408033e-05,2,2,TFSC,23.5
+car92,Engativa,90,"['Engativa', 'Santa Fe']",0.00014929999815649353,"['Engativa', 'Teusaquillo']",8.610000077169389e-05,1,1,TFSC,13.3
+car93,Antonio Nariño,87,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00036700000055134296,"['Antonio Nariño', 'Martires', 'Santa Fe']",9.679999857326038e-05,2,2,KPAMS,18.5
+car94,Candelaria,77,"['Candelaria', 'Santa Fe']",0.00012910000077681616,"['Candelaria', 'Teusaquillo']",7.900000127847306e-05,1,1,TFSC,13.3
+car95,Engativa,97,"['Engativa', 'Teusaquillo']",0.00017210000078193843,"['Engativa', 'Teusaquillo']",9.230000068782829e-05,1,1,TFSC,13.3
+car96,Tunjuelito,79,"['Tunjuelito', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00037030000021331944,"['Tunjuelito', 'Rafael Uribe']",0.00010830000246642157,3,1,RU,36.0
+car97,San Cristobal,51,"['San Cristobal', 'Martires', 'Santa Fe']",0.00036130000080447644,"['San Cristobal', 'Martires', 'Santa Fe']",0.00010339999789721332,2,2,KPAMS,18.5
+car98,Ciudad Bolivar,78,"['Ciudad Bolivar', 'Tunjuelito', 'Puente Aranda', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.00048719999904278666,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.00010939999992842786,6,3,KPAMS,48.8
+car99,Ciudad Bolivar,97,"['Ciudad Bolivar', 'Tunjuelito', 'Puente Aranda', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.0004597999977704603,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.00010599999950500205,6,3,KPAMS,48.8
+car100,Tunjuelito,95,"['Tunjuelito', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00023739999960525893,"['Tunjuelito', 'Rafael Uribe']",7.31999971321784e-05,5,1,RU,36.0
+car101,Usme,78,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Martires', 'Puente Aranda', 'Tunjuelito', 'Rafael Uribe']",0.00018360000103712082,"['Usme', 'Rafael Uribe']",5.700000110664405e-05,6,1,RU,25.0
+car102,Candelaria,77,"['Candelaria', 'Santa Fe']",7.470000127796084e-05,"['Candelaria', 'Teusaquillo']",4.990000161342323e-05,1,1,TFSC,13.3
+car103,Kennedy,60,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002505000011296943,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.180000127642415e-05,2,2,KPAMS,18.5
+car104,Kennedy,70,"['Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00024620000112918206,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.0599999414989725e-05,3,2,KPAMS,18.5
+car105,Kennedy,82,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002396000018052291,"['Kennedy', 'Puente Aranda', 'Santa Fe']",5.7600002037361264e-05,2,2,KPAMS,18.5
+car106,San Cristobal,58,"['San Cristobal', 'Martires', 'Santa Fe']",0.00022190000163391232,"['San Cristobal', 'Martires', 'Santa Fe']",6.3900002714945e-05,2,2,KPAMS,18.5
+car107,Barrios Unidos,82,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.700000009615906e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.700000110664405e-05,2,2,TFSC,23.5
+car108,Ciudad Bolivar,84,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0003184000015608035,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.81000019540079e-05,4,3,KPAMS,48.8
+car109,Martires,73,"['Martires', 'Santa Fe']",0.00025439999808440916,"['Martires', 'Santa Fe']",5.18000015290454e-05,1,1,KPAMS,8.0
+car110,San Cristobal,86,"['San Cristobal', 'Martires', 'Santa Fe']",0.00017829999706009403,"['San Cristobal', 'Martires', 'Santa Fe']",6.339999890769832e-05,2,2,KPAMS,18.5
+car111,Usme,55,"['Usme', 'San Cristobal', 'Martires', 'Santa Fe']",0.00021009999909438193,"['Usme', 'Rafael Uribe']",5.6000000768108293e-05,3,1,RU,25.0
+car112,Martires,82,"['Martires', 'Santa Fe']",0.00020799999765586108,"['Martires', 'Santa Fe']",5.160000000614673e-05,1,1,KPAMS,8.0
+car113,San Cristobal,63,"['San Cristobal', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.000243499998759944,"['San Cristobal', 'Martires', 'Santa Fe']",6.569999823113903e-05,3,2,KPAMS,18.5
+car114,Antonio Nariño,66,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.0002521999995224178,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.539999958476983e-05,2,2,KPAMS,18.5
+car115,Kennedy,52,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00023950000104377978,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.0900001699337736e-05,2,2,KPAMS,18.5
+car116,Martires,55,"['Martires', 'Santa Fe']",0.0002645999993546866,"['Martires', 'Santa Fe']",5.189999865251593e-05,1,1,KPAMS,8.0
+car117,Martires,82,"['Martires', 'Santa Fe']",0.00019980000070063397,"['Martires', 'Santa Fe']",4.8499998229090124e-05,1,1,KPAMS,8.0
+car118,Candelaria,98,"['Candelaria', 'Santa Fe']",7.399999958579428e-05,"['Candelaria', 'Teusaquillo']",4.830000034417026e-05,1,1,TFSC,13.3
+car119,Usme,62,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00017719999959808774,"['Usme', 'Rafael Uribe']",5.3800002206116915e-05,4,1,RU,25.0
+car120,Martires,86,"['Martires', 'Santa Fe']",0.0002167999991797842,"['Martires', 'Santa Fe']",4.8499998229090124e-05,1,1,KPAMS,8.0
+car121,Bosa,55,"['Bosa', 'Kennedy', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.0003442999986873474,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.349999966914766e-05,4,3,KPAMS,42.5
+car122,Barrios Unidos,70,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.439999848837033e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.440000313683413e-05,2,2,TFSC,23.5
+car123,Kennedy,71,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00029069999800412916,"['Kennedy', 'Puente Aranda', 'Santa Fe']",5.8400000852998346e-05,2,2,KPAMS,18.5
+car124,Engativa,84,"['Engativa', 'Teusaquillo']",9.209999916492961e-05,"['Engativa', 'Teusaquillo']",5.4700001783203334e-05,1,1,TFSC,13.3
+car125,Engativa,84,"['Engativa', 'Teusaquillo']",9.259999933419749e-05,"['Engativa', 'Teusaquillo']",5.210000017541461e-05,1,1,TFSC,13.3
+car126,Puente Aranda,80,"['Puente Aranda', 'Santa Fe']",0.0002610000010463409,"['Puente Aranda', 'Santa Fe']",7.110000296961516e-05,1,1,KPAMS,8.0
+car127,Antonio Nariño,96,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00025119999918388203,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.190000203787349e-05,2,2,KPAMS,18.5
+car128,Candelaria,99,"['Candelaria', 'Santa Fe']",7.339999865507707e-05,"['Candelaria', 'Teusaquillo']",4.789999729837291e-05,1,1,TFSC,13.3
+car129,Ciudad Bolivar,66,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00027570000020205043,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.600000051548705e-05,5,3,KPAMS,48.8
+car130,Puente Aranda,86,"['Puente Aranda', 'Santa Fe']",0.0002476999979990069,"['Puente Aranda', 'Santa Fe']",5.210000017541461e-05,1,1,KPAMS,8.0
+car131,Antonio Nariño,71,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.0002443999983370304,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.10999995842576e-05,2,2,KPAMS,18.5
+car132,Kennedy,64,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00025240000104531646,"['Kennedy', 'Puente Aranda', 'Santa Fe']",5.919999966863543e-05,2,2,KPAMS,18.5
+car133,Bosa,58,"['Bosa', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.000325099998008227,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.550000034621917e-05,6,3,KPAMS,42.5
+car134,Candelaria,90,"['Candelaria', 'Santa Fe']",7.510000068577938e-05,"['Candelaria', 'Teusaquillo']",4.850000186706893e-05,1,1,TFSC,13.3
+car135,Bosa,88,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.000311400002829032,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.209999992279336e-05,3,3,KPAMS,42.5
+car136,San Cristobal,81,"['San Cristobal', 'Martires', 'Santa Fe']",0.0002103000006172806,"['San Cristobal', 'Martires', 'Santa Fe']",6.000000212225132e-05,2,2,KPAMS,18.5
+car137,Bosa,94,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0003371999991941266,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.089999806135893e-05,3,3,KPAMS,42.5
+car138,Ciudad Bolivar,57,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00025749999986146577,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.420000136131421e-05,4,3,KPAMS,48.8
+car139,San Cristobal,53,"['San Cristobal', 'Martires', 'Santa Fe']",0.00021399999968707561,"['San Cristobal', 'Martires', 'Santa Fe']",7.019999975454994e-05,2,2,KPAMS,18.5
+car140,San Cristobal,79,"['San Cristobal', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00017689999731373973,"['San Cristobal', 'Martires', 'Santa Fe']",6.039999789209105e-05,3,2,KPAMS,18.5
+car141,Antonio Nariño,92,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.000253100002737483,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.140000186860561e-05,2,2,KPAMS,18.5
+car142,San Cristobal,70,"['San Cristobal', 'Martires', 'Santa Fe']",0.00019289999909233302,"['San Cristobal', 'Martires', 'Santa Fe']",5.830000009154901e-05,2,2,KPAMS,18.5
+car143,Puente Aranda,63,"['Puente Aranda', 'Santa Fe']",0.00021379999816417694,"['Puente Aranda', 'Santa Fe']",5.15000028826762e-05,1,1,KPAMS,8.0
+car144,Martires,71,"['Martires', 'Santa Fe']",0.0002234999992651865,"['Martires', 'Santa Fe']",4.860000262851827e-05,1,1,KPAMS,8.0
+car145,Antonio Nariño,61,"['Antonio Nariño', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00023069999951985665,"['Antonio Nariño', 'Martires', 'Santa Fe']",5.949999831500463e-05,3,2,KPAMS,18.5
+car146,Antonio Nariño,53,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00023700000019744039,"['Antonio Nariño', 'Martires', 'Santa Fe']",5.8499997976468876e-05,2,2,KPAMS,18.5
+car147,Kennedy,74,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002241000001959037,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.240000220714137e-05,2,2,KPAMS,18.5
+car148,Engativa,66,"['Engativa', 'Teusaquillo']",9.370000043418258e-05,"['Engativa', 'Teusaquillo']",5.459999738377519e-05,1,1,TFSC,13.3
+car149,Antonio Nariño,85,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00024930000290623866,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.0500002291519195e-05,2,2,KPAMS,18.5
+car150,Barrios Unidos,73,"['Barrios Unidos', 'Engativa', 'Santa Fe']",8.660000094096176e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.4299998737405986e-05,2,2,TFSC,23.5
+car151,Barrios Unidos,68,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.379999755765311e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.289999899105169e-05,2,2,TFSC,23.5
+car152,Kennedy,66,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00025830000231508166,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.190000203787349e-05,2,2,KPAMS,18.5
+car153,San Cristobal,88,"['San Cristobal', 'Martires', 'Santa Fe']",0.00018220000129076652,"['San Cristobal', 'Martires', 'Santa Fe']",6.10999995842576e-05,2,2,KPAMS,18.5
+car154,Antonio Nariño,53,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.0002396000018052291,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.070000017643906e-05,2,2,KPAMS,18.5
+car155,Bosa,53,"['Bosa', 'Kennedy', 'Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00033540000003995374,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.260000009206124e-05,4,3,KPAMS,42.5
+car156,Usme,74,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Puente Aranda', 'Martires', 'Santa Fe']",0.000163800003065262,"['Usme', 'Rafael Uribe']",5.4799998906673864e-05,5,1,RU,25.0
+car157,Puente Aranda,56,"['Puente Aranda', 'Santa Fe']",0.00022819999867351726,"['Puente Aranda', 'Santa Fe']",5.18000015290454e-05,1,1,KPAMS,8.0
+car158,Ciudad Bolivar,86,"['Ciudad Bolivar', 'Kennedy', 'Antonio Nariño', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00028590000147232786,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.590000339201652e-05,5,3,KPAMS,48.8
+car159,Martires,70,"['Martires', 'Santa Fe']",0.00021409999681054614,"['Martires', 'Santa Fe']",5.0499998906161636e-05,1,1,KPAMS,8.0
+car160,Puente Aranda,91,"['Puente Aranda', 'Santa Fe']",0.00029990000257384963,"['Puente Aranda', 'Santa Fe']",5.050000254414044e-05,1,1,KPAMS,8.0
+car161,Puente Aranda,67,"['Puente Aranda', 'Santa Fe']",0.00023990000045159832,"['Puente Aranda', 'Santa Fe']",5.1300001359777525e-05,1,1,KPAMS,8.0
+car162,Bosa,86,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.000314799999614479,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.149999899207614e-05,3,3,KPAMS,42.5
+car163,Martires,72,"['Martires', 'Santa Fe']",0.00022090000129537657,"['Martires', 'Santa Fe']",4.980000085197389e-05,1,1,KPAMS,8.0
+car164,Puente Aranda,94,"['Puente Aranda', 'Santa Fe']",0.0002666000000317581,"['Puente Aranda', 'Santa Fe']",5.120000059832819e-05,1,1,KPAMS,8.0
+car165,Bosa,82,"['Bosa', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.0003235000003769528,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.070000017643906e-05,6,3,KPAMS,42.5
+car166,San Cristobal,67,"['San Cristobal', 'Martires', 'Santa Fe']",0.00018970000019180588,"['San Cristobal', 'Martires', 'Santa Fe']",6.049999865354039e-05,2,2,KPAMS,18.5
+car167,Engativa,53,"['Engativa', 'Santa Fe']",9.539999882690609e-05,"['Engativa', 'Teusaquillo']",5.2900002629030496e-05,1,1,TFSC,13.3
+car168,Candelaria,57,"['Candelaria', 'Teusaquillo']",7.819999882485718e-05,"['Candelaria', 'Teusaquillo']",4.819999958272092e-05,1,1,TFSC,13.3
+car169,Tunjuelito,77,"['Tunjuelito', 'Antonio Nariño', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0002413000001979526,"['Tunjuelito', 'Rafael Uribe']",6.629999916185625e-05,4,1,RU,36.0
+car170,Ciudad Bolivar,81,"['Ciudad Bolivar', 'Bosa', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0002792999985103961,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.600000051548705e-05,5,3,KPAMS,48.8
+car171,Puente Aranda,58,"['Puente Aranda', 'Santa Fe']",0.00025829999867710285,"['Puente Aranda', 'Santa Fe']",5.140000212122686e-05,1,1,KPAMS,8.0
+car172,Candelaria,84,"['Candelaria', 'Teusaquillo']",7.510000068577938e-05,"['Candelaria', 'Teusaquillo']",4.6700002712896094e-05,1,1,TFSC,13.3
+car173,Kennedy,80,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002739000010478776,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.040000153006986e-05,2,2,KPAMS,18.5
+car174,San Cristobal,59,"['San Cristobal', 'Martires', 'Santa Fe']",0.00018880000061471947,"['San Cristobal', 'Martires', 'Santa Fe']",6.290000237640925e-05,2,2,KPAMS,18.5
+car175,Martires,73,"['Martires', 'Santa Fe']",0.00022510000053443946,"['Martires', 'Santa Fe']",5.0999999075429514e-05,1,1,KPAMS,8.0
+car176,Candelaria,88,"['Candelaria', 'Santa Fe']",7.429999823216349e-05,"['Candelaria', 'Teusaquillo']",4.770000305143185e-05,1,1,TFSC,13.3
+car177,Kennedy,79,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002500000009604264,"['Kennedy', 'Puente Aranda', 'Santa Fe']",5.9399997553555295e-05,2,2,KPAMS,18.5
+car178,Usme,88,"['Usme', 'San Cristobal', 'Martires', 'Santa Fe']",0.00016850000247359276,"['Usme', 'Rafael Uribe']",5.4799998906673864e-05,3,1,RU,25.0
+car179,Bosa,95,"['Bosa', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.00031849999868427403,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.129999746917747e-05,6,3,KPAMS,42.5
+car180,San Cristobal,50,"['San Cristobal', 'Martires', 'Santa Fe']",0.00017859999934444204,"['San Cristobal', 'Martires', 'Santa Fe']",6.140000186860561e-05,2,2,KPAMS,18.5
+car181,Antonio Nariño,96,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00021890000061830506,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.130000110715628e-05,2,2,KPAMS,18.5
+car182,Ciudad Bolivar,64,"['Ciudad Bolivar', 'Bosa', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.0004451000022527296,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.00010059999840450473,7,3,KPAMS,48.8
+car183,Usme,54,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.0001869000006990973,"['Usme', 'Rafael Uribe']",6.519999806187116e-05,4,1,RU,25.0
+car184,Engativa,68,"['Engativa', 'Teusaquillo']",0.0001021999996737577,"['Engativa', 'Teusaquillo']",6.13999982306268e-05,1,1,TFSC,13.3
+car185,San Cristobal,76,"['San Cristobal', 'Martires', 'Santa Fe']",0.00025860000096145086,"['San Cristobal', 'Martires', 'Santa Fe']",7.040000127744861e-05,2,2,KPAMS,18.5
+car186,Candelaria,77,"['Candelaria', 'Santa Fe']",7.969999933266081e-05,"['Candelaria', 'Teusaquillo']",5.2200000936863944e-05,1,1,TFSC,13.3
+car187,Candelaria,88,"['Candelaria', 'Santa Fe']",8.170000000973232e-05,"['Candelaria', 'Teusaquillo']",5.0999999075429514e-05,1,1,TFSC,13.3
+car188,Tunjuelito,81,"['Tunjuelito', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002497000023140572,"['Tunjuelito', 'Rafael Uribe']",8.749999688006938e-05,3,1,RU,36.0
+car189,Martires,60,"['Martires', 'Santa Fe']",0.0002172999993490521,"['Martires', 'Santa Fe']",5.5900000006658956e-05,1,1,KPAMS,8.0
+car190,Usme,52,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.0001795999996829778,"['Usme', 'Rafael Uribe']",5.650000093737617e-05,4,1,RU,25.0
+car191,Engativa,83,"['Engativa', 'Santa Fe']",0.00010210000255028717,"['Engativa', 'Teusaquillo']",6.0999998822808266e-05,1,1,TFSC,13.3
+car192,Ciudad Bolivar,98,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.0003158999970764853,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",7.019999975454994e-05,5,3,KPAMS,48.8
+car193,Martires,83,"['Martires', 'Santa Fe']",0.00023839999994379468,"['Martires', 'Santa Fe']",5.7199998991563916e-05,1,1,KPAMS,8.0
+car194,Puente Aranda,69,"['Puente Aranda', 'Santa Fe']",0.0002494000000297092,"['Puente Aranda', 'Santa Fe']",5.430000237538479e-05,1,1,KPAMS,8.0
+car195,Martires,79,"['Martires', 'Santa Fe']",0.00019239999892306514,"['Martires', 'Santa Fe']",5.079999755253084e-05,1,1,KPAMS,8.0
+car196,Kennedy,68,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002415000017208513,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.719999873894267e-05,2,2,KPAMS,18.5
+car197,Barrios Unidos,55,"['Barrios Unidos', 'Engativa', 'Santa Fe']",0.00010220000331173651,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.94000011915341e-05,2,2,TFSC,23.5
+car198,Bosa,78,"['Bosa', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.00031569999919156544,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.479999865405262e-05,6,3,KPAMS,42.5
+car199,Kennedy,84,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00027269999918644316,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.310000026132911e-05,2,2,KPAMS,18.5
+car200,Martires,67,"['Martires', 'Santa Fe']",0.00023950000104377978,"['Martires', 'Santa Fe']",5.1700000767596066e-05,1,1,KPAMS,8.0
+car201,Barrios Unidos,83,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",0.00010010000187321566,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.7600002037361264e-05,2,2,TFSC,23.5
+car202,Antonio Nariño,90,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00026000000070780516,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.56000011076685e-05,2,2,KPAMS,18.5
+car203,Puente Aranda,76,"['Puente Aranda', 'Santa Fe']",0.00023700000019744039,"['Puente Aranda', 'Santa Fe']",5.529999907594174e-05,1,1,KPAMS,8.0
+car204,Candelaria,57,"['Candelaria', 'Santa Fe']",7.829999958630651e-05,"['Candelaria', 'Teusaquillo']",5.030000102124177e-05,1,1,TFSC,13.3
+car205,Antonio Nariño,86,"['Antonio Nariño', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00023599999985890463,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.399999983841553e-05,3,2,KPAMS,18.5
+car206,Tunjuelito,98,"['Tunjuelito', 'Puente Aranda', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.0002477999987604562,"['Tunjuelito', 'Rafael Uribe']",6.89999978931155e-05,5,1,RU,36.0
+car207,Kennedy,77,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002558999985922128,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.270000085351057e-05,2,2,KPAMS,18.5
+car208,Engativa,72,"['Engativa', 'Teusaquillo']",9.750000026542693e-05,"['Engativa', 'Teusaquillo']",5.620000229100697e-05,1,1,TFSC,13.3
+car209,Engativa,81,"['Engativa', 'Santa Fe']",9.960000170394778e-05,"['Engativa', 'Teusaquillo']",5.750000127591193e-05,1,1,TFSC,13.3
+car210,Martires,62,"['Martires', 'Santa Fe']",0.00025490000189165585,"['Martires', 'Santa Fe']",5.810000220662914e-05,1,1,KPAMS,8.0
+car211,Candelaria,65,"['Candelaria', 'Santa Fe']",7.999999797903001e-05,"['Candelaria', 'Teusaquillo']",5.2200000936863944e-05,1,1,TFSC,13.3
+car212,Martires,65,"['Martires', 'Santa Fe']",0.00024910000138334,"['Martires', 'Santa Fe']",5.6700002460274845e-05,1,1,KPAMS,8.0
+car213,Antonio Nariño,54,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00025189999723806977,"['Antonio Nariño', 'Martires', 'Santa Fe']",7.03999976394698e-05,2,2,KPAMS,18.5
+car214,Candelaria,51,"['Candelaria', 'Santa Fe']",7.850000110920519e-05,"['Candelaria', 'Teusaquillo']",5.0999999075429514e-05,1,1,TFSC,13.3
+car215,Tunjuelito,76,"['Tunjuelito', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00022570000146515667,"['Tunjuelito', 'Rafael Uribe']",7.100000220816582e-05,5,1,RU,36.0
+car216,Kennedy,70,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002701999983401038,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.510000093840063e-05,2,2,KPAMS,18.5
+car217,Candelaria,51,"['Candelaria', 'Santa Fe']",7.74000000092201e-05,"['Candelaria', 'Teusaquillo']",4.990000161342323e-05,1,1,TFSC,13.3
+car218,Ciudad Bolivar,65,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002935999982582871,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",7.01000026310794e-05,3,3,KPAMS,48.8
+car219,Ciudad Bolivar,77,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00029099999665049836,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.70000008540228e-05,4,3,KPAMS,48.8
+car220,Engativa,68,"['Engativa', 'Santa Fe']",9.649999992689118e-05,"['Engativa', 'Teusaquillo']",5.669999882229604e-05,1,1,TFSC,13.3
+car221,Barrios Unidos,69,"['Barrios Unidos', 'Engativa', 'Santa Fe']",0.00010000000111176632,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.740000051446259e-05,2,2,TFSC,23.5
+car222,Tunjuelito,68,"['Tunjuelito', 'Antonio Nariño', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0002336999968974851,"['Tunjuelito', 'Rafael Uribe']",6.930000017746352e-05,4,1,RU,36.0
+car223,San Cristobal,91,"['San Cristobal', 'Martires', 'Santa Fe']",0.00019859999883919954,"['San Cristobal', 'Martires', 'Santa Fe']",6.450000000768341e-05,2,2,KPAMS,18.5
+car224,Kennedy,63,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00024619999749120325,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.410000059986487e-05,2,2,KPAMS,18.5
+car225,Ciudad Bolivar,51,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0003271999994467478,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.820000271545723e-05,3,3,KPAMS,48.8
+car226,Engativa,73,"['Engativa', 'Teusaquillo']",9.539999882690609e-05,"['Engativa', 'Teusaquillo']",5.609999789157882e-05,1,1,TFSC,13.3
+car227,Martires,79,"['Martires', 'Santa Fe']",0.00024080000002868474,"['Martires', 'Santa Fe']",5.239999882178381e-05,1,1,KPAMS,8.0
+car228,Martires,76,"['Martires', 'Santa Fe']",0.0002457000009599142,"['Martires', 'Santa Fe']",5.1700000767596066e-05,1,1,KPAMS,8.0
+car229,Tunjuelito,82,"['Tunjuelito', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0002572999983385671,"['Tunjuelito', 'Rafael Uribe']",6.809999831602909e-05,4,1,RU,36.0
+car230,Antonio Nariño,77,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.0002516000022296794,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.529999882332049e-05,2,2,KPAMS,18.5
+car231,Martires,85,"['Martires', 'Santa Fe']",0.00023860000146669336,"['Martires', 'Santa Fe']",5.2200000936863944e-05,1,1,KPAMS,8.0
+car232,Barrios Unidos,74,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.839999984251335e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.750000127591193e-05,2,2,TFSC,23.5
+car233,Candelaria,81,"['Candelaria', 'Teusaquillo']",7.810000170138665e-05,"['Candelaria', 'Teusaquillo']",4.9700000090524554e-05,1,1,TFSC,13.3
+car234,Engativa,68,"['Engativa', 'Santa Fe']",0.00010560000009718351,"['Engativa', 'Teusaquillo']",5.5100001191021875e-05,1,1,TFSC,13.3
+car235,Ciudad Bolivar,80,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0003079999987676274,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.860000212327577e-05,4,3,KPAMS,48.8
+car236,Barrios Unidos,96,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.709999721962959e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.749999763793312e-05,2,2,TFSC,23.5
+car237,Barrios Unidos,58,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.060000229510479e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.500000042957254e-05,2,2,TFSC,23.5
+car238,San Cristobal,79,"['San Cristobal', 'Martires', 'Santa Fe']",0.00019249999968451448,"['San Cristobal', 'Martires', 'Santa Fe']",6.450000000768341e-05,2,2,KPAMS,18.5
+car239,Bosa,85,"['Bosa', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00033799999800976366,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.609999763895757e-05,4,3,KPAMS,42.5
+car240,Puente Aranda,51,"['Puente Aranda', 'Santa Fe']",0.00027179999960935675,"['Puente Aranda', 'Santa Fe']",5.490000330610201e-05,1,1,KPAMS,8.0
+car241,San Cristobal,83,"['San Cristobal', 'Martires', 'Santa Fe']",0.00020679999943240546,"['San Cristobal', 'Martires', 'Santa Fe']",6.349999966914766e-05,2,2,KPAMS,18.5
+car242,San Cristobal,68,"['San Cristobal', 'Martires', 'Santa Fe']",0.0004063000014866702,"['San Cristobal', 'Martires', 'Santa Fe']",9.190000128000975e-05,2,2,KPAMS,18.5
+car243,Antonio Nariño,63,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00021840000044903718,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.970000322326086e-05,2,2,KPAMS,18.5
+car244,Barrios Unidos,53,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.31999966269359e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",6.339999890769832e-05,2,2,TFSC,23.5
+car245,Barrios Unidos,82,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.620000128052197e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.529999907594174e-05,2,2,TFSC,23.5
+car246,Tunjuelito,87,"['Tunjuelito', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.0002398999968136195,"['Tunjuelito', 'Rafael Uribe']",7.040000127744861e-05,5,1,RU,36.0
+car247,Ciudad Bolivar,70,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002485999975760933,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.749999738531187e-05,3,3,KPAMS,48.8
+car248,Tunjuelito,55,"['Tunjuelito', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0002461000003677327,"['Tunjuelito', 'Rafael Uribe']",7.499999992433004e-05,4,1,RU,36.0
+car249,Antonio Nariño,63,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.0002444000019750092,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.399999983841553e-05,2,2,KPAMS,18.5
+car250,Antonio Nariño,61,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00021460000061779283,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.219999704626389e-05,2,2,KPAMS,18.5
+car251,Puente Aranda,58,"['Puente Aranda', 'Santa Fe']",0.00021749999723397195,"['Puente Aranda', 'Santa Fe']",5.270000110613182e-05,1,1,KPAMS,8.0
+car252,Candelaria,58,"['Candelaria', 'Santa Fe']",7.570000161649659e-05,"['Candelaria', 'Teusaquillo']",4.8800000513438135e-05,1,1,TFSC,13.3
+car253,Barrios Unidos,60,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.330000102636404e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.369999780668877e-05,2,2,TFSC,23.5
+car254,Candelaria,71,"['Candelaria', 'Teusaquillo']",7.390000246232376e-05,"['Candelaria', 'Teusaquillo']",4.660000195144676e-05,1,1,TFSC,13.3
+car255,Engativa,56,"['Engativa', 'Teusaquillo']",9.140000111074187e-05,"['Engativa', 'Teusaquillo']",5.239999882178381e-05,1,1,TFSC,13.3
+car256,Puente Aranda,64,"['Puente Aranda', 'Santa Fe']",0.00022809999791206792,"['Puente Aranda', 'Santa Fe']",5.2500003221211955e-05,1,1,KPAMS,8.0
+car257,Martires,77,"['Martires', 'Santa Fe']",0.00021999999808031134,"['Martires', 'Santa Fe']",5.199999941396527e-05,1,1,KPAMS,8.0
+car258,Antonio Nariño,92,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00024510000002919696,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.209999992279336e-05,2,2,KPAMS,18.5
+car259,Candelaria,53,"['Candelaria', 'Teusaquillo']",7.299999924725853e-05,"['Candelaria', 'Teusaquillo']",4.749999789055437e-05,1,1,TFSC,13.3
+car260,Barrios Unidos,59,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.11999995878432e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.4600001021753997e-05,2,2,TFSC,23.5
+car261,Ciudad Bolivar,79,"['Ciudad Bolivar', 'Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002907999987655785,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.629999916185625e-05,4,3,KPAMS,48.8
+car262,Engativa,55,"['Engativa', 'Santa Fe']",9.069999941857532e-05,"['Engativa', 'Teusaquillo']",5.500000042957254e-05,1,1,TFSC,13.3
+car263,Candelaria,92,"['Candelaria', 'Teusaquillo']",0.00011629999789875001,"['Candelaria', 'Teusaquillo']",8.110000271699391e-05,1,1,TFSC,13.3
+car264,Puente Aranda,72,"['Puente Aranda', 'Santa Fe']",0.00022880000324221328,"['Puente Aranda', 'Santa Fe']",5.819999933009967e-05,1,1,KPAMS,8.0
+car265,Martires,63,"['Martires', 'Santa Fe']",0.0002714000002015382,"['Martires', 'Santa Fe']",5.3800002206116915e-05,1,1,KPAMS,8.0
+car266,Antonio Nariño,65,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.0002313999975740444,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.380000195349567e-05,2,2,KPAMS,18.5
+car267,Tunjuelito,71,"['Tunjuelito', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00023460000011255033,"['Tunjuelito', 'Rafael Uribe']",6.900000153109431e-05,4,1,RU,36.0
+car268,Barrios Unidos,59,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.449999924981967e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.720000262954272e-05,2,2,TFSC,23.5
+car269,Candelaria,93,"['Candelaria', 'Santa Fe']",7.479999840143137e-05,"['Candelaria', 'Teusaquillo']",4.830000034417026e-05,1,1,TFSC,13.3
+car270,San Cristobal,68,"['San Cristobal', 'Martires', 'Santa Fe']",0.00020810000205528922,"['San Cristobal', 'Martires', 'Santa Fe']",6.550000034621917e-05,2,2,KPAMS,18.5
+car271,Antonio Nariño,92,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00024649999977555126,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.790000043110922e-05,2,2,KPAMS,18.5
+car272,Martires,72,"['Martires', 'Santa Fe']",0.00021090000154799782,"['Martires', 'Santa Fe']",5.1799997891066596e-05,1,1,KPAMS,8.0
+car273,Candelaria,53,"['Candelaria', 'Santa Fe']",7.449999975506216e-05,"['Candelaria', 'Teusaquillo']",4.780000017490238e-05,1,1,TFSC,13.3
+car274,Barrios Unidos,85,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.29000016185455e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.4299998737405986e-05,2,2,TFSC,23.5
+car275,Martires,57,"['Martires', 'Santa Fe']",0.0002490999977453612,"['Martires', 'Santa Fe']",4.930000068270601e-05,1,1,KPAMS,8.0
+car276,Martires,68,"['Martires', 'Santa Fe']",0.00021379999816417694,"['Martires', 'Santa Fe']",4.850000186706893e-05,1,1,KPAMS,8.0
+car277,Kennedy,58,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00022840000019641593,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.260000009206124e-05,2,2,KPAMS,18.5
+car278,Bosa,50,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.00033260000054724514,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.260000009206124e-05,3,3,KPAMS,42.5
+car279,Tunjuelito,99,"['Tunjuelito', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002300000014656689,"['Tunjuelito', 'Rafael Uribe']",6.759999814676121e-05,3,1,RU,36.0
+car280,Usme,84,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00021259999994072132,"['Usme', 'Rafael Uribe']",5.500000042957254e-05,5,1,RU,25.0
+car281,Kennedy,76,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00024359999952139333,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.0599999414989725e-05,2,2,KPAMS,18.5
+car282,San Cristobal,73,"['San Cristobal', 'Martires', 'Santa Fe']",0.00021120000019436702,"['San Cristobal', 'Martires', 'Santa Fe']",7.589999950141646e-05,2,2,KPAMS,18.5
+car283,Engativa,90,"['Engativa', 'Teusaquillo']",0.0001489000023866538,"['Engativa', 'Teusaquillo']",9.520000094198622e-05,1,1,TFSC,13.3
+car284,Candelaria,76,"['Candelaria', 'Teusaquillo']",0.00017529999968246557,"['Candelaria', 'Teusaquillo']",5.2999999752501026e-05,1,1,TFSC,13.3
+car285,Usme,88,"['Usme', 'San Cristobal', 'Martires', 'Santa Fe']",0.00018089999866788276,"['Usme', 'Rafael Uribe']",5.6799999583745375e-05,3,1,RU,25.0
+car286,San Cristobal,72,"['San Cristobal', 'Martires', 'Santa Fe']",0.0002950000016426202,"['San Cristobal', 'Martires', 'Santa Fe']",6.120000034570694e-05,2,2,KPAMS,18.5
+car287,Candelaria,94,"['Candelaria', 'Teusaquillo']",7.410000034724362e-05,"['Candelaria', 'Teusaquillo']",4.8400001105619594e-05,1,1,TFSC,13.3
+car288,Kennedy,72,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002482999989297241,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.040000153006986e-05,2,2,KPAMS,18.5
+car289,Candelaria,98,"['Candelaria', 'Santa Fe']",7.399999958579428e-05,"['Candelaria', 'Teusaquillo']",4.6799999836366624e-05,1,1,TFSC,13.3
+car290,Usme,91,"['Usme', 'San Cristobal', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00019609999799286015,"['Usme', 'Rafael Uribe']",0.00013419999959296547,4,1,RU,25.0
+car291,Antonio Nariño,55,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.0002625999986776151,"['Antonio Nariño', 'Martires', 'Santa Fe']",9.620000128052197e-05,2,2,KPAMS,18.5
+car292,Engativa,96,"['Engativa', 'Santa Fe']",9.470000077271834e-05,"['Engativa', 'Teusaquillo']",6.769999890821055e-05,1,1,TFSC,13.3
+car293,San Cristobal,89,"['San Cristobal', 'Martires', 'Santa Fe']",0.00021560000095632859,"['San Cristobal', 'Martires', 'Santa Fe']",7.090000144671649e-05,2,2,KPAMS,18.5
+car294,Barrios Unidos,78,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",0.00010320000001229346,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",6.629999916185625e-05,2,2,TFSC,23.5
+car295,Bosa,96,"['Bosa', 'Kennedy', 'Puente Aranda', 'Martires', 'Antonio Nariño', 'San Cristobal', 'Usme', 'Rafael Uribe']",0.00035740000021178275,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",7.370000093942508e-05,7,3,KPAMS,42.5
+car296,Kennedy,97,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0003125000002910383,"['Kennedy', 'Puente Aranda', 'Santa Fe']",7.60000002628658e-05,2,2,KPAMS,18.5
+car297,Antonio Nariño,62,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00023180000061984174,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.850000136182643e-05,2,2,KPAMS,18.5
+car298,Tunjuelito,90,"['Tunjuelito', 'Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00021550000019487925,"['Tunjuelito', 'Rafael Uribe']",7.079999704728834e-05,3,1,RU,36.0
+car299,Martires,54,"['Martires', 'Santa Fe']",0.00021120000019436702,"['Martires', 'Santa Fe']",5.210000017541461e-05,1,1,KPAMS,8.0
+car300,Ciudad Bolivar,63,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Martires', 'Antonio Nariño', 'San Cristobal', 'Santa Fe']",0.00036050000198883936,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.00011799999992945231,6,3,KPAMS,48.8
+car301,Antonio Nariño,72,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.0003096000000368804,"['Antonio Nariño', 'Martires', 'Santa Fe']",8.940000043367036e-05,2,2,KPAMS,18.5
+car302,Puente Aranda,99,"['Puente Aranda', 'Santa Fe']",0.00026509999952395447,"['Puente Aranda', 'Santa Fe']",6.120000034570694e-05,1,1,KPAMS,8.0
+car303,Tunjuelito,68,"['Tunjuelito', 'Antonio Nariño', 'Martires', 'Puente Aranda', 'Santa Fe']",0.0002612999996927101,"['Tunjuelito', 'Rafael Uribe']",7.240000195452012e-05,4,1,RU,36.0
+car304,Kennedy,85,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00027129999944008887,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.539999958476983e-05,2,2,KPAMS,18.5
+car305,Antonio Nariño,60,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00024019999909796752,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.639999992330559e-05,2,2,KPAMS,18.5
+car306,Usme,51,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00018450000061420724,"['Usme', 'Rafael Uribe']",6.0599999414989725e-05,5,1,RU,25.0
+car307,Candelaria,96,"['Candelaria', 'Teusaquillo']",7.970000297063962e-05,"['Candelaria', 'Teusaquillo']",5.6799999583745375e-05,1,1,TFSC,13.3
+car308,Tunjuelito,98,"['Tunjuelito', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.0002444000019750092,"['Tunjuelito', 'Rafael Uribe']",7.759999789413996e-05,4,1,RU,36.0
+car309,Engativa,93,"['Engativa', 'Teusaquillo']",0.00010169999950448982,"['Engativa', 'Teusaquillo']",5.750000127591193e-05,1,1,TFSC,13.3
+car310,Martires,99,"['Martires', 'Santa Fe']",0.00024080000002868474,"['Martires', 'Santa Fe']",5.4600001021753997e-05,1,1,KPAMS,8.0
+car311,Engativa,73,"['Engativa', 'Teusaquillo']",0.0001021999996737577,"['Engativa', 'Teusaquillo']",5.569999848376028e-05,1,1,TFSC,13.3
+car312,Engativa,56,"['Engativa', 'Santa Fe']",9.440000212634914e-05,"['Engativa', 'Teusaquillo']",5.4799998906673864e-05,1,1,TFSC,13.3
+car313,Bosa,95,"['Bosa', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.0003355000008014031,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",8.449999950244091e-05,5,3,KPAMS,42.5
+car314,Usme,56,"['Usme', 'San Cristobal', 'Martires', 'Santa Fe']",0.00024249999842140824,"['Usme', 'Rafael Uribe']",6.199999916134402e-05,3,1,RU,25.0
+car315,Barrios Unidos,57,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.520000094198622e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",6.349999966914766e-05,2,2,TFSC,23.5
+car316,Candelaria,73,"['Candelaria', 'Santa Fe']",0.00010509999992791563,"['Candelaria', 'Teusaquillo']",7.660000119358301e-05,1,1,TFSC,13.3
+car317,San Cristobal,66,"['San Cristobal', 'Martires', 'Santa Fe']",0.00021379999816417694,"['San Cristobal', 'Martires', 'Santa Fe']",6.710000161547214e-05,2,2,KPAMS,18.5
+car318,Usme,58,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00021769999875687063,"['Usme', 'Rafael Uribe']",5.8400000852998346e-05,5,1,RU,25.0
+car319,Barrios Unidos,76,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",0.0001050000028044451,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.859999873791821e-05,2,2,TFSC,23.5
+car320,Usme,89,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00020649999714805745,"['Usme', 'Rafael Uribe']",5.6400000175926834e-05,5,1,RU,25.0
+car321,Kennedy,83,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00024979999943752773,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.519999806187116e-05,2,2,KPAMS,18.5
+car322,Tunjuelito,57,"['Tunjuelito', 'Antonio Nariño', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0002440999996906612,"['Tunjuelito', 'Rafael Uribe']",6.919999941601418e-05,4,1,RU,36.0
+car323,Barrios Unidos,84,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.90999978967011e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",7.48999991628807e-05,2,2,TFSC,23.5
+car324,Usme,71,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00017769999976735562,"['Usme', 'Rafael Uribe']",5.690000034519471e-05,4,1,RU,25.0
+car325,Tunjuelito,90,"['Tunjuelito', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00024090000079013407,"['Tunjuelito', 'Rafael Uribe']",6.750000102329068e-05,4,1,RU,36.0
+car326,Puente Aranda,69,"['Puente Aranda', 'Santa Fe']",0.0002420999990135897,"['Puente Aranda', 'Santa Fe']",5.6499997299397364e-05,1,1,KPAMS,8.0
+car327,Candelaria,65,"['Candelaria', 'Teusaquillo']",7.79999973019585e-05,"['Candelaria', 'Teusaquillo']",5.0499998906161636e-05,1,1,TFSC,13.3
+car328,Barrios Unidos,55,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.349999891128391e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",6.550000034621917e-05,2,2,TFSC,23.5
+car329,Barrios Unidos,89,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.689999933470972e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.650000093737617e-05,2,2,TFSC,23.5
+car330,Puente Aranda,99,"['Puente Aranda', 'Santa Fe']",0.0002831999991030898,"['Puente Aranda', 'Santa Fe']",5.819999933009967e-05,1,1,KPAMS,8.0
+car331,San Cristobal,74,"['San Cristobal', 'Martires', 'Santa Fe']",0.00020529999892460182,"['San Cristobal', 'Martires', 'Santa Fe']",6.429999848478474e-05,2,2,KPAMS,18.5
+car332,Engativa,93,"['Engativa', 'Teusaquillo']",0.00011250000170548446,"['Engativa', 'Teusaquillo']",5.949999831500463e-05,1,1,TFSC,13.3
+car333,Antonio Nariño,58,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.0002444000019750092,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.56000011076685e-05,2,2,KPAMS,18.5
+car334,Antonio Nariño,50,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00023610000062035397,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.360000043059699e-05,2,2,KPAMS,18.5
+car335,Martires,63,"['Martires', 'Santa Fe']",0.00020109999968553893,"['Martires', 'Santa Fe']",5.2600000344682485e-05,1,1,KPAMS,8.0
+car336,Antonio Nariño,50,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00023299999884329736,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.339999890769832e-05,2,2,KPAMS,18.5
+car337,Barrios Unidos,58,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.810000119614415e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.6400000175926834e-05,2,2,TFSC,23.5
+car338,Kennedy,61,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002458000017213635,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.41999977233354e-05,2,2,KPAMS,18.5
+car339,Antonio Nariño,67,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00023430000146618113,"['Antonio Nariño', 'Martires', 'Santa Fe']",7.560000085504726e-05,2,2,KPAMS,18.5
+car340,Antonio Nariño,60,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00026050000087707303,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.130000110715628e-05,2,2,KPAMS,18.5
+car341,Barrios Unidos,69,"['Barrios Unidos', 'Engativa', 'Santa Fe']",0.00012169999899924733,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",8.270000034826808e-05,2,2,TFSC,23.5
+car342,Barrios Unidos,51,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.859999772743322e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.680000322172418e-05,2,2,TFSC,23.5
+car343,Antonio Nariño,86,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00024730000222916715,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.209999992279336e-05,2,2,KPAMS,18.5
+car344,Bosa,67,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0003628000013122801,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.659999780822545e-05,3,3,KPAMS,42.5
+car345,Tunjuelito,53,"['Tunjuelito', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.00023949999740580097,"['Tunjuelito', 'Rafael Uribe']",6.929999653948471e-05,4,1,RU,36.0
+car346,Kennedy,93,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00026020000223070383,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.380000195349567e-05,2,2,KPAMS,18.5
+car347,Martires,95,"['Martires', 'Santa Fe']",0.00026899999647866935,"['Martires', 'Santa Fe']",5.319999763742089e-05,1,1,KPAMS,8.0
+car348,Usme,69,"['Usme', 'San Cristobal', 'Martires', 'Santa Fe']",0.0001864000005298294,"['Usme', 'Rafael Uribe']",5.7699999160831794e-05,3,1,RU,25.0
+car349,Kennedy,88,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0003097000007983297,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.479999865405262e-05,2,2,KPAMS,18.5
+car350,San Cristobal,92,"['San Cristobal', 'Martires', 'Santa Fe']",0.0002137000010407064,"['San Cristobal', 'Martires', 'Santa Fe']",6.450000000768341e-05,2,2,KPAMS,18.5
+car351,Tunjuelito,51,"['Tunjuelito', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.00022449999960372224,"['Tunjuelito', 'Rafael Uribe']",7.369999730144627e-05,3,1,RU,36.0
+car352,Usme,59,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00017699999807518907,"['Usme', 'Rafael Uribe']",5.569999848376028e-05,4,1,RU,25.0
+car353,Martires,68,"['Martires', 'Santa Fe']",0.00023530000180471689,"['Martires', 'Santa Fe']",5.199999941396527e-05,1,1,KPAMS,8.0
+car354,Martires,77,"['Martires', 'Santa Fe']",0.00020330000188550912,"['Martires', 'Santa Fe']",5.0400001782691106e-05,1,1,KPAMS,8.0
+car355,Candelaria,81,"['Candelaria', 'Teusaquillo']",7.879999975557439e-05,"['Candelaria', 'Teusaquillo']",5.030000102124177e-05,1,1,TFSC,13.3
+car356,Barrios Unidos,77,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",0.0001227000029757619,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",0.00014290000035543926,2,2,TFSC,23.5
+car357,Engativa,59,"['Engativa', 'Teusaquillo']",0.00011850000009872019,"['Engativa', 'Teusaquillo']",8.969999908003956e-05,1,1,TFSC,13.3
+car358,Candelaria,92,"['Candelaria', 'Teusaquillo']",9.169999975711107e-05,"['Candelaria', 'Teusaquillo']",6.27999979769811e-05,1,1,TFSC,13.3
+car359,Martires,85,"['Martires', 'Santa Fe']",0.00028620000011869706,"['Martires', 'Santa Fe']",5.919999966863543e-05,1,1,KPAMS,8.0
+car360,Puente Aranda,54,"['Puente Aranda', 'Santa Fe']",0.00027889999910257757,"['Puente Aranda', 'Santa Fe']",5.48999996681232e-05,1,1,KPAMS,8.0
+car361,Martires,87,"['Martires', 'Santa Fe']",0.0002271999983349815,"['Martires', 'Santa Fe']",4.959999932907522e-05,1,1,KPAMS,8.0
+car362,Bosa,75,"['Bosa', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0003260000012232922,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.569999823113903e-05,4,3,KPAMS,42.5
+car363,Antonio Nariño,95,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.0002550999997765757,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.930000017746352e-05,2,2,KPAMS,18.5
+car364,Kennedy,95,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.000260199998592725,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.269999721553177e-05,2,2,KPAMS,18.5
+car365,Barrios Unidos,73,"['Barrios Unidos', 'Engativa', 'Santa Fe']",8.940000043367036e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.5800002883188426e-05,2,2,TFSC,23.5
+car366,Barrios Unidos,63,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.760000102687627e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.400000009103678e-05,2,2,TFSC,23.5
+car367,Candelaria,78,"['Candelaria', 'Santa Fe']",8.539999907952733e-05,"['Candelaria', 'Teusaquillo']",5.189999865251593e-05,1,1,TFSC,13.3
+car368,Usme,84,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00020429999858606607,"['Usme', 'Rafael Uribe']",5.720000262954272e-05,4,1,RU,25.0
+car369,Candelaria,94,"['Candelaria', 'Teusaquillo']",7.389999882434495e-05,"['Candelaria', 'Teusaquillo']",5.1300001359777525e-05,1,1,TFSC,13.3
+car370,Tunjuelito,63,"['Tunjuelito', 'Antonio Nariño', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00023829999918234535,"['Tunjuelito', 'Rafael Uribe']",7.160000313888304e-05,4,1,RU,36.0
+car371,Engativa,52,"['Engativa', 'Santa Fe']",0.00010310000288882293,"['Engativa', 'Teusaquillo']",5.7699999160831794e-05,1,1,TFSC,13.3
+car372,Kennedy,91,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00025409999943803996,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.149999899207614e-05,2,2,KPAMS,18.5
+car373,Ciudad Bolivar,56,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002687999985937495,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.660000144620426e-05,3,3,KPAMS,48.8
+car374,Antonio Nariño,53,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00020619999850168824,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.13999982306268e-05,2,2,KPAMS,18.5
+car375,Puente Aranda,96,"['Puente Aranda', 'Santa Fe']",0.000234499999351101,"['Puente Aranda', 'Santa Fe']",5.2200000936863944e-05,1,1,KPAMS,8.0
+car376,Antonio Nariño,89,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00022639999951934442,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.009999924572185e-05,2,2,KPAMS,18.5
+car377,Tunjuelito,71,"['Tunjuelito', 'Puente Aranda', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.00021120000019436702,"['Tunjuelito', 'Rafael Uribe']",6.629999916185625e-05,5,1,RU,36.0
+car378,Tunjuelito,61,"['Tunjuelito', 'Antonio Nariño', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00021999999808031134,"['Tunjuelito', 'Rafael Uribe']",6.510000093840063e-05,4,1,RU,36.0
+car379,Antonio Nariño,92,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00023220000002766028,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.239999856916256e-05,2,2,KPAMS,18.5
+car380,Tunjuelito,77,"['Tunjuelito', 'Antonio Nariño', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0002162000018870458,"['Tunjuelito', 'Rafael Uribe']",6.280000161495991e-05,4,1,RU,36.0
+car381,Barrios Unidos,93,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.29000016185455e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.539999983739108e-05,2,2,TFSC,23.5
+car382,Candelaria,55,"['Candelaria', 'Teusaquillo']",7.349999941652641e-05,"['Candelaria', 'Teusaquillo']",4.740000076708384e-05,1,1,TFSC,13.3
+car383,Engativa,63,"['Engativa', 'Santa Fe']",9.389999831910245e-05,"['Engativa', 'Teusaquillo']",5.339999916031957e-05,1,1,TFSC,13.3
+car384,Tunjuelito,92,"['Tunjuelito', 'Antonio Nariño', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00020489999951678328,"['Tunjuelito', 'Rafael Uribe']",6.489999941550195e-05,4,1,RU,36.0
+car385,Ciudad Bolivar,58,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0002832000027410686,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.650000068475492e-05,4,3,KPAMS,48.8
+car386,Bosa,92,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0003203999985998962,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.479999865405262e-05,3,3,KPAMS,42.5
+car387,San Cristobal,69,"['San Cristobal', 'Martires', 'Santa Fe']",0.0002023999986704439,"['San Cristobal', 'Martires', 'Santa Fe']",6.329999814624898e-05,2,2,KPAMS,18.5
+car388,Antonio Nariño,82,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00022049999824957922,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.089999806135893e-05,2,2,KPAMS,18.5
+car389,Usme,95,"['Usme', 'San Cristobal', 'Martires', 'Santa Fe']",0.00015870000061113387,"['Usme', 'Rafael Uribe']",5.379999856813811e-05,3,1,RU,25.0
+car390,Antonio Nariño,68,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00023470000087399967,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.009999924572185e-05,2,2,KPAMS,18.5
+car391,Kennedy,61,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00022280000121099874,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.009999924572185e-05,2,2,KPAMS,18.5
+car392,Tunjuelito,83,"['Tunjuelito', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.0001869000006990973,"['Tunjuelito', 'Rafael Uribe']",6.459999713115394e-05,4,1,RU,36.0
+car393,Barrios Unidos,85,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.299999874201603e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.639999653794803e-05,2,2,TFSC,23.5
+car394,Bosa,50,"['Bosa', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00032500000088475645,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.489999941550195e-05,5,3,KPAMS,42.5
+car395,Ciudad Bolivar,88,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0003012000015587546,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.989999747020192e-05,4,3,KPAMS,48.8
+car396,Kennedy,59,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00022589999935007654,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.920000305399299e-05,2,2,KPAMS,18.5
+car397,Bosa,98,"['Bosa', 'Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00041290000081062317,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",7.170000026235357e-05,6,3,KPAMS,42.5
+car398,Bosa,92,"['Bosa', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.0003221000006305985,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.329999814624898e-05,5,3,KPAMS,42.5
+car399,Puente Aranda,56,"['Puente Aranda', 'Santa Fe']",0.0002423999976599589,"['Puente Aranda', 'Santa Fe']",5.249999958323315e-05,1,1,KPAMS,8.0
+car400,Martires,91,"['Martires', 'Santa Fe']",0.00020990000120946206,"['Martires', 'Santa Fe']",4.940000144415535e-05,1,1,KPAMS,8.0
+car401,Kennedy,90,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00020679999943240546,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.049999865354039e-05,2,2,KPAMS,18.5
+car402,Candelaria,80,"['Candelaria', 'Santa Fe']",7.240000195452012e-05,"['Candelaria', 'Teusaquillo']",4.810000245925039e-05,1,1,TFSC,13.3
+car403,Usme,73,"['Usme', 'San Cristobal', 'Martires', 'Santa Fe']",0.0001967999996850267,"['Usme', 'Rafael Uribe']",5.450000026030466e-05,3,1,RU,25.0
+car404,Puente Aranda,98,"['Puente Aranda', 'Santa Fe']",0.00025380000079167075,"['Puente Aranda', 'Santa Fe']",5.569999848376028e-05,1,1,KPAMS,8.0
+car405,Tunjuelito,73,"['Tunjuelito', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00023230000078910962,"['Tunjuelito', 'Rafael Uribe']",6.479999865405262e-05,4,1,RU,36.0
+car406,Usme,97,"['Usme', 'San Cristobal', 'Martires', 'Santa Fe']",0.00019080000129179098,"['Usme', 'Rafael Uribe']",5.4200001613935456e-05,3,1,RU,25.0
+car407,Bosa,84,"['Bosa', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0003131000012217555,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.270000085351057e-05,4,3,KPAMS,42.5
+car408,Tunjuelito,87,"['Tunjuelito', 'Antonio Nariño', 'Martires', 'Puente Aranda', 'Santa Fe']",0.0002386999985901639,"['Tunjuelito', 'Rafael Uribe']",6.459999713115394e-05,4,1,RU,36.0
+car409,Martires,71,"['Martires', 'Santa Fe']",0.00024080000002868474,"['Martires', 'Santa Fe']",5.109999983687885e-05,1,1,KPAMS,8.0
+car410,Candelaria,60,"['Candelaria', 'Santa Fe']",7.32000007701572e-05,"['Candelaria', 'Teusaquillo']",4.830000034417026e-05,1,1,TFSC,13.3
+car411,Candelaria,73,"['Candelaria', 'Santa Fe']",7.230000119307078e-05,"['Candelaria', 'Teusaquillo']",4.6299999667098746e-05,1,1,TFSC,13.3
+car412,Barrios Unidos,87,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.069999941857532e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.529999907594174e-05,2,2,TFSC,23.5
+car413,San Cristobal,81,"['San Cristobal', 'Martires', 'Santa Fe']",0.00017830000069807284,"['San Cristobal', 'Martires', 'Santa Fe']",6.10999995842576e-05,2,2,KPAMS,18.5
+car414,Antonio Nariño,98,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.0002539999986765906,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.209999992279336e-05,2,2,KPAMS,18.5
+car415,Engativa,92,"['Engativa', 'Santa Fe']",9.389999831910245e-05,"['Engativa', 'Teusaquillo']",5.3499999921768904e-05,1,1,TFSC,13.3
+car416,Tunjuelito,56,"['Tunjuelito', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.0003504999986034818,"['Tunjuelito', 'Rafael Uribe']",0.00014170000213198364,3,1,RU,36.0
+car417,Barrios Unidos,89,"['Barrios Unidos', 'Engativa', 'Santa Fe']",0.00023359999977401458,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",0.00011389999781385995,2,2,TFSC,23.5
+car418,Bosa,64,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0008387999987462536,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.00021259999994072132,3,3,KPAMS,42.5
+car419,Engativa,74,"['Engativa', 'Teusaquillo']",0.0002181999989261385,"['Engativa', 'Teusaquillo']",9.470000077271834e-05,1,1,TFSC,13.3
+car420,Tunjuelito,82,"['Tunjuelito', 'Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.0002367999986745417,"['Tunjuelito', 'Rafael Uribe']",8.150000212481245e-05,3,1,RU,36.0
+car421,Barrios Unidos,95,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.979999958886765e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",6.719999873894267e-05,2,2,TFSC,23.5
+car422,Puente Aranda,98,"['Puente Aranda', 'Santa Fe']",0.00026530000104685314,"['Puente Aranda', 'Santa Fe']",6.600000051548705e-05,1,1,KPAMS,8.0
+car423,Martires,83,"['Martires', 'Santa Fe']",0.00021099999867146835,"['Martires', 'Santa Fe']",5.480000254465267e-05,1,1,KPAMS,8.0
+car424,Kennedy,90,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.000258100000792183,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00012350000179139897,2,2,KPAMS,18.5
+car425,San Cristobal,81,"['San Cristobal', 'Martires', 'Santa Fe']",0.0003356000015628524,"['San Cristobal', 'Martires', 'Santa Fe']",0.00010250000195810571,2,2,KPAMS,18.5
+car426,Bosa,70,"['Bosa', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0005856999996467493,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",9.500000305706635e-05,4,3,KPAMS,42.5
+car427,Antonio Nariño,90,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.0002585000002000015,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.969999958528206e-05,2,2,KPAMS,18.5
+car428,Tunjuelito,98,"['Tunjuelito', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00023719999808236025,"['Tunjuelito', 'Rafael Uribe']",7.030000051599927e-05,5,1,RU,36.0
+car429,San Cristobal,67,"['San Cristobal', 'Martires', 'Santa Fe']",0.0002170999978261534,"['San Cristobal', 'Martires', 'Santa Fe']",6.299999949987978e-05,2,2,KPAMS,18.5
+car430,Puente Aranda,93,"['Puente Aranda', 'Santa Fe']",0.00023579999833600596,"['Puente Aranda', 'Santa Fe']",5.3499999921768904e-05,1,1,KPAMS,8.0
+car431,Martires,61,"['Martires', 'Santa Fe']",0.00020289999883971177,"['Martires', 'Santa Fe']",5.080000119050965e-05,1,1,KPAMS,8.0
+car432,Ciudad Bolivar,56,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.00028030000248691067,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.639999992330559e-05,3,3,KPAMS,48.8
+car433,Candelaria,95,"['Candelaria', 'Teusaquillo']",7.399999958579428e-05,"['Candelaria', 'Teusaquillo']",4.8800000513438135e-05,1,1,TFSC,13.3
+car434,Kennedy,94,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00024260000282083638,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.009999924572185e-05,2,2,KPAMS,18.5
+car435,Engativa,95,"['Engativa', 'Santa Fe']",9.219999992637895e-05,"['Engativa', 'Teusaquillo']",5.779999992228113e-05,1,1,TFSC,13.3
+car436,Candelaria,73,"['Candelaria', 'Teusaquillo']",7.429999823216349e-05,"['Candelaria', 'Teusaquillo']",4.7900000936351717e-05,1,1,TFSC,13.3
+car437,Engativa,58,"['Engativa', 'Teusaquillo']",9.520000094198622e-05,"['Engativa', 'Teusaquillo']",5.2200000936863944e-05,1,1,TFSC,13.3
+car438,Engativa,91,"['Engativa', 'Teusaquillo']",9.420000060345046e-05,"['Engativa', 'Teusaquillo']",5.129999772179872e-05,1,1,TFSC,13.3
+car439,Tunjuelito,93,"['Tunjuelito', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.0002863000008801464,"['Tunjuelito', 'Rafael Uribe']",0.00010269999984302558,6,1,RU,36.0
+car440,Ciudad Bolivar,75,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.0004697999975178391,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.00010340000153519213,5,3,KPAMS,48.8
+car441,Kennedy,61,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0006472000022768043,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00010929999916697852,2,2,KPAMS,18.5
+car442,Kennedy,65,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0003015000002051238,"['Kennedy', 'Puente Aranda', 'Santa Fe']",7.139999797800556e-05,2,2,KPAMS,18.5
+car443,Engativa,91,"['Engativa', 'Teusaquillo']",9.929999941959977e-05,"['Engativa', 'Teusaquillo']",5.830000009154901e-05,1,1,TFSC,13.3
+car444,Puente Aranda,99,"['Puente Aranda', 'Santa Fe']",0.0002398000033281278,"['Puente Aranda', 'Santa Fe']",5.5100001191021875e-05,1,1,KPAMS,8.0
+car445,Tunjuelito,82,"['Tunjuelito', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.0002553999984229449,"['Tunjuelito', 'Rafael Uribe']",7.31999971321784e-05,4,1,RU,36.0
+car446,Puente Aranda,50,"['Puente Aranda', 'Santa Fe']",0.0002415000017208513,"['Puente Aranda', 'Santa Fe']",5.279999822960235e-05,1,1,KPAMS,8.0
+car447,Usme,59,"['Usme', 'San Cristobal', 'Martires', 'Santa Fe']",0.0001956999985850416,"['Usme', 'Rafael Uribe']",5.410000085248612e-05,3,1,RU,25.0
+car448,Tunjuelito,72,"['Tunjuelito', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Puente Aranda', 'Santa Fe']",0.000219899997318862,"['Tunjuelito', 'Rafael Uribe']",6.629999916185625e-05,5,1,RU,36.0
+car449,Tunjuelito,82,"['Tunjuelito', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Puente Aranda', 'Santa Fe']",0.0002272000019729603,"['Tunjuelito', 'Rafael Uribe']",6.710000161547214e-05,5,1,RU,36.0
+car450,Martires,78,"['Martires', 'Santa Fe']",0.00021639999977196567,"['Martires', 'Santa Fe']",5.0900001951958984e-05,1,1,KPAMS,8.0
+car451,Antonio Nariño,54,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00025660000028437935,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.610000127693638e-05,2,2,KPAMS,18.5
+car452,Puente Aranda,97,"['Puente Aranda', 'Santa Fe']",0.00024389999816776253,"['Puente Aranda', 'Santa Fe']",5.1799997891066596e-05,1,1,KPAMS,8.0
+car453,San Cristobal,75,"['San Cristobal', 'Martires', 'Santa Fe']",0.0001866000020527281,"['San Cristobal', 'Martires', 'Santa Fe']",6.190000203787349e-05,2,2,KPAMS,18.5
+car454,Tunjuelito,53,"['Tunjuelito', 'Puente Aranda', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.00023209999926621094,"['Tunjuelito', 'Rafael Uribe']",6.510000093840063e-05,5,1,RU,36.0
+car455,Antonio Nariño,77,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.0002488999998604413,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.199999916134402e-05,2,2,KPAMS,18.5
+car456,Barrios Unidos,94,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.100000170292333e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.65999980608467e-05,2,2,TFSC,23.5
+car457,Puente Aranda,70,"['Puente Aranda', 'Santa Fe']",0.00023040000087348744,"['Puente Aranda', 'Santa Fe']",5.190000229049474e-05,1,1,KPAMS,8.0
+car458,Candelaria,79,"['Candelaria', 'Santa Fe']",7.449999975506216e-05,"['Candelaria', 'Teusaquillo']",4.8099998821271583e-05,1,1,TFSC,13.3
+car459,Candelaria,57,"['Candelaria', 'Santa Fe']",7.17999973858241e-05,"['Candelaria', 'Teusaquillo']",4.690000059781596e-05,1,1,TFSC,13.3
+car460,San Cristobal,95,"['San Cristobal', 'Martires', 'Santa Fe']",0.00024119999943650328,"['San Cristobal', 'Martires', 'Santa Fe']",6.159999975352548e-05,2,2,KPAMS,18.5
+car461,San Cristobal,73,"['San Cristobal', 'Martires', 'Santa Fe']",0.00022589999935007654,"['San Cristobal', 'Martires', 'Santa Fe']",5.990000136080198e-05,2,2,KPAMS,18.5
+car462,Martires,99,"['Martires', 'Santa Fe']",0.000279799998679664,"['Martires', 'Santa Fe']",7.369999730144627e-05,1,1,KPAMS,8.0
+car463,Kennedy,94,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00048439999955007806,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00011970000196015462,2,2,KPAMS,18.5
+car464,Tunjuelito,94,"['Tunjuelito', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00044639999759965576,"['Tunjuelito', 'Rafael Uribe']",0.00016179999875021167,4,1,RU,36.0
+car465,Puente Aranda,85,"['Puente Aranda', 'Santa Fe']",0.0003071999999519903,"['Puente Aranda', 'Santa Fe']",6.170000051497482e-05,1,1,KPAMS,8.0
+car466,Bosa,96,"['Bosa', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00032669999927747995,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.669999856967479e-05,5,3,KPAMS,42.5
+car467,San Cristobal,94,"['San Cristobal', 'Martires', 'Santa Fe']",0.00021220000053290278,"['San Cristobal', 'Martires', 'Santa Fe']",6.779999966965988e-05,2,2,KPAMS,18.5
+car468,Martires,92,"['Martires', 'Santa Fe']",0.00022650000028079376,"['Martires', 'Santa Fe']",5.140000212122686e-05,1,1,KPAMS,8.0
+car469,Engativa,52,"['Engativa', 'Teusaquillo']",9.610000051907264e-05,"['Engativa', 'Teusaquillo']",5.520000195247121e-05,1,1,TFSC,13.3
+car470,Tunjuelito,58,"['Tunjuelito', 'Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00021219999689492397,"['Tunjuelito', 'Rafael Uribe']",6.740000026184134e-05,3,1,RU,36.0
+car471,Martires,78,"['Martires', 'Santa Fe']",0.00024159999884432182,"['Martires', 'Santa Fe']",5.0999999075429514e-05,1,1,KPAMS,8.0
+car472,Puente Aranda,93,"['Puente Aranda', 'Santa Fe']",0.00022499999977299012,"['Puente Aranda', 'Santa Fe']",5.1399998483248055e-05,1,1,KPAMS,8.0
+car473,Tunjuelito,77,"['Tunjuelito', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.000228899996727705,"['Tunjuelito', 'Rafael Uribe']",6.529999882332049e-05,4,1,RU,36.0
+car474,San Cristobal,50,"['San Cristobal', 'Martires', 'Santa Fe']",0.00022529999841935933,"['San Cristobal', 'Martires', 'Santa Fe']",6.600000051548705e-05,2,2,KPAMS,18.5
+car475,Engativa,91,"['Engativa', 'Teusaquillo']",9.59999997576233e-05,"['Engativa', 'Teusaquillo']",5.439999949885532e-05,1,1,TFSC,13.3
+car476,San Cristobal,67,"['San Cristobal', 'Martires', 'Santa Fe']",0.0002286000017193146,"['San Cristobal', 'Martires', 'Santa Fe']",6.040000153006986e-05,2,2,KPAMS,18.5
+car477,Usme,84,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00017100000331993215,"['Usme', 'Rafael Uribe']",5.410000085248612e-05,6,1,RU,25.0
+car478,Barrios Unidos,93,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.409999984200113e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.6799999583745375e-05,2,2,TFSC,23.5
+car479,Martires,72,"['Martires', 'Santa Fe']",0.00018849999833037145,"['Martires', 'Santa Fe']",5.030000102124177e-05,1,1,KPAMS,8.0
+car480,Barrios Unidos,53,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.730000238050707e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.539999983739108e-05,2,2,TFSC,23.5
+car481,Engativa,85,"['Engativa', 'Teusaquillo']",9.019999924930744e-05,"['Engativa', 'Teusaquillo']",5.369999780668877e-05,1,1,TFSC,13.3
+car482,Candelaria,83,"['Candelaria', 'Santa Fe']",7.43000018701423e-05,"['Candelaria', 'Teusaquillo']",5.109999983687885e-05,1,1,TFSC,13.3
+car483,Puente Aranda,88,"['Puente Aranda', 'Santa Fe']",0.00024119999943650328,"['Puente Aranda', 'Santa Fe']",5.199999941396527e-05,1,1,KPAMS,8.0
+car484,Antonio Nariño,82,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00023499999952036887,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.399999983841553e-05,2,2,KPAMS,18.5
+car485,Ciudad Bolivar,75,"['Ciudad Bolivar', 'Tunjuelito', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00029010000071139075,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.610000127693638e-05,6,3,KPAMS,48.8
+car486,Barrios Unidos,81,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.050000153365545e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.8400000852998346e-05,2,2,TFSC,23.5
+car487,Engativa,62,"['Engativa', 'Santa Fe']",0.0001145999995060265,"['Engativa', 'Teusaquillo']",5.830000009154901e-05,1,1,TFSC,13.3
+car488,Martires,72,"['Martires', 'Santa Fe']",0.00021360000027925707,"['Martires', 'Santa Fe']",5.400000009103678e-05,1,1,KPAMS,8.0
+car489,Ciudad Bolivar,71,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.000274800000624964,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",7.330000153160654e-05,4,3,KPAMS,48.8
+car490,Ciudad Bolivar,76,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002872000004572328,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.819999907747842e-05,3,3,KPAMS,48.8
+car491,Barrios Unidos,81,"['Barrios Unidos', 'Engativa', 'Santa Fe']",0.00010290000136592425,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.759999839938246e-05,2,2,TFSC,23.5
+car492,Barrios Unidos,75,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.960000170394778e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.530000271392055e-05,2,2,TFSC,23.5
+car493,Kennedy,72,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00024029999985941686,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.460000076913275e-05,2,2,KPAMS,18.5
+car494,Barrios Unidos,74,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.549999958835542e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.579999924520962e-05,2,2,TFSC,23.5
+car495,Usme,62,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00020950000180164352,"['Usme', 'Rafael Uribe']",5.5199998314492404e-05,4,1,RU,25.0
+car496,Ciudad Bolivar,55,"['Ciudad Bolivar', 'Bosa', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0003117000014754012,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",7.15000023774337e-05,5,3,KPAMS,48.8
+car497,San Cristobal,57,"['San Cristobal', 'Martires', 'Santa Fe']",0.00019969999993918464,"['San Cristobal', 'Martires', 'Santa Fe']",6.579999899258837e-05,2,2,KPAMS,18.5
+car498,Martires,61,"['Martires', 'Santa Fe']",0.0002275000006193295,"['Martires', 'Santa Fe']",5.279999822960235e-05,1,1,KPAMS,8.0
+car499,Barrios Unidos,55,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",0.00010440000187372789,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.8900001022266224e-05,2,2,TFSC,23.5
+car500,Tunjuelito,77,"['Tunjuelito', 'Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00022309999985736795,"['Tunjuelito', 'Rafael Uribe']",7.089999780873768e-05,3,1,RU,36.0
+car501,Puente Aranda,91,"['Puente Aranda', 'Santa Fe']",0.0002454999994370155,"['Puente Aranda', 'Santa Fe']",5.62999994144775e-05,1,1,KPAMS,8.0
+car502,Antonio Nariño,96,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00023370000053546391,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.450000000768341e-05,2,2,KPAMS,18.5
+car503,Ciudad Bolivar,78,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00031970000054570846,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.539999958476983e-05,4,3,KPAMS,48.8
+car504,Antonio Nariño,52,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.0002637999969010707,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.070000017643906e-05,2,2,KPAMS,18.5
+car505,Barrios Unidos,53,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.679999857326038e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.409999721450731e-05,2,2,TFSC,23.5
+car506,Kennedy,69,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00025739999910001643,"['Kennedy', 'Puente Aranda', 'Santa Fe']",5.9699999837903306e-05,2,2,KPAMS,18.5
+car507,Antonio Nariño,75,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00021469999774126336,"['Antonio Nariño', 'Martires', 'Santa Fe']",5.9699999837903306e-05,2,2,KPAMS,18.5
+car508,San Cristobal,96,"['San Cristobal', 'Martires', 'Santa Fe']",0.00022009999884176068,"['San Cristobal', 'Martires', 'Santa Fe']",6.0200000007171184e-05,2,2,KPAMS,18.5
+car509,San Cristobal,73,"['San Cristobal', 'Martires', 'Santa Fe']",0.00018149999959859997,"['San Cristobal', 'Martires', 'Santa Fe']",5.889999738428742e-05,2,2,KPAMS,18.5
+car510,San Cristobal,54,"['San Cristobal', 'Martires', 'Santa Fe']",0.00016830000095069408,"['San Cristobal', 'Martires', 'Santa Fe']",0.00019269999756943434,2,2,KPAMS,18.5
+car511,Engativa,88,"['Engativa', 'Santa Fe']",9.860000136541203e-05,"['Engativa', 'Teusaquillo']",5.62999994144775e-05,1,1,TFSC,13.3
+car512,Candelaria,57,"['Candelaria', 'Teusaquillo']",7.43000018701423e-05,"['Candelaria', 'Teusaquillo']",4.810000245925039e-05,1,1,TFSC,13.3
+car513,Antonio Nariño,78,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.0002351000002818182,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.0200000007171184e-05,2,2,KPAMS,18.5
+car514,San Cristobal,82,"['San Cristobal', 'Martires', 'Santa Fe']",0.0002007000002777204,"['San Cristobal', 'Martires', 'Santa Fe']",6.519999806187116e-05,2,2,KPAMS,18.5
+car515,Martires,52,"['Martires', 'Santa Fe']",0.0002426999999443069,"['Martires', 'Santa Fe']",5.430000237538479e-05,1,1,KPAMS,8.0
+car516,San Cristobal,68,"['San Cristobal', 'Martires', 'Santa Fe']",0.00019750000137719326,"['San Cristobal', 'Martires', 'Santa Fe']",6.229999780771323e-05,2,2,KPAMS,18.5
+car517,Usme,94,"['Usme', 'San Cristobal', 'Martires', 'Santa Fe']",0.00018309999722987413,"['Usme', 'Rafael Uribe']",5.729999975301325e-05,3,1,RU,25.0
+car518,San Cristobal,59,"['San Cristobal', 'Martires', 'Santa Fe']",0.0001961999987543095,"['San Cristobal', 'Martires', 'Santa Fe']",6.339999890769832e-05,2,2,KPAMS,18.5
+car519,Puente Aranda,88,"['Puente Aranda', 'Santa Fe']",0.00025770000138436444,"['Puente Aranda', 'Santa Fe']",5.500000042957254e-05,1,1,KPAMS,8.0
+car520,Martires,73,"['Martires', 'Santa Fe']",0.00020339999900897965,"['Martires', 'Santa Fe']",5.120000059832819e-05,1,1,KPAMS,8.0
+car521,Candelaria,84,"['Candelaria', 'Santa Fe']",7.74000000092201e-05,"['Candelaria', 'Teusaquillo']",4.909999915980734e-05,1,1,TFSC,13.3
+car522,Puente Aranda,89,"['Puente Aranda', 'Santa Fe']",0.0003431999975873623,"['Puente Aranda', 'Santa Fe']",8.460000026389025e-05,1,1,KPAMS,8.0
+car523,Martires,59,"['Martires', 'Santa Fe']",0.00025919999825418927,"['Martires', 'Santa Fe']",6.740000026184134e-05,1,1,KPAMS,8.0
+car524,Martires,71,"['Martires', 'Santa Fe']",0.00022000000171829015,"['Martires', 'Santa Fe']",5.339999916031957e-05,1,1,KPAMS,8.0
+car525,Puente Aranda,94,"['Puente Aranda', 'Santa Fe']",0.0003007000013894867,"['Puente Aranda', 'Santa Fe']",5.929999679210596e-05,1,1,KPAMS,8.0
+car526,Martires,85,"['Martires', 'Santa Fe']",0.00022960000205785036,"['Martires', 'Santa Fe']",5.1300001359777525e-05,1,1,KPAMS,8.0
+car527,Engativa,69,"['Engativa', 'Santa Fe']",0.00010189999738940969,"['Engativa', 'Teusaquillo']",5.830000009154901e-05,1,1,TFSC,13.3
+car528,Puente Aranda,62,"['Puente Aranda', 'Santa Fe']",0.0002510999984224327,"['Puente Aranda', 'Santa Fe']",5.610000152955763e-05,1,1,KPAMS,8.0
+car529,San Cristobal,80,"['San Cristobal', 'Martires', 'Santa Fe']",0.00020840000070165843,"['San Cristobal', 'Martires', 'Santa Fe']",6.639999992330559e-05,2,2,KPAMS,18.5
+car530,Tunjuelito,80,"['Tunjuelito', 'Antonio Nariño', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00024560000019846484,"['Tunjuelito', 'Rafael Uribe']",7.2900002123788e-05,4,1,RU,36.0
+car531,Puente Aranda,78,"['Puente Aranda', 'Santa Fe']",0.00025910000113071874,"['Puente Aranda', 'Santa Fe']",5.509999755304307e-05,1,1,KPAMS,8.0
+car532,Antonio Nariño,67,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00027770000087912194,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.539999958476983e-05,2,2,KPAMS,18.5
+car533,Usme,96,"['Usme', 'San Cristobal', 'Martires', 'Santa Fe']",0.00019260000044596381,"['Usme', 'Rafael Uribe']",5.8000001445179805e-05,3,1,RU,25.0
+car534,Tunjuelito,55,"['Tunjuelito', 'Antonio Nariño', 'Martires', 'Puente Aranda', 'Santa Fe']",0.0002296999991813209,"['Tunjuelito', 'Rafael Uribe']",7.400000322377309e-05,4,1,RU,36.0
+car535,Puente Aranda,75,"['Puente Aranda', 'Santa Fe']",0.0002514000007067807,"['Puente Aranda', 'Santa Fe']",5.4200001613935456e-05,1,1,KPAMS,8.0
+car536,Bosa,56,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.00032410000130767,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.660000144620426e-05,3,3,KPAMS,42.5
+car537,Antonio Nariño,70,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00023990000045159832,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.630000279983506e-05,2,2,KPAMS,18.5
+car538,Bosa,86,"['Bosa', 'Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.000329400001646718,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.900000153109431e-05,4,3,KPAMS,42.5
+car539,Kennedy,89,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00026050000087707303,"['Kennedy', 'Puente Aranda', 'Santa Fe']",7.040000127744861e-05,2,2,KPAMS,18.5
+car540,Martires,58,"['Martires', 'Santa Fe']",0.00020769999900949188,"['Martires', 'Santa Fe']",5.32000012753997e-05,1,1,KPAMS,8.0
+car541,Candelaria,99,"['Candelaria', 'Santa Fe']",7.750000077066943e-05,"['Candelaria', 'Teusaquillo']",5.0400001782691106e-05,1,1,TFSC,13.3
+car542,Ciudad Bolivar,60,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0003195999997842591,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",7.03999976394698e-05,4,3,KPAMS,48.8
+car543,Kennedy,76,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002719999974942766,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.260000009206124e-05,2,2,KPAMS,18.5
+car544,Tunjuelito,78,"['Tunjuelito', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00025319999986095354,"['Tunjuelito', 'Rafael Uribe']",6.999999823165126e-05,4,1,RU,36.0
+car545,Usme,89,"['Usme', 'San Cristobal', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00021550000019487925,"['Usme', 'Rafael Uribe']",5.880000026081689e-05,4,1,RU,25.0
+car546,Martires,88,"['Martires', 'Santa Fe']",0.00024109999867505394,"['Martires', 'Santa Fe']",5.390000296756625e-05,1,1,KPAMS,8.0
+car547,Usme,99,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00022909999825060368,"['Usme', 'Rafael Uribe']",5.48999996681232e-05,4,1,RU,25.0
+car548,Kennedy,61,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00023769999825162813,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.439999924623407e-05,2,2,KPAMS,18.5
+car549,Ciudad Bolivar,65,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.0002817999993567355,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.759999814676121e-05,5,3,KPAMS,48.8
+car550,Ciudad Bolivar,76,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.000293100001726998,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.669999856967479e-05,4,3,KPAMS,48.8
+car551,Bosa,55,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0003453999997873325,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.370000119204633e-05,3,3,KPAMS,42.5
+car552,Kennedy,74,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00026760000037029386,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.209999992279336e-05,2,2,KPAMS,18.5
+car553,San Cristobal,54,"['San Cristobal', 'Martires', 'Santa Fe']",0.0001995999991777353,"['San Cristobal', 'Martires', 'Santa Fe']",6.380000195349567e-05,2,2,KPAMS,18.5
+car554,Ciudad Bolivar,79,"['Ciudad Bolivar', 'Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0003006000006280374,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.679999933112413e-05,4,3,KPAMS,48.8
+car555,Engativa,90,"['Engativa', 'Santa Fe']",9.790000331122428e-05,"['Engativa', 'Teusaquillo']",5.660000169882551e-05,1,1,TFSC,13.3
+car556,San Cristobal,60,"['San Cristobal', 'Martires', 'Santa Fe']",0.00017630000002100132,"['San Cristobal', 'Martires', 'Santa Fe']",6.38999990769662e-05,2,2,KPAMS,18.5
+car557,Bosa,94,"['Bosa', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00033650000113993883,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.370000119204633e-05,4,3,KPAMS,42.5
+car558,Engativa,58,"['Engativa', 'Santa Fe']",9.610000051907264e-05,"['Engativa', 'Teusaquillo']",5.62999994144775e-05,1,1,TFSC,13.3
+car559,Antonio Nariño,69,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.0002334000018890947,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.660000144620426e-05,2,2,KPAMS,18.5
+car560,Engativa,59,"['Engativa', 'Teusaquillo']",9.73999995039776e-05,"['Engativa', 'Teusaquillo']",5.609999789157882e-05,1,1,TFSC,13.3
+car561,Usme,79,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0001779000012902543,"['Usme', 'Rafael Uribe']",5.959999907645397e-05,5,1,RU,25.0
+car562,Martires,89,"['Martires', 'Santa Fe']",0.0002119999990100041,"['Martires', 'Santa Fe']",5.2699997468153015e-05,1,1,KPAMS,8.0
+car563,Martires,89,"['Martires', 'Santa Fe']",0.00022610000087297522,"['Martires', 'Santa Fe']",5.199999941396527e-05,1,1,KPAMS,8.0
+car564,Martires,68,"['Martires', 'Santa Fe']",0.00022140000146464445,"['Martires', 'Santa Fe']",5.239999882178381e-05,1,1,KPAMS,8.0
+car565,Bosa,87,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0003327000013086945,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.740000026184134e-05,3,3,KPAMS,42.5
+car566,Usme,53,"['Usme', 'San Cristobal', 'Martires', 'Puente Aranda', 'Santa Fe']",0.0001917000008688774,"['Usme', 'Rafael Uribe']",5.650000093737617e-05,4,1,RU,25.0
+car567,Martires,99,"['Martires', 'Santa Fe']",0.0002237999979115557,"['Martires', 'Santa Fe']",5.119999696034938e-05,1,1,KPAMS,8.0
+car568,Puente Aranda,89,"['Puente Aranda', 'Santa Fe']",0.0002473999993526377,"['Puente Aranda', 'Santa Fe']",5.5100001191021875e-05,1,1,KPAMS,8.0
+car569,Engativa,51,"['Engativa', 'Teusaquillo']",9.540000246488489e-05,"['Engativa', 'Teusaquillo']",5.65999980608467e-05,1,1,TFSC,13.3
+car570,San Cristobal,60,"['San Cristobal', 'Martires', 'Santa Fe']",0.00017130000196630135,"['San Cristobal', 'Martires', 'Santa Fe']",6.349999966914766e-05,2,2,KPAMS,18.5
+car571,Tunjuelito,89,"['Tunjuelito', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.00022499999977299012,"['Tunjuelito', 'Rafael Uribe']",6.829999983892776e-05,4,1,RU,36.0
+car572,San Cristobal,60,"['San Cristobal', 'Martires', 'Santa Fe']",0.0001779000012902543,"['San Cristobal', 'Martires', 'Santa Fe']",6.370000119204633e-05,2,2,KPAMS,18.5
+car573,Barrios Unidos,52,"['Barrios Unidos', 'Engativa', 'Santa Fe']",0.0001224999978148844,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.959999907645397e-05,2,2,TFSC,23.5
+car574,Candelaria,65,"['Candelaria', 'Santa Fe']",7.750000077066943e-05,"['Candelaria', 'Teusaquillo']",5.0999999075429514e-05,1,1,TFSC,13.3
+car575,Martires,72,"['Martires', 'Santa Fe']",0.0002212999970652163,"['Martires', 'Santa Fe']",5.2600000344682485e-05,1,1,KPAMS,8.0
+car576,Engativa,55,"['Engativa', 'Santa Fe']",9.950000094249845e-05,"['Engativa', 'Teusaquillo']",5.6799999583745375e-05,1,1,TFSC,13.3
+car577,Antonio Nariño,79,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.0002334000018890947,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.420000136131421e-05,2,2,KPAMS,18.5
+car578,Barrios Unidos,61,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",0.00013039999976172112,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.999999848427251e-05,2,2,TFSC,23.5
+car579,Kennedy,85,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00022600000011152588,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.55999974696897e-05,2,2,KPAMS,18.5
+car580,Bosa,53,"['Bosa', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00035799999750452116,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.319999738479964e-05,4,3,KPAMS,42.5
+car581,Martires,92,"['Martires', 'Santa Fe']",0.00021879999985685572,"['Martires', 'Santa Fe']",5.279999822960235e-05,1,1,KPAMS,8.0
+car582,Barrios Unidos,91,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.649999992689118e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.77000027988106e-05,2,2,TFSC,23.5
+car583,Engativa,76,"['Engativa', 'Teusaquillo']",0.00010029999975813553,"['Engativa', 'Teusaquillo']",5.450000026030466e-05,1,1,TFSC,13.3
+car584,Tunjuelito,65,"['Tunjuelito', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00024620000112918206,"['Tunjuelito', 'Rafael Uribe']",6.849999772384763e-05,4,1,RU,36.0
+car585,Engativa,69,"['Engativa', 'Teusaquillo']",0.00010439999823574908,"['Engativa', 'Teusaquillo']",5.509999755304307e-05,1,1,TFSC,13.3
+car586,Engativa,78,"['Engativa', 'Santa Fe']",9.620000128052197e-05,"['Engativa', 'Teusaquillo']",5.3400002798298374e-05,1,1,TFSC,13.3
+car587,San Cristobal,87,"['San Cristobal', 'Martires', 'Santa Fe']",0.00023380000129691325,"['San Cristobal', 'Martires', 'Santa Fe']",6.38999990769662e-05,2,2,KPAMS,18.5
+car588,Antonio Nariño,97,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.0002623999971547164,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.41999977233354e-05,2,2,KPAMS,18.5
+car589,Bosa,51,"['Bosa', 'Ciudad Bolivar', 'Tunjuelito', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00035939999725087546,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.529999882332049e-05,7,3,KPAMS,42.5
+car590,Usme,81,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00020700000095530413,"['Usme', 'Rafael Uribe']",5.650000093737617e-05,4,1,RU,25.0
+car591,Antonio Nariño,77,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00024960000155260786,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.310000026132911e-05,2,2,KPAMS,18.5
+car592,Bosa,96,"['Bosa', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0003271999994467478,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.289999873843044e-05,4,3,KPAMS,42.5
+car593,Bosa,60,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.00033970000004046597,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.180000127642415e-05,3,3,KPAMS,42.5
+car594,Martires,59,"['Martires', 'Santa Fe']",0.0002330999996047467,"['Martires', 'Santa Fe']",5.1799997891066596e-05,1,1,KPAMS,8.0
+car595,Usme,64,"['Usme', 'San Cristobal', 'Martires', 'Santa Fe']",0.00020770000264747068,"['Usme', 'Rafael Uribe']",5.790000068373047e-05,3,1,RU,25.0
+car596,Tunjuelito,97,"['Tunjuelito', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.00022629999875789508,"['Tunjuelito', 'Rafael Uribe']",6.809999831602909e-05,3,1,RU,36.0
+car597,Kennedy,78,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00023670000155107118,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.330000178422779e-05,2,2,KPAMS,18.5
+car598,Tunjuelito,59,"['Tunjuelito', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.00022819999867351726,"['Tunjuelito', 'Rafael Uribe']",6.639999992330559e-05,3,1,RU,36.0
+car599,Ciudad Bolivar,87,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0002817999993567355,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.850000136182643e-05,4,3,KPAMS,48.8
+car600,Engativa,62,"['Engativa', 'Teusaquillo']",9.729999874252826e-05,"['Engativa', 'Teusaquillo']",5.7199998991563916e-05,1,1,TFSC,13.3
+car601,Engativa,83,"['Engativa', 'Teusaquillo']",9.539999882690609e-05,"['Engativa', 'Teusaquillo']",5.5900000006658956e-05,1,1,TFSC,13.3
+car602,Puente Aranda,64,"['Puente Aranda', 'Santa Fe']",0.0002432000001135748,"['Puente Aranda', 'Santa Fe']",5.4299998737405986e-05,1,1,KPAMS,8.0
+car603,Barrios Unidos,97,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.819999831961468e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.869999949936755e-05,2,2,TFSC,23.5
+car604,Usme,56,"['Usme', 'San Cristobal', 'Martires', 'Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00017640000078245066,"['Usme', 'Rafael Uribe']",5.560000136028975e-05,5,1,RU,25.0
+car605,Engativa,90,"['Engativa', 'Teusaquillo']",9.579999823472463e-05,"['Engativa', 'Teusaquillo']",5.4600001021753997e-05,1,1,TFSC,13.3
+car606,Candelaria,94,"['Candelaria', 'Santa Fe']",7.76999986555893e-05,"['Candelaria', 'Teusaquillo']",4.9700000090524554e-05,1,1,TFSC,13.3
+car607,Ciudad Bolivar,81,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0002865999995265156,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.850000136182643e-05,4,3,KPAMS,48.8
+car608,Tunjuelito,99,"['Tunjuelito', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.0002404000006208662,"['Tunjuelito', 'Rafael Uribe']",6.81000019540079e-05,6,1,RU,36.0
+car609,Antonio Nariño,92,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.0002521999995224178,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.460000076913275e-05,2,2,KPAMS,18.5
+car610,Kennedy,64,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00025240000104531646,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.370000119204633e-05,2,2,KPAMS,18.5
+car611,Martires,90,"['Martires', 'Santa Fe']",0.00025599999935366213,"['Martires', 'Santa Fe']",5.3899999329587445e-05,1,1,KPAMS,8.0
+car612,Antonio Nariño,89,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00024759999723755755,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.399999983841553e-05,2,2,KPAMS,18.5
+car613,Barrios Unidos,95,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.560000034980476e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.750000127591193e-05,2,2,TFSC,23.5
+car614,Usme,67,"['Usme', 'San Cristobal', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00020399999993969686,"['Usme', 'Rafael Uribe']",5.639999653794803e-05,4,1,RU,25.0
+car615,Usme,85,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00020599999697878957,"['Usme', 'Rafael Uribe']",5.5199998314492404e-05,5,1,RU,25.0
+car616,Martires,67,"['Martires', 'Santa Fe']",0.00024589999884483404,"['Martires', 'Santa Fe']",5.310000051395036e-05,1,1,KPAMS,8.0
+car617,Bosa,59,"['Bosa', 'Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00032590000046184286,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.610000127693638e-05,5,3,KPAMS,42.5
+car618,Martires,63,"['Martires', 'Santa Fe']",0.00024560000019846484,"['Martires', 'Santa Fe']",5.280000186758116e-05,1,1,KPAMS,8.0
+car619,Tunjuelito,50,"['Tunjuelito', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.00022629999875789508,"['Tunjuelito', 'Rafael Uribe']",6.750000102329068e-05,4,1,RU,36.0
+car620,Barrios Unidos,95,"['Barrios Unidos', 'Engativa', 'Santa Fe']",0.0001021999996737577,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.989999772282317e-05,2,2,TFSC,23.5
+car621,Kennedy,76,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.000283800000033807,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.349999966914766e-05,2,2,KPAMS,18.5
+car622,Puente Aranda,69,"['Puente Aranda', 'Santa Fe']",0.0002563999987614807,"['Puente Aranda', 'Santa Fe']",5.439999949885532e-05,1,1,KPAMS,8.0
+car623,Engativa,54,"['Engativa', 'Santa Fe']",9.469999713473953e-05,"['Engativa', 'Teusaquillo']",5.6000000768108293e-05,1,1,TFSC,13.3
+car624,San Cristobal,79,"['San Cristobal', 'Martires', 'Santa Fe']",0.00020339999900897965,"['San Cristobal', 'Martires', 'Santa Fe']",6.55999974696897e-05,2,2,KPAMS,18.5
+car625,Barrios Unidos,82,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.869999848888256e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.639999653794803e-05,2,2,TFSC,23.5
+car626,Kennedy,77,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00027290000070934184,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.500000017695129e-05,2,2,KPAMS,18.5
+car627,Barrios Unidos,69,"['Barrios Unidos', 'Engativa', 'Santa Fe']",0.0001007999999274034,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.609999789157882e-05,2,2,TFSC,23.5
+car628,Puente Aranda,98,"['Puente Aranda', 'Santa Fe']",0.00023599999985890463,"['Puente Aranda', 'Santa Fe']",5.360000068321824e-05,1,1,KPAMS,8.0
+car629,Candelaria,90,"['Candelaria', 'Santa Fe']",7.719999848632142e-05,"['Candelaria', 'Teusaquillo']",5.020000025979243e-05,1,1,TFSC,13.3
+car630,Usme,59,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.000207199998840224,"['Usme', 'Rafael Uribe']",5.6499997299397364e-05,4,1,RU,25.0
+car631,Engativa,71,"['Engativa', 'Santa Fe']",9.700000009615906e-05,"['Engativa', 'Teusaquillo']",5.5999997130129486e-05,1,1,TFSC,13.3
+car632,Ciudad Bolivar,78,"['Ciudad Bolivar', 'Tunjuelito', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.0002817999993567355,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.959999882383272e-05,6,3,KPAMS,48.8
+car633,Puente Aranda,96,"['Puente Aranda', 'Santa Fe']",0.00025909999749273993,"['Puente Aranda', 'Santa Fe']",5.4600001021753997e-05,1,1,KPAMS,8.0
+car634,Barrios Unidos,69,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.619999764254317e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.759999839938246e-05,2,2,TFSC,23.5
+car635,Puente Aranda,94,"['Puente Aranda', 'Santa Fe']",0.00023100000180420466,"['Puente Aranda', 'Santa Fe']",5.400000009103678e-05,1,1,KPAMS,8.0
+car636,San Cristobal,80,"['San Cristobal', 'Martires', 'Santa Fe']",0.00017659999866737053,"['San Cristobal', 'Martires', 'Santa Fe']",6.320000102277845e-05,2,2,KPAMS,18.5
+car637,Barrios Unidos,73,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.979999958886765e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.62999994144775e-05,2,2,TFSC,23.5
+car638,San Cristobal,64,"['San Cristobal', 'Martires', 'Santa Fe']",0.00025409999943803996,"['San Cristobal', 'Martires', 'Santa Fe']",8.430000161752105e-05,2,2,KPAMS,18.5
+car639,Usme,94,"['Usme', 'San Cristobal', 'Martires', 'Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00021950000154902227,"['Usme', 'Rafael Uribe']",5.909999890718609e-05,5,1,RU,25.0
+car640,Bosa,67,"['Bosa', 'Ciudad Bolivar', 'Tunjuelito', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00032499999724677764,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.690000009257346e-05,7,3,KPAMS,42.5
+car641,Barrios Unidos,83,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.930000305757858e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.62999994144775e-05,2,2,TFSC,23.5
+car642,Candelaria,56,"['Candelaria', 'Teusaquillo']",7.820000246283598e-05,"['Candelaria', 'Teusaquillo']",5.0499998906161636e-05,1,1,TFSC,13.3
+car643,Ciudad Bolivar,91,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0003084999989368953,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.969999958528206e-05,3,3,KPAMS,48.8
+car644,San Cristobal,72,"['San Cristobal', 'Martires', 'Santa Fe']",0.00020109999968553893,"['San Cristobal', 'Martires', 'Santa Fe']",7.139999797800556e-05,2,2,KPAMS,18.5
+car645,Puente Aranda,78,"['Puente Aranda', 'Santa Fe']",0.00023270000019692816,"['Puente Aranda', 'Santa Fe']",5.5500000598840415e-05,1,1,KPAMS,8.0
+car646,Engativa,74,"['Engativa', 'Teusaquillo']",9.76999981503468e-05,"['Engativa', 'Teusaquillo']",5.669999882229604e-05,1,1,TFSC,13.3
+car647,Martires,61,"['Martires', 'Santa Fe']",0.0002310999989276752,"['Martires', 'Santa Fe']",5.1300001359777525e-05,1,1,KPAMS,8.0
+car648,Tunjuelito,61,"['Tunjuelito', 'Puente Aranda', 'Martires', 'Santa Fe']",0.000245400002313545,"['Tunjuelito', 'Rafael Uribe']",6.769999890821055e-05,3,1,RU,36.0
+car649,San Cristobal,93,"['San Cristobal', 'Martires', 'Santa Fe']",0.00017600000137463212,"['San Cristobal', 'Martires', 'Santa Fe']",6.349999966914766e-05,2,2,KPAMS,18.5
+car650,Ciudad Bolivar,63,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0003097000007983297,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.880000000819564e-05,3,3,KPAMS,48.8
+car651,Engativa,78,"['Engativa', 'Santa Fe']",0.00010089999705087394,"['Engativa', 'Teusaquillo']",5.6000000768108293e-05,1,1,TFSC,13.3
+car652,Tunjuelito,99,"['Tunjuelito', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.00027090000003227033,"['Tunjuelito', 'Rafael Uribe']",6.880000000819564e-05,4,1,RU,36.0
+car653,Martires,85,"['Martires', 'Santa Fe']",0.00023909999799798243,"['Martires', 'Santa Fe']",5.199999941396527e-05,1,1,KPAMS,8.0
+car654,Antonio Nariño,97,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.0002060999977402389,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.38999990769662e-05,2,2,KPAMS,18.5
+car655,Antonio Nariño,73,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00027659999977913685,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.289999873843044e-05,2,2,KPAMS,18.5
+car656,Usme,60,"['Usme', 'San Cristobal', 'Martires', 'Santa Fe']",0.0002041000007011462,"['Usme', 'Rafael Uribe']",5.620000229100697e-05,3,1,RU,25.0
+car657,San Cristobal,86,"['San Cristobal', 'Martires', 'Santa Fe']",0.00022840000019641593,"['San Cristobal', 'Martires', 'Santa Fe']",6.339999890769832e-05,2,2,KPAMS,18.5
+car658,Antonio Nariño,99,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00024980000307550654,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.70000008540228e-05,2,2,KPAMS,18.5
+car659,Ciudad Bolivar,84,"['Ciudad Bolivar', 'Kennedy', 'Tunjuelito', 'Puente Aranda', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.0003010000000358559,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.98000003467314e-05,7,3,KPAMS,48.8
+car660,Tunjuelito,77,"['Tunjuelito', 'Antonio Nariño', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00027009999757865444,"['Tunjuelito', 'Rafael Uribe']",6.919999941601418e-05,4,1,RU,36.0
+car661,Candelaria,91,"['Candelaria', 'Santa Fe']",7.79999973019585e-05,"['Candelaria', 'Teusaquillo']",5.079999755253084e-05,1,1,TFSC,13.3
+car662,Martires,95,"['Martires', 'Santa Fe']",0.00024530000155209564,"['Martires', 'Santa Fe']",5.239999882178381e-05,1,1,KPAMS,8.0
+car663,Martires,80,"['Martires', 'Santa Fe']",0.00025690000256872736,"['Martires', 'Santa Fe']",5.120000059832819e-05,1,1,KPAMS,8.0
+car664,Bosa,93,"['Bosa', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00035570000181905925,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.529999882332049e-05,4,3,KPAMS,42.5
+car665,Engativa,64,"['Engativa', 'Teusaquillo']",9.240000144927762e-05,"['Engativa', 'Teusaquillo']",5.5900000006658956e-05,1,1,TFSC,13.3
+car666,San Cristobal,88,"['San Cristobal', 'Martires', 'Santa Fe']",0.0001852000023063738,"['San Cristobal', 'Martires', 'Santa Fe']",6.320000102277845e-05,2,2,KPAMS,18.5
+car667,Ciudad Bolivar,78,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0002767000005405862,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.84000006003771e-05,4,3,KPAMS,48.8
+car668,San Cristobal,89,"['San Cristobal', 'Martires', 'Santa Fe']",0.00019719999909284525,"['San Cristobal', 'Martires', 'Santa Fe']",6.299999949987978e-05,2,2,KPAMS,18.5
+car669,Candelaria,95,"['Candelaria', 'Teusaquillo']",7.76999986555893e-05,"['Candelaria', 'Teusaquillo']",4.9799997213995084e-05,1,1,TFSC,13.3
+car670,Puente Aranda,91,"['Puente Aranda', 'Santa Fe']",0.00022569999782717787,"['Puente Aranda', 'Santa Fe']",5.3499999921768904e-05,1,1,KPAMS,8.0
+car671,Puente Aranda,71,"['Puente Aranda', 'Santa Fe']",0.0002672000009624753,"['Puente Aranda', 'Santa Fe']",5.270000110613182e-05,1,1,KPAMS,8.0
+car672,Candelaria,92,"['Candelaria', 'Teusaquillo']",7.74000000092201e-05,"['Candelaria', 'Teusaquillo']",4.940000144415535e-05,1,1,TFSC,13.3
+car673,Candelaria,65,"['Candelaria', 'Santa Fe']",8.089999755611643e-05,"['Candelaria', 'Teusaquillo']",4.939999780617654e-05,1,1,TFSC,13.3
+car674,Engativa,66,"['Engativa', 'Santa Fe']",9.370000043418258e-05,"['Engativa', 'Teusaquillo']",5.569999848376028e-05,1,1,TFSC,13.3
+car675,Engativa,67,"['Engativa', 'Teusaquillo']",9.829999908106402e-05,"['Engativa', 'Teusaquillo']",5.6000000768108293e-05,1,1,TFSC,13.3
+car676,Engativa,81,"['Engativa', 'Teusaquillo']",9.900000077323057e-05,"['Engativa', 'Teusaquillo']",5.32000012753997e-05,1,1,TFSC,13.3
+car677,Tunjuelito,92,"['Tunjuelito', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.0002578999992692843,"['Tunjuelito', 'Rafael Uribe']",7.019999975454994e-05,5,1,RU,36.0
+car678,Martires,60,"['Martires', 'Santa Fe']",0.0002548000011302065,"['Martires', 'Santa Fe']",5.2600000344682485e-05,1,1,KPAMS,8.0
+car679,Engativa,83,"['Engativa', 'Santa Fe']",9.299999874201603e-05,"['Engativa', 'Teusaquillo']",5.4700001783203334e-05,1,1,TFSC,13.3
+car680,Tunjuelito,61,"['Tunjuelito', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00024699999994481914,"['Tunjuelito', 'Rafael Uribe']",6.809999831602909e-05,5,1,RU,36.0
+car681,Antonio Nariño,67,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00024190000112866983,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.850000136182643e-05,2,2,KPAMS,18.5
+car682,Puente Aranda,85,"['Puente Aranda', 'Santa Fe']",0.00027100000079371966,"['Puente Aranda', 'Santa Fe']",5.3899999329587445e-05,1,1,KPAMS,8.0
+car683,Antonio Nariño,53,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00027459999910206534,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.379999831551686e-05,2,2,KPAMS,18.5
+car684,Antonio Nariño,86,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.0002342000007047318,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.22000006842427e-05,2,2,KPAMS,18.5
+car685,Ciudad Bolivar,66,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0002941999991890043,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.820000271545723e-05,4,3,KPAMS,48.8
+car686,San Cristobal,92,"['San Cristobal', 'Martires', 'Santa Fe']",0.0002289000003656838,"['San Cristobal', 'Martires', 'Santa Fe']",6.510000093840063e-05,2,2,KPAMS,18.5
+car687,Barrios Unidos,58,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.480000153416768e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",6.299999949987978e-05,2,2,TFSC,23.5
+car688,Ciudad Bolivar,64,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.00031230000240611844,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.720000237692147e-05,6,3,KPAMS,48.8
+car689,Puente Aranda,99,"['Puente Aranda', 'Santa Fe']",0.00024289999782922678,"['Puente Aranda', 'Santa Fe']",5.4699998145224527e-05,1,1,KPAMS,8.0
+car690,Usme,91,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00019600000086938962,"['Usme', 'Rafael Uribe']",5.900000178371556e-05,5,1,RU,25.0
+car691,San Cristobal,55,"['San Cristobal', 'Martires', 'Santa Fe']",0.00021609999748761766,"['San Cristobal', 'Martires', 'Santa Fe']",6.439999924623407e-05,2,2,KPAMS,18.5
+car692,Antonio Nariño,60,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00021080000078654848,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.380000195349567e-05,2,2,KPAMS,18.5
+car693,Puente Aranda,67,"['Puente Aranda', 'Santa Fe']",0.00023069999951985665,"['Puente Aranda', 'Santa Fe']",5.439999949885532e-05,1,1,KPAMS,8.0
+car694,Ciudad Bolivar,84,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00030160000096657313,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.819999907747842e-05,4,3,KPAMS,48.8
+car695,Bosa,80,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.00035039999784203246,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.539999958476983e-05,3,3,KPAMS,42.5
+car696,Candelaria,52,"['Candelaria', 'Santa Fe']",7.749999713269062e-05,"['Candelaria', 'Teusaquillo']",5.0999999075429514e-05,1,1,TFSC,13.3
+car697,Engativa,65,"['Engativa', 'Teusaquillo']",0.00012399999832268804,"['Engativa', 'Teusaquillo']",5.999999848427251e-05,1,1,TFSC,13.3
+car698,Antonio Nariño,79,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00023119999968912452,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.55999974696897e-05,2,2,KPAMS,18.5
+car699,Barrios Unidos,64,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.870000212686136e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.700000110664405e-05,2,2,TFSC,23.5
+car700,Puente Aranda,83,"['Puente Aranda', 'Santa Fe']",0.0002505000011296943,"['Puente Aranda', 'Santa Fe']",5.3599997045239434e-05,1,1,KPAMS,8.0
+car701,Bosa,52,"['Bosa', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0003619999988586642,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.569999823113903e-05,4,3,KPAMS,42.5
+car702,San Cristobal,89,"['San Cristobal', 'Martires', 'Santa Fe']",0.00020460000087041408,"['San Cristobal', 'Martires', 'Santa Fe']",6.360000043059699e-05,2,2,KPAMS,18.5
+car703,Martires,58,"['Martires', 'Santa Fe']",0.00024500000290572643,"['Martires', 'Santa Fe']",5.2200000936863944e-05,1,1,KPAMS,8.0
+car704,Candelaria,64,"['Candelaria', 'Santa Fe']",7.790000017848797e-05,"['Candelaria', 'Teusaquillo']",5.0499998906161636e-05,1,1,TFSC,13.3
+car705,Barrios Unidos,94,"['Barrios Unidos', 'Engativa', 'Santa Fe']",0.00010199999815085903,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.740000051446259e-05,2,2,TFSC,23.5
+car706,Kennedy,54,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002767999976640567,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.38999990769662e-05,2,2,KPAMS,18.5
+car707,Kennedy,84,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002696999981708359,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.189999839989468e-05,2,2,KPAMS,18.5
+car708,Kennedy,80,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002911000010499265,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.539999958476983e-05,2,2,KPAMS,18.5
+car709,Puente Aranda,90,"['Puente Aranda', 'Santa Fe']",0.00024360000315937214,"['Puente Aranda', 'Santa Fe']",5.400000009103678e-05,1,1,KPAMS,8.0
+car710,Tunjuelito,68,"['Tunjuelito', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.0002488999998604413,"['Tunjuelito', 'Rafael Uribe']",6.849999772384763e-05,5,1,RU,36.0
+car711,San Cristobal,62,"['San Cristobal', 'Martires', 'Santa Fe']",0.00023950000104377978,"['San Cristobal', 'Martires', 'Santa Fe']",6.299999949987978e-05,2,2,KPAMS,18.5
+car712,Tunjuelito,75,"['Tunjuelito', 'Antonio Nariño', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00023750000036670826,"['Tunjuelito', 'Rafael Uribe']",6.800000119255856e-05,4,1,RU,36.0
+car713,Martires,91,"['Martires', 'Santa Fe']",0.00021489999926416203,"['Martires', 'Santa Fe']",5.280000186758116e-05,1,1,KPAMS,8.0
+car714,Bosa,83,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0003828000008070376,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.619999840040691e-05,3,3,KPAMS,42.5
+car715,Martires,63,"['Martires', 'Santa Fe']",0.0002372999988438096,"['Martires', 'Santa Fe']",5.280000186758116e-05,1,1,KPAMS,8.0
+car716,Tunjuelito,52,"['Tunjuelito', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Puente Aranda', 'Santa Fe']",0.0002829000004567206,"['Tunjuelito', 'Rafael Uribe']",6.779999966965988e-05,5,1,RU,36.0
+car717,Kennedy,93,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00030300000071292743,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.239999856916256e-05,2,2,KPAMS,18.5
+car718,Tunjuelito,62,"['Tunjuelito', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.0002299999978276901,"['Tunjuelito', 'Rafael Uribe']",6.86999992467463e-05,4,1,RU,36.0
+car719,Usme,69,"['Usme', 'San Cristobal', 'Martires', 'Puente Aranda', 'Antonio Nariño', 'Rafael Uribe']",0.0002220999995188322,"['Usme', 'Rafael Uribe']",5.7600002037361264e-05,5,1,RU,25.0
+car720,Usme,80,"['Usme', 'San Cristobal', 'Martires', 'Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00020629999926313758,"['Usme', 'Rafael Uribe']",5.4299998737405986e-05,5,1,RU,25.0
+car721,Kennedy,58,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00026989999969373457,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.400000347639434e-05,2,2,KPAMS,18.5
+car722,San Cristobal,75,"['San Cristobal', 'Martires', 'Santa Fe']",0.00018769999951473437,"['San Cristobal', 'Martires', 'Santa Fe']",6.489999941550195e-05,2,2,KPAMS,18.5
+car723,Martires,58,"['Martires', 'Santa Fe']",0.0002663999985088594,"['Martires', 'Santa Fe']",5.279999822960235e-05,1,1,KPAMS,8.0
+car724,Barrios Unidos,59,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.960000170394778e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.790000068373047e-05,2,2,TFSC,23.5
+car725,Tunjuelito,73,"['Tunjuelito', 'Antonio Nariño', 'Martires', 'Puente Aranda', 'Santa Fe']",0.0002789999998640269,"['Tunjuelito', 'Rafael Uribe']",6.859999848529696e-05,4,1,RU,36.0
+car726,San Cristobal,64,"['San Cristobal', 'Martires', 'Santa Fe']",0.00018679999993764795,"['San Cristobal', 'Martires', 'Santa Fe']",6.849999772384763e-05,2,2,KPAMS,18.5
+car727,Bosa,56,"['Bosa', 'Kennedy', 'Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00034840000080293976,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.629999916185625e-05,4,3,KPAMS,42.5
+car728,Candelaria,78,"['Candelaria', 'Santa Fe']",7.779999941703863e-05,"['Candelaria', 'Teusaquillo']",5.160000000614673e-05,1,1,TFSC,13.3
+car729,Candelaria,95,"['Candelaria', 'Santa Fe']",7.720000212430023e-05,"['Candelaria', 'Teusaquillo']",4.850000186706893e-05,1,1,TFSC,13.3
+car730,Bosa,73,"['Bosa', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00033070000063162297,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.450000000768341e-05,4,3,KPAMS,42.5
+car731,Bosa,98,"['Bosa', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0003677000022435095,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.299999949987978e-05,4,3,KPAMS,42.5
+car732,Tunjuelito,52,"['Tunjuelito', 'Antonio Nariño', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00022959999841987155,"['Tunjuelito', 'Rafael Uribe']",6.81000019540079e-05,4,1,RU,36.0
+car733,Antonio Nariño,89,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.0002604000001156237,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.669999856967479e-05,2,2,KPAMS,18.5
+car734,Ciudad Bolivar,96,"['Ciudad Bolivar', 'Bosa', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0003041000018129125,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.870000288472511e-05,5,3,KPAMS,48.8
+car735,Tunjuelito,71,"['Tunjuelito', 'Antonio Nariño', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00021839999681105837,"['Tunjuelito', 'Rafael Uribe']",6.790000043110922e-05,4,1,RU,36.0
+car736,Engativa,56,"['Engativa', 'Teusaquillo']",0.0001005000012810342,"['Engativa', 'Teusaquillo']",5.62999994144775e-05,1,1,TFSC,13.3
+car737,Martires,90,"['Martires', 'Santa Fe']",0.00021249999917927198,"['Martires', 'Santa Fe']",5.289999899105169e-05,1,1,KPAMS,8.0
+car738,Usme,99,"['Usme', 'San Cristobal', 'Martires', 'Santa Fe']",0.00019839999731630087,"['Usme', 'Rafael Uribe']",5.7199998991563916e-05,3,1,RU,25.0
+car739,Antonio Nariño,91,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.0002674999996088445,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.769999890821055e-05,2,2,KPAMS,18.5
+car740,Puente Aranda,65,"['Puente Aranda', 'Santa Fe']",0.0002459999996062834,"['Puente Aranda', 'Santa Fe']",5.5400003475369886e-05,1,1,KPAMS,8.0
+car741,Tunjuelito,87,"['Tunjuelito', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0002482999989297241,"['Tunjuelito', 'Rafael Uribe']",6.610000127693638e-05,3,1,RU,36.0
+car742,Martires,69,"['Martires', 'Santa Fe']",0.00022470000112662092,"['Martires', 'Santa Fe']",5.270000110613182e-05,1,1,KPAMS,8.0
+car743,San Cristobal,87,"['San Cristobal', 'Martires', 'Santa Fe']",0.00022159999934956431,"['San Cristobal', 'Martires', 'Santa Fe']",6.360000043059699e-05,2,2,KPAMS,18.5
+car744,Puente Aranda,68,"['Puente Aranda', 'Santa Fe']",0.00025919999825418927,"['Puente Aranda', 'Santa Fe']",5.409999721450731e-05,1,1,KPAMS,8.0
+car745,Ciudad Bolivar,87,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.00027879999834112823,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.999999823165126e-05,3,3,KPAMS,48.8
+car746,Tunjuelito,99,"['Tunjuelito', 'Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00024680000205989927,"['Tunjuelito', 'Rafael Uribe']",6.669999856967479e-05,3,1,RU,36.0
+car747,Tunjuelito,66,"['Tunjuelito', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00023879999935161322,"['Tunjuelito', 'Rafael Uribe']",6.579999899258837e-05,5,1,RU,36.0
+car748,San Cristobal,81,"['San Cristobal', 'Martires', 'Santa Fe']",0.0002117000003636349,"['San Cristobal', 'Martires', 'Santa Fe']",6.38999990769662e-05,2,2,KPAMS,18.5
+car749,Bosa,82,"['Bosa', 'Kennedy', 'Antonio Nariño', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00036130000080447644,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.539999958476983e-05,5,3,KPAMS,42.5
+car750,Engativa,73,"['Engativa', 'Santa Fe']",9.59999997576233e-05,"['Engativa', 'Teusaquillo']",5.690000034519471e-05,1,1,TFSC,13.3
+car751,Puente Aranda,79,"['Puente Aranda', 'Santa Fe']",0.0005210999988776166,"['Puente Aranda', 'Santa Fe']",0.00012129999959142879,1,1,KPAMS,8.0
+car752,Barrios Unidos,83,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",0.0001021999996737577,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",6.589999975403771e-05,2,2,TFSC,23.5
+car753,Engativa,91,"['Engativa', 'Santa Fe']",0.00011630000153672881,"['Engativa', 'Teusaquillo']",6.22000006842427e-05,1,1,TFSC,13.3
+car754,Tunjuelito,59,"['Tunjuelito', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00025969999842345715,"['Tunjuelito', 'Rafael Uribe']",7.700000060140155e-05,5,1,RU,36.0
+car755,Ciudad Bolivar,77,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.00027350000164005905,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.940000093891285e-05,6,3,KPAMS,48.8
+car756,Tunjuelito,53,"['Tunjuelito', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00023660000078962184,"['Tunjuelito', 'Rafael Uribe']",6.7299999500392e-05,5,1,RU,36.0
+car757,Antonio Nariño,73,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00023860000146669336,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.629999916185625e-05,2,2,KPAMS,18.5
+car758,Puente Aranda,93,"['Puente Aranda', 'Santa Fe']",0.00025749999986146577,"['Puente Aranda', 'Santa Fe']",5.450000026030466e-05,1,1,KPAMS,8.0
+car759,Martires,91,"['Martires', 'Santa Fe']",0.00027259999842499383,"['Martires', 'Santa Fe']",7.440000263159163e-05,1,1,KPAMS,8.0
+car760,San Cristobal,63,"['San Cristobal', 'Martires', 'Santa Fe']",0.00018799999816110358,"['San Cristobal', 'Martires', 'Santa Fe']",6.620000203838572e-05,2,2,KPAMS,18.5
+car761,Martires,51,"['Martires', 'Santa Fe']",0.0002094999981636647,"['Martires', 'Santa Fe']",5.189999865251593e-05,1,1,KPAMS,8.0
+car762,Martires,91,"['Martires', 'Santa Fe']",0.00023409999994328246,"['Martires', 'Santa Fe']",5.2699997468153015e-05,1,1,KPAMS,8.0
+car763,Bosa,60,"['Bosa', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.0003157999999530148,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.799999755457975e-05,5,3,KPAMS,42.5
+car764,Usme,58,"['Usme', 'San Cristobal', 'Martires', 'Santa Fe']",0.0002099999983329326,"['Usme', 'Rafael Uribe']",5.859999873791821e-05,3,1,RU,25.0
+car765,Antonio Nariño,65,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.0002389999972365331,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.27999979769811e-05,2,2,KPAMS,18.5
+car766,Bosa,58,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002987000007124152,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.350000330712646e-05,3,3,KPAMS,42.5
+car767,Antonio Nariño,82,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00022230000104173087,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.159999975352548e-05,2,2,KPAMS,18.5
+car768,Ciudad Bolivar,74,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.00029739999808953144,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.479999865405262e-05,3,3,KPAMS,48.8
+car769,Candelaria,62,"['Candelaria', 'Teusaquillo']",7.380000170087442e-05,"['Candelaria', 'Teusaquillo']",5.1700000767596066e-05,1,1,TFSC,13.3
+car770,Ciudad Bolivar,54,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002899999999499414,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.439999924623407e-05,3,3,KPAMS,48.8
+car771,Bosa,90,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0003189999988535419,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.349999966914766e-05,3,3,KPAMS,42.5
+car772,Bosa,95,"['Bosa', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0003178999977535568,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",5.9799996961373836e-05,4,3,KPAMS,42.5
+car773,Tunjuelito,64,"['Tunjuelito', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0002297000028192997,"['Tunjuelito', 'Rafael Uribe']",6.589999975403771e-05,4,1,RU,36.0
+car774,Martires,60,"['Martires', 'Santa Fe']",0.00024280000070575625,"['Martires', 'Santa Fe']",5.03999981447123e-05,1,1,KPAMS,8.0
+car775,Puente Aranda,53,"['Puente Aranda', 'Santa Fe']",0.0002566999974078499,"['Puente Aranda', 'Santa Fe']",5.1300001359777525e-05,1,1,KPAMS,8.0
+car776,San Cristobal,71,"['San Cristobal', 'Martires', 'Santa Fe']",0.00020880000010947697,"['San Cristobal', 'Martires', 'Santa Fe']",6.460000076913275e-05,2,2,KPAMS,18.5
+car777,Tunjuelito,63,"['Tunjuelito', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00025580000146874227,"['Tunjuelito', 'Rafael Uribe']",6.469999789260328e-05,5,1,RU,36.0
+car778,Antonio Nariño,75,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.0002463000018906314,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.24999993306119e-05,2,2,KPAMS,18.5
+car779,Barrios Unidos,85,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",8.609999713371508e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.509999755304307e-05,2,2,TFSC,23.5
+car780,Usme,84,"['Usme', 'San Cristobal', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00019350000002305023,"['Usme', 'Rafael Uribe']",5.360000068321824e-05,4,1,RU,25.0
+car781,Antonio Nariño,91,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00021209999977145344,"['Antonio Nariño', 'Martires', 'Santa Fe']",5.999999848427251e-05,2,2,KPAMS,18.5
+car782,Engativa,94,"['Engativa', 'Santa Fe']",9.159999899566174e-05,"['Engativa', 'Teusaquillo']",5.48999996681232e-05,1,1,TFSC,13.3
+car783,Antonio Nariño,86,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00024219999977503903,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.049999865354039e-05,2,2,KPAMS,18.5
+car784,San Cristobal,61,"['San Cristobal', 'Martires', 'Santa Fe']",0.00019040000188397244,"['San Cristobal', 'Martires', 'Santa Fe']",6.380000195349567e-05,2,2,KPAMS,18.5
+car785,San Cristobal,64,"['San Cristobal', 'Martires', 'Santa Fe']",0.00022119999994174577,"['San Cristobal', 'Martires', 'Santa Fe']",6.189999839989468e-05,2,2,KPAMS,18.5
+car786,Ciudad Bolivar,84,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Martires', 'Antonio Nariño', 'San Cristobal', 'Rafael Uribe']",0.0002701999983401038,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.529999882332049e-05,6,3,KPAMS,48.8
+car787,Bosa,87,"['Bosa', 'Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.0003805999986070674,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",8.940000043367036e-05,6,3,KPAMS,42.5
+car788,Candelaria,93,"['Candelaria', 'Teusaquillo']",7.729999924777076e-05,"['Candelaria', 'Teusaquillo']",5.509999755304307e-05,1,1,TFSC,13.3
+car789,Antonio Nariño,61,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00028480000037234277,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.850000136182643e-05,2,2,KPAMS,18.5
+car790,San Cristobal,90,"['San Cristobal', 'Martires', 'Santa Fe']",0.0002044000029854942,"['San Cristobal', 'Martires', 'Santa Fe']",6.519999806187116e-05,2,2,KPAMS,18.5
+car791,Puente Aranda,99,"['Puente Aranda', 'Santa Fe']",0.00022670000180369243,"['Puente Aranda', 'Santa Fe']",5.360000068321824e-05,1,1,KPAMS,8.0
+car792,Barrios Unidos,95,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",0.00010100000145030208,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.539999983739108e-05,2,2,TFSC,23.5
+car793,Puente Aranda,51,"['Puente Aranda', 'Santa Fe']",0.00021940000078757294,"['Puente Aranda', 'Santa Fe']",5.140000212122686e-05,1,1,KPAMS,8.0
+car794,Bosa,51,"['Bosa', 'Kennedy', 'Antonio Nariño', 'Martires', 'Puente Aranda', 'Santa Fe']",0.0003189999988535419,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.539999958476983e-05,5,3,KPAMS,42.5
+car795,Candelaria,94,"['Candelaria', 'Santa Fe']",0.00010760000077425502,"['Candelaria', 'Teusaquillo']",7.850000110920519e-05,1,1,TFSC,13.3
+car796,Barrios Unidos,75,"['Barrios Unidos', 'Engativa', 'Santa Fe']",0.00010130000009667128,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",6.639999992330559e-05,2,2,TFSC,23.5
+car797,Ciudad Bolivar,60,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00028840000231866725,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",7.040000127744861e-05,4,3,KPAMS,48.8
+car798,Engativa,56,"['Engativa', 'Santa Fe']",9.380000119563192e-05,"['Engativa', 'Teusaquillo']",5.7600002037361264e-05,1,1,TFSC,13.3
+car799,Tunjuelito,71,"['Tunjuelito', 'Antonio Nariño', 'Martires', 'Puente Aranda', 'Santa Fe']",0.000269199998001568,"['Tunjuelito', 'Rafael Uribe']",6.98000003467314e-05,4,1,RU,36.0
+car800,Usme,62,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00017920000027515925,"['Usme', 'Rafael Uribe']",5.7600002037361264e-05,5,1,RU,25.0
+car801,Martires,65,"['Martires', 'Santa Fe']",0.00022059999901102856,"['Martires', 'Santa Fe']",5.129999772179872e-05,1,1,KPAMS,8.0
+car802,Martires,98,"['Martires', 'Santa Fe']",0.00022820000231149606,"['Martires', 'Santa Fe']",5.120000059832819e-05,1,1,KPAMS,8.0
+car803,Candelaria,78,"['Candelaria', 'Teusaquillo']",7.43000018701423e-05,"['Candelaria', 'Teusaquillo']",5.1300001359777525e-05,1,1,TFSC,13.3
+car804,Barrios Unidos,52,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.969999882741831e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.6400000175926834e-05,2,2,TFSC,23.5
+car805,Martires,82,"['Martires', 'Santa Fe']",0.00017660000230534934,"['Martires', 'Santa Fe']",4.980000085197389e-05,1,1,KPAMS,8.0
+car806,San Cristobal,80,"['San Cristobal', 'Martires', 'Santa Fe']",0.000225800002226606,"['San Cristobal', 'Martires', 'Santa Fe']",6.170000051497482e-05,2,2,KPAMS,18.5
+car807,Engativa,85,"['Engativa', 'Teusaquillo']",0.00020399999993969686,"['Engativa', 'Teusaquillo']",8.289999823318794e-05,1,1,TFSC,13.3
+car808,Engativa,94,"['Engativa', 'Santa Fe']",9.350000254926272e-05,"['Engativa', 'Teusaquillo']",5.699999746866524e-05,1,1,TFSC,13.3
+car809,Puente Aranda,97,"['Puente Aranda', 'Santa Fe']",0.00047820000327192247,"['Puente Aranda', 'Santa Fe']",5.5599997722310945e-05,1,1,KPAMS,8.0
+car810,Puente Aranda,97,"['Puente Aranda', 'Santa Fe']",0.00022610000087297522,"['Puente Aranda', 'Santa Fe']",5.230000169831328e-05,1,1,KPAMS,8.0
+car811,Tunjuelito,87,"['Tunjuelito', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.00026059999800054356,"['Tunjuelito', 'Rafael Uribe']",6.870000288472511e-05,4,1,RU,36.0
+car812,Martires,89,"['Martires', 'Santa Fe']",0.00026499999876250513,"['Martires', 'Santa Fe']",5.270000110613182e-05,1,1,KPAMS,8.0
+car813,Antonio Nariño,57,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00024169999960577115,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.550000034621917e-05,2,2,KPAMS,18.5
+car814,Puente Aranda,56,"['Puente Aranda', 'Santa Fe']",0.00022459999672719277,"['Puente Aranda', 'Santa Fe']",5.289999899105169e-05,1,1,KPAMS,8.0
+car815,Tunjuelito,54,"['Tunjuelito', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.00024330000087502412,"['Tunjuelito', 'Rafael Uribe']",7.330000153160654e-05,6,1,RU,36.0
+car816,San Cristobal,97,"['San Cristobal', 'Martires', 'Santa Fe']",0.0002482999989297241,"['San Cristobal', 'Martires', 'Santa Fe']",9.139999747276306e-05,2,2,KPAMS,18.5
+car817,Barrios Unidos,92,"['Barrios Unidos', 'Engativa', 'Santa Fe']",0.00012200000128359534,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",6.489999941550195e-05,2,2,TFSC,23.5
+car818,Puente Aranda,59,"['Puente Aranda', 'Santa Fe']",0.00024000000121304765,"['Puente Aranda', 'Santa Fe']",6.919999941601418e-05,1,1,KPAMS,8.0
+car819,Kennedy,87,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0003113999991910532,"['Kennedy', 'Puente Aranda', 'Santa Fe']",9.709999721962959e-05,2,2,KPAMS,18.5
+car820,Kennedy,64,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002840000015567057,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0001157000006060116,2,2,KPAMS,18.5
+car821,Martires,58,"['Martires', 'Santa Fe']",0.0002077999997709412,"['Martires', 'Santa Fe']",5.839999721501954e-05,1,1,KPAMS,8.0
+car822,Martires,64,"['Martires', 'Santa Fe']",0.00023839999994379468,"['Martires', 'Santa Fe']",5.160000000614673e-05,1,1,KPAMS,8.0
+car823,Barrios Unidos,60,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.299999874201603e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",6.0200000007171184e-05,2,2,TFSC,23.5
+car824,Bosa,67,"['Bosa', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0003163999972457532,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.600000051548705e-05,4,3,KPAMS,42.5
+car825,Barrios Unidos,69,"['Barrios Unidos', 'Engativa', 'Santa Fe']",8.910000178730115e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.620000229100697e-05,2,2,TFSC,23.5
+car826,Martires,65,"['Martires', 'Santa Fe']",0.00021050000214017928,"['Martires', 'Santa Fe']",5.120000059832819e-05,1,1,KPAMS,8.0
+car827,Tunjuelito,50,"['Tunjuelito', 'Antonio Nariño', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00023330000112764537,"['Tunjuelito', 'Rafael Uribe']",6.84000006003771e-05,4,1,RU,36.0
+car828,San Cristobal,66,"['San Cristobal', 'Martires', 'Santa Fe']",0.00020500000027823262,"['San Cristobal', 'Martires', 'Santa Fe']",6.370000119204633e-05,2,2,KPAMS,18.5
+car829,Barrios Unidos,73,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",0.00010069999916595407,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.500000042957254e-05,2,2,TFSC,23.5
+car830,Kennedy,65,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00025069999901461415,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.510000093840063e-05,2,2,KPAMS,18.5
+car831,Candelaria,69,"['Candelaria', 'Teusaquillo']",7.469999763998203e-05,"['Candelaria', 'Teusaquillo']",4.86999997519888e-05,1,1,TFSC,13.3
+car832,Ciudad Bolivar,54,"['Ciudad Bolivar', 'Tunjuelito', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0002823999966494739,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.639999992330559e-05,5,3,KPAMS,48.8
+car833,Ciudad Bolivar,97,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0003614999986893963,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",7.810000170138665e-05,4,3,KPAMS,48.8
+car834,Barrios Unidos,67,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.010000212583691e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.620000229100697e-05,2,2,TFSC,23.5
+car835,Tunjuelito,99,"['Tunjuelito', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00022849999731988646,"['Tunjuelito', 'Rafael Uribe']",7.120000009308569e-05,5,1,RU,36.0
+car836,Kennedy,94,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.000265800001216121,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.189999839989468e-05,2,2,KPAMS,18.5
+car837,Kennedy,91,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00023909999799798243,"['Kennedy', 'Puente Aranda', 'Santa Fe']",5.959999907645397e-05,2,2,KPAMS,18.5
+car838,Martires,75,"['Martires', 'Santa Fe']",0.00020959999892511405,"['Martires', 'Santa Fe']",5.059999966761097e-05,1,1,KPAMS,8.0
+car839,San Cristobal,73,"['San Cristobal', 'Martires', 'Santa Fe']",0.00021579999884124845,"['San Cristobal', 'Martires', 'Santa Fe']",6.209999992279336e-05,2,2,KPAMS,18.5
+car840,Bosa,79,"['Bosa', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00032080000164569356,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.190000203787349e-05,5,3,KPAMS,42.5
+car841,Kennedy,63,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002874000019801315,"['Kennedy', 'Puente Aranda', 'Santa Fe']",9.00999984878581e-05,2,2,KPAMS,18.5
+car842,Puente Aranda,77,"['Puente Aranda', 'Santa Fe']",0.00023050000163493678,"['Puente Aranda', 'Santa Fe']",6.189999839989468e-05,1,1,KPAMS,8.0
+car843,Barrios Unidos,52,"['Barrios Unidos', 'Engativa', 'Santa Fe']",0.00010000000111176632,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.959999907645397e-05,2,2,TFSC,23.5
+car844,Candelaria,99,"['Candelaria', 'Teusaquillo']",7.410000034724362e-05,"['Candelaria', 'Teusaquillo']",5.029999738326296e-05,1,1,TFSC,13.3
+car845,Barrios Unidos,56,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.409999984200113e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.539999983739108e-05,2,2,TFSC,23.5
+car846,Antonio Nariño,80,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00027709999994840473,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.520000169984996e-05,2,2,KPAMS,18.5
+car847,Kennedy,62,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002410000015515834,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.310000026132911e-05,2,2,KPAMS,18.5
+car848,Kennedy,94,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00024929999926825985,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.159999975352548e-05,2,2,KPAMS,18.5
+car849,Ciudad Bolivar,95,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.00026979999893228523,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",7.069999992381781e-05,6,3,KPAMS,48.8
+car850,Kennedy,50,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00023289999808184803,"['Kennedy', 'Puente Aranda', 'Santa Fe']",5.859999873791821e-05,2,2,KPAMS,18.5
+car851,Tunjuelito,96,"['Tunjuelito', 'Antonio Nariño', 'Martires', 'Puente Aranda', 'Santa Fe']",0.0002459999996062834,"['Tunjuelito', 'Rafael Uribe']",6.86999992467463e-05,4,1,RU,36.0
+car852,San Cristobal,63,"['San Cristobal', 'Martires', 'Santa Fe']",0.00019090000205324031,"['San Cristobal', 'Martires', 'Santa Fe']",6.13999982306268e-05,2,2,KPAMS,18.5
+car853,Engativa,96,"['Engativa', 'Santa Fe']",9.14999982342124e-05,"['Engativa', 'Teusaquillo']",5.459999738377519e-05,1,1,TFSC,13.3
+car854,Ciudad Bolivar,58,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00023469999723602086,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.669999856967479e-05,5,3,KPAMS,48.8
+car855,Engativa,86,"['Engativa', 'Santa Fe']",9.03999971342273e-05,"['Engativa', 'Teusaquillo']",5.370000144466758e-05,1,1,TFSC,13.3
+car856,Bosa,89,"['Bosa', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.0003223999992769677,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.079999729990959e-05,5,3,KPAMS,42.5
+car857,Ciudad Bolivar,91,"['Ciudad Bolivar', 'Kennedy', 'Antonio Nariño', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00026989999969373457,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.0999998822808266e-05,5,3,KPAMS,48.8
+car858,Usme,69,"['Usme', 'San Cristobal', 'Martires', 'Santa Fe']",0.00021600000036414713,"['Usme', 'Rafael Uribe']",0.00010289999772794545,3,1,RU,25.0
+car859,Puente Aranda,54,"['Puente Aranda', 'Santa Fe']",0.0005709000033675693,"['Puente Aranda', 'Santa Fe']",0.00014699999883305281,1,1,KPAMS,8.0
+car860,Barrios Unidos,51,"['Barrios Unidos', 'Engativa', 'Santa Fe']",0.00017909999951370992,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",0.00010210000255028717,2,2,TFSC,23.5
+car861,Kennedy,67,"['Kennedy', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Puente Aranda', 'Santa Fe']",0.0002652000002854038,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.770000254618935e-05,5,2,KPAMS,18.5
+car862,Usme,54,"['Usme', 'San Cristobal', 'Martires', 'Antonio Nariño', 'Rafael Uribe']",0.00021529999867198057,"['Usme', 'Rafael Uribe']",0.0001816000003600493,4,1,RU,25.0
+car863,Tunjuelito,76,"['Tunjuelito', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.00043510000250535086,"['Tunjuelito', 'Rafael Uribe']",8.95000011951197e-05,3,1,RU,36.0
+car864,Tunjuelito,96,"['Tunjuelito', 'Antonio Nariño', 'Martires', 'Puente Aranda', 'Santa Fe']",0.0002365000000281725,"['Tunjuelito', 'Rafael Uribe']",7.109999933163635e-05,4,1,RU,36.0
+car865,San Cristobal,79,"['San Cristobal', 'Martires', 'Santa Fe']",0.0002144999998563435,"['San Cristobal', 'Martires', 'Santa Fe']",6.959999882383272e-05,2,2,KPAMS,18.5
+car866,Engativa,57,"['Engativa', 'Santa Fe']",9.569999747327529e-05,"['Engativa', 'Teusaquillo']",5.7199998991563916e-05,1,1,TFSC,13.3
+car867,Tunjuelito,79,"['Tunjuelito', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Puente Aranda', 'Santa Fe']",0.0002376000011281576,"['Tunjuelito', 'Rafael Uribe']",6.619999840040691e-05,5,1,RU,36.0
+car868,Bosa,58,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.00032749999809311703,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.380000195349567e-05,3,3,KPAMS,42.5
+car869,Bosa,84,"['Bosa', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00034809999851859175,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.339999890769832e-05,5,3,KPAMS,42.5
+car870,Usme,89,"['Usme', 'San Cristobal', 'Martires', 'Santa Fe']",0.00018900000213761814,"['Usme', 'Rafael Uribe']",5.579999924520962e-05,3,1,RU,25.0
+car871,Ciudad Bolivar,84,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0002953999974124599,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.669999856967479e-05,4,3,KPAMS,48.8
+car872,San Cristobal,85,"['San Cristobal', 'Martires', 'Santa Fe']",0.00018280000222148374,"['San Cristobal', 'Martires', 'Santa Fe']",6.24999993306119e-05,2,2,KPAMS,18.5
+car873,Tunjuelito,81,"['Tunjuelito', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00022729999909643084,"['Tunjuelito', 'Rafael Uribe']",6.499999653897248e-05,4,1,RU,36.0
+car874,Bosa,91,"['Bosa', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00033400000029359944,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.489999941550195e-05,4,3,KPAMS,42.5
+car875,Engativa,68,"['Engativa', 'Teusaquillo']",9.779999891179614e-05,"['Engativa', 'Teusaquillo']",5.4299998737405986e-05,1,1,TFSC,13.3
+car876,Martires,62,"['Martires', 'Santa Fe']",0.00021700000070268288,"['Martires', 'Santa Fe']",5.060000330558978e-05,1,1,KPAMS,8.0
+car877,Puente Aranda,91,"['Puente Aranda', 'Santa Fe']",0.00025269999969168566,"['Puente Aranda', 'Santa Fe']",5.100000271340832e-05,1,1,KPAMS,8.0
+car878,Barrios Unidos,70,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.669999781181104e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.569999848376028e-05,2,2,TFSC,23.5
+car879,Puente Aranda,55,"['Puente Aranda', 'Santa Fe']",0.0002494999971531797,"['Puente Aranda', 'Santa Fe']",5.070000042906031e-05,1,1,KPAMS,8.0
+car880,Puente Aranda,65,"['Puente Aranda', 'Santa Fe']",0.0003524999992805533,"['Puente Aranda', 'Santa Fe']",0.00010119999933522195,1,1,KPAMS,8.0
+car881,Martires,75,"['Martires', 'Santa Fe']",0.0003532999980961904,"['Martires', 'Santa Fe']",7.88000033935532e-05,1,1,KPAMS,8.0
+car882,Antonio Nariño,94,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00036980000004405156,"['Antonio Nariño', 'Martires', 'Santa Fe']",7.750000077066943e-05,2,2,KPAMS,18.5
+car883,San Cristobal,69,"['San Cristobal', 'Martires', 'Santa Fe']",0.00017549999756738544,"['San Cristobal', 'Martires', 'Santa Fe']",7.74000000092201e-05,2,2,KPAMS,18.5
+car884,Kennedy,84,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002778999987640418,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.500000017695129e-05,2,2,KPAMS,18.5
+car885,Usme,95,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.0001900000024761539,"['Usme', 'Rafael Uribe']",5.909999890718609e-05,4,1,RU,25.0
+car886,Kennedy,92,"['Kennedy', 'Puente Aranda', 'Martires', 'Antonio Nariño', 'San Cristobal', 'Santa Fe']",0.0002758999980869703,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.22000006842427e-05,5,2,KPAMS,18.5
+car887,Kennedy,87,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00023329999748966657,"['Kennedy', 'Puente Aranda', 'Santa Fe']",5.65999980608467e-05,2,2,KPAMS,18.5
+car888,Candelaria,96,"['Candelaria', 'Santa Fe']",7.080000068526715e-05,"['Candelaria', 'Teusaquillo']",4.7100002120714635e-05,1,1,TFSC,13.3
+car889,Kennedy,96,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0003131000012217555,"['Kennedy', 'Puente Aranda', 'Santa Fe']",8.410000009462237e-05,2,2,KPAMS,18.5
+car890,Puente Aranda,56,"['Puente Aranda', 'Santa Fe']",0.0002347999979974702,"['Puente Aranda', 'Santa Fe']",5.989999772282317e-05,1,1,KPAMS,8.0
+car891,Engativa,93,"['Engativa', 'Teusaquillo']",8.909999814932235e-05,"['Engativa', 'Teusaquillo']",5.680000322172418e-05,1,1,TFSC,13.3
+car892,Puente Aranda,58,"['Puente Aranda', 'Santa Fe']",0.00022399999943445437,"['Puente Aranda', 'Santa Fe']",5.1700000767596066e-05,1,1,KPAMS,8.0
+car893,Engativa,77,"['Engativa', 'Santa Fe']",8.859999798005447e-05,"['Engativa', 'Teusaquillo']",5.360000068321824e-05,1,1,TFSC,13.3
+car894,Puente Aranda,92,"['Puente Aranda', 'Santa Fe']",0.00022290000197244808,"['Puente Aranda', 'Santa Fe']",4.930000068270601e-05,1,1,KPAMS,8.0
+car895,Barrios Unidos,96,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.00999984878581e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.319999763742089e-05,2,2,TFSC,23.5
+car896,Engativa,67,"['Engativa', 'Teusaquillo']",9.259999933419749e-05,"['Engativa', 'Teusaquillo']",4.949999856762588e-05,1,1,TFSC,13.3
+car897,Barrios Unidos,65,"['Barrios Unidos', 'Engativa', 'Santa Fe']",8.590000288677402e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.210000017541461e-05,2,2,TFSC,23.5
+car898,Bosa,56,"['Bosa', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00032899999860092066,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.429999848478474e-05,5,3,KPAMS,42.5
+car899,Usme,87,"['Usme', 'San Cristobal', 'Martires', 'Puente Aranda', 'Santa Fe']",0.0001685999995970633,"['Usme', 'Rafael Uribe']",5.319999763742089e-05,4,1,RU,25.0
+car900,Engativa,71,"['Engativa', 'Teusaquillo']",8.510000043315813e-05,"['Engativa', 'Teusaquillo']",4.9700000090524554e-05,1,1,TFSC,13.3
+car901,Tunjuelito,70,"['Tunjuelito', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00020640000002458692,"['Tunjuelito', 'Rafael Uribe']",6.360000043059699e-05,5,1,RU,36.0
+car902,Usme,77,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00018350000027567148,"['Usme', 'Rafael Uribe']",5.18000015290454e-05,4,1,RU,25.0
+car903,Martires,55,"['Martires', 'Santa Fe']",0.00022530000205733813,"['Martires', 'Santa Fe']",4.740000076708384e-05,1,1,KPAMS,8.0
+car904,Ciudad Bolivar,86,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002702999991015531,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.000121900000522146,3,3,KPAMS,48.8
+car905,Kennedy,53,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00028160000147181563,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.439999924623407e-05,2,2,KPAMS,18.5
+car906,San Cristobal,75,"['San Cristobal', 'Martires', 'Santa Fe']",0.0001860999982454814,"['San Cristobal', 'Martires', 'Santa Fe']",6.749999738531187e-05,2,2,KPAMS,18.5
+car907,Tunjuelito,77,"['Tunjuelito', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00026340000113123097,"['Tunjuelito', 'Rafael Uribe']",8.719999823370017e-05,3,1,RU,36.0
+car908,Usme,52,"['Usme', 'San Cristobal', 'Martires', 'Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00018140000247512944,"['Usme', 'Rafael Uribe']",5.609999789157882e-05,5,1,RU,25.0
+car909,Usme,64,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00019260000044596381,"['Usme', 'Rafael Uribe']",5.379999856813811e-05,5,1,RU,25.0
+car910,Tunjuelito,79,"['Tunjuelito', 'Antonio Nariño', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00024929999926825985,"['Tunjuelito', 'Rafael Uribe']",6.310000026132911e-05,4,1,RU,36.0
+car911,Martires,84,"['Martires', 'Santa Fe']",0.0004312999990361277,"['Martires', 'Santa Fe']",8.189999789465219e-05,1,1,KPAMS,8.0
+car912,Barrios Unidos,79,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.619999764254317e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",6.149999899207614e-05,2,2,TFSC,23.5
+car913,Martires,63,"['Martires', 'Santa Fe']",0.0002361999977438245,"['Martires', 'Santa Fe']",5.219999729888514e-05,1,1,KPAMS,8.0
+car914,Engativa,93,"['Engativa', 'Santa Fe']",8.879999950295314e-05,"['Engativa', 'Teusaquillo']",6.199999916134402e-05,1,1,TFSC,13.3
+car915,Tunjuelito,82,"['Tunjuelito', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00024280000070575625,"['Tunjuelito', 'Rafael Uribe']",6.900000153109431e-05,4,1,RU,36.0
+car916,Engativa,69,"['Engativa', 'Teusaquillo']",9.860000136541203e-05,"['Engativa', 'Teusaquillo']",5.4200001613935456e-05,1,1,TFSC,13.3
+car917,Engativa,70,"['Engativa', 'Santa Fe']",9.199999840348028e-05,"['Engativa', 'Teusaquillo']",5.149999924469739e-05,1,1,TFSC,13.3
+car918,Barrios Unidos,68,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.329999738838524e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",6.460000076913275e-05,2,2,TFSC,23.5
+car919,San Cristobal,75,"['San Cristobal', 'Martires', 'Santa Fe']",0.00022819999867351726,"['San Cristobal', 'Martires', 'Santa Fe']",6.280000161495991e-05,2,2,KPAMS,18.5
+car920,Antonio Nariño,65,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00021419999757199548,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.230000144569203e-05,2,2,KPAMS,18.5
+car921,Puente Aranda,96,"['Puente Aranda', 'Santa Fe']",0.00025520000053802505,"['Puente Aranda', 'Santa Fe']",5.18000015290454e-05,1,1,KPAMS,8.0
+car922,Engativa,98,"['Engativa', 'Santa Fe']",9.069999941857532e-05,"['Engativa', 'Teusaquillo']",5.2200000936863944e-05,1,1,TFSC,13.3
+car923,Usme,50,"['Usme', 'San Cristobal', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00019869999960064888,"['Usme', 'Rafael Uribe']",5.410000085248612e-05,4,1,RU,25.0
+car924,Bosa,82,"['Bosa', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.0003308000013930723,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.280000161495991e-05,5,3,KPAMS,42.5
+car925,Ciudad Bolivar,50,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0002921999985119328,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",7.120000009308569e-05,4,3,KPAMS,48.8
+car926,Puente Aranda,64,"['Puente Aranda', 'Santa Fe']",0.0002144999998563435,"['Puente Aranda', 'Santa Fe']",5.18000015290454e-05,1,1,KPAMS,8.0
+car927,Engativa,77,"['Engativa', 'Santa Fe']",9.110000246437266e-05,"['Engativa', 'Teusaquillo']",5.239999882178381e-05,1,1,TFSC,13.3
+car928,Usme,68,"['Usme', 'San Cristobal', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00016599999798927456,"['Usme', 'Rafael Uribe']",5.569999848376028e-05,4,1,RU,25.0
+car929,Candelaria,69,"['Candelaria', 'Santa Fe']",7.439999899361283e-05,"['Candelaria', 'Teusaquillo']",4.780000017490238e-05,1,1,TFSC,13.3
+car930,Martires,96,"['Martires', 'Santa Fe']",0.000260199998592725,"['Martires', 'Santa Fe']",5.160000000614673e-05,1,1,KPAMS,8.0
+car931,Martires,78,"['Martires', 'Santa Fe']",0.00025300000197603367,"['Martires', 'Santa Fe']",4.940000144415535e-05,1,1,KPAMS,8.0
+car932,Candelaria,50,"['Candelaria', 'Teusaquillo']",7.330000153160654e-05,"['Candelaria', 'Teusaquillo']",4.8000001697801054e-05,1,1,TFSC,13.3
+car933,Usme,73,"['Usme', 'Tunjuelito', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.00018289999934495427,"['Usme', 'Rafael Uribe']",5.569999848376028e-05,5,1,RU,25.0
+car934,Antonio Nariño,59,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.0002902999985963106,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00016029999824240804,2,2,KPAMS,18.5
+car935,Tunjuelito,97,"['Tunjuelito', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Puente Aranda', 'Santa Fe']",0.0002844000009645242,"['Tunjuelito', 'Rafael Uribe']",8.000000161700882e-05,5,1,RU,36.0
+car936,Barrios Unidos,86,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.950000094249845e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",6.10999995842576e-05,2,2,TFSC,23.5
+car937,Puente Aranda,62,"['Puente Aranda', 'Santa Fe']",0.00023800000053597614,"['Puente Aranda', 'Santa Fe']",5.500000042957254e-05,1,1,KPAMS,8.0
+car938,Candelaria,60,"['Candelaria', 'Teusaquillo']",7.700000060140155e-05,"['Candelaria', 'Teusaquillo']",5.1399998483248055e-05,1,1,TFSC,13.3
+car939,Engativa,85,"['Engativa', 'Teusaquillo']",9.73999995039776e-05,"['Engativa', 'Teusaquillo']",5.549999696086161e-05,1,1,TFSC,13.3
+car940,Engativa,57,"['Engativa', 'Teusaquillo']",9.580000187270343e-05,"['Engativa', 'Teusaquillo']",5.2600000344682485e-05,1,1,TFSC,13.3
+car941,Kennedy,61,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002868999981728848,"['Kennedy', 'Puente Aranda', 'Santa Fe']",7.080000068526715e-05,2,2,KPAMS,18.5
+car942,Kennedy,85,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002645999993546866,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.170000051497482e-05,2,2,KPAMS,18.5
+car943,Candelaria,83,"['Candelaria', 'Santa Fe']",7.539999933214858e-05,"['Candelaria', 'Teusaquillo']",4.8499998229090124e-05,1,1,TFSC,13.3
+car944,Barrios Unidos,53,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.73999995039776e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.4699998145224527e-05,2,2,TFSC,23.5
+car945,Puente Aranda,65,"['Puente Aranda', 'Santa Fe']",0.00022920000265003182,"['Puente Aranda', 'Santa Fe']",5.270000110613182e-05,1,1,KPAMS,8.0
+car946,Tunjuelito,80,"['Tunjuelito', 'Puente Aranda', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.0002418000003672205,"['Tunjuelito', 'Rafael Uribe']",7.209999967017211e-05,5,1,RU,36.0
+car947,Kennedy,99,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002578999992692843,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.0999998822808266e-05,2,2,KPAMS,18.5
+car948,San Cristobal,82,"['San Cristobal', 'Martires', 'Santa Fe']",0.00019449999672360718,"['San Cristobal', 'Martires', 'Santa Fe']",6.450000000768341e-05,2,2,KPAMS,18.5
+car949,Ciudad Bolivar,61,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.00029399999766610563,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.719999873894267e-05,3,3,KPAMS,48.8
+car950,Puente Aranda,76,"['Puente Aranda', 'Santa Fe']",0.0002509000005375128,"['Puente Aranda', 'Santa Fe']",5.239999882178381e-05,1,1,KPAMS,8.0
+car951,Candelaria,56,"['Candelaria', 'Teusaquillo']",7.470000127796084e-05,"['Candelaria', 'Teusaquillo']",4.769999941345304e-05,1,1,TFSC,13.3
+car952,Bosa,94,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.00030899999910616316,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.349999966914766e-05,3,3,KPAMS,42.5
+car953,Martires,66,"['Martires', 'Santa Fe']",0.00020940000104019418,"['Martires', 'Santa Fe']",5.059999966761097e-05,1,1,KPAMS,8.0
+car954,Antonio Nariño,90,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00023470000087399967,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.13999982306268e-05,2,2,KPAMS,18.5
+car955,Tunjuelito,88,"['Tunjuelito', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.00023769999825162813,"['Tunjuelito', 'Rafael Uribe']",6.679999933112413e-05,3,1,RU,36.0
+car956,Ciudad Bolivar,71,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0003003999991051387,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.56000011076685e-05,4,3,KPAMS,48.8
+car957,Bosa,82,"['Bosa', 'Kennedy', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00039280000055441633,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",7.470000127796084e-05,4,3,KPAMS,42.5
+car958,Kennedy,51,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002356000004510861,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.120000034570694e-05,2,2,KPAMS,18.5
+car959,Engativa,61,"['Engativa', 'Teusaquillo']",9.309999950346537e-05,"['Engativa', 'Teusaquillo']",5.219999729888514e-05,1,1,TFSC,13.3
+car960,Usme,62,"['Usme', 'San Cristobal', 'Martires', 'Santa Fe']",0.00018599999748403206,"['Usme', 'Rafael Uribe']",5.249999958323315e-05,3,1,RU,25.0
+car961,Puente Aranda,61,"['Puente Aranda', 'Santa Fe']",0.0002300000014656689,"['Puente Aranda', 'Santa Fe']",4.950000220560469e-05,1,1,KPAMS,8.0
+car962,Antonio Nariño,51,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.000222100003156811,"['Antonio Nariño', 'Martires', 'Santa Fe']",9.069999941857532e-05,2,2,KPAMS,18.5
+car963,San Cristobal,58,"['San Cristobal', 'Martires', 'Santa Fe']",0.0002082999999402091,"['San Cristobal', 'Martires', 'Santa Fe']",5.990000136080198e-05,2,2,KPAMS,18.5
+car964,Puente Aranda,89,"['Puente Aranda', 'Santa Fe']",0.00021540000307140872,"['Puente Aranda', 'Santa Fe']",4.909999915980734e-05,1,1,KPAMS,8.0
+car965,Puente Aranda,84,"['Puente Aranda', 'Santa Fe']",0.00020980000044801272,"['Puente Aranda', 'Santa Fe']",4.740000076708384e-05,1,1,KPAMS,8.0
+car966,Usme,96,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.0001692000005277805,"['Usme', 'Rafael Uribe']",5.03999981447123e-05,4,1,RU,25.0
+car967,Barrios Unidos,59,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.539999882690609e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.289999899105169e-05,2,2,TFSC,23.5
+car968,Martires,99,"['Martires', 'Santa Fe']",0.00023549999968963675,"['Martires', 'Santa Fe']",4.73000000056345e-05,1,1,KPAMS,8.0
+car969,Puente Aranda,87,"['Puente Aranda', 'Santa Fe']",0.00021209999977145344,"['Puente Aranda', 'Santa Fe']",4.780000017490238e-05,1,1,KPAMS,8.0
+car970,San Cristobal,94,"['San Cristobal', 'Martires', 'Santa Fe']",0.00031179999859887175,"['San Cristobal', 'Martires', 'Santa Fe']",8.729999899514951e-05,2,2,KPAMS,18.5
+car971,Martires,54,"['Martires', 'Santa Fe']",0.0002457000009599142,"['Martires', 'Santa Fe']",5.609999789157882e-05,1,1,KPAMS,8.0
+car972,Tunjuelito,73,"['Tunjuelito', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.000231100002565654,"['Tunjuelito', 'Rafael Uribe']",7.270000060088933e-05,4,1,RU,36.0
+car973,Candelaria,96,"['Candelaria', 'Teusaquillo']",7.410000034724362e-05,"['Candelaria', 'Teusaquillo']",5.080000119050965e-05,1,1,TFSC,13.3
+car974,Usme,63,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00018980000095325522,"['Usme', 'Rafael Uribe']",5.5900000006658956e-05,4,1,RU,25.0
+car975,Tunjuelito,81,"['Tunjuelito', 'Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.0002190000013797544,"['Tunjuelito', 'Rafael Uribe']",6.550000034621917e-05,3,1,RU,36.0
+car976,Candelaria,76,"['Candelaria', 'Santa Fe']",7.32000007701572e-05,"['Candelaria', 'Teusaquillo']",4.9100002797786146e-05,1,1,TFSC,13.3
+car977,Ciudad Bolivar,98,"['Ciudad Bolivar', 'Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.00034560000131023116,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",7.000000186963007e-05,4,3,KPAMS,48.8
+car978,Puente Aranda,88,"['Puente Aranda', 'Santa Fe']",0.00024199999825214036,"['Puente Aranda', 'Santa Fe']",5.289999899105169e-05,1,1,KPAMS,8.0
+car979,Martires,79,"['Martires', 'Santa Fe']",0.00022530000205733813,"['Martires', 'Santa Fe']",4.980000085197389e-05,1,1,KPAMS,8.0
+car980,Antonio Nariño,63,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00026559999969322234,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.179999763844535e-05,2,2,KPAMS,18.5
+car981,Bosa,57,"['Bosa', 'Kennedy', 'Puente Aranda', 'Martires', 'San Cristobal', 'Antonio Nariño', 'Rafael Uribe']",0.0003277000032539945,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.270000085351057e-05,6,3,KPAMS,42.5
+car982,Bosa,85,"['Bosa', 'Kennedy', 'Antonio Nariño', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00028199999724165536,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.180000127642415e-05,5,3,KPAMS,42.5
+car983,San Cristobal,74,"['San Cristobal', 'Martires', 'Santa Fe']",0.0001781999999366235,"['San Cristobal', 'Martires', 'Santa Fe']",6.490000305348076e-05,2,2,KPAMS,18.5
+car984,Tunjuelito,56,"['Tunjuelito', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.0002483000025677029,"['Tunjuelito', 'Rafael Uribe']",9.91000015346799e-05,5,1,RU,36.0
+car985,Martires,62,"['Martires', 'Santa Fe']",0.00027090000003227033,"['Martires', 'Santa Fe']",9.339999814983457e-05,1,1,KPAMS,8.0
+car986,Martires,52,"['Martires', 'Santa Fe']",0.00025749999986146577,"['Martires', 'Santa Fe']",6.0599999414989725e-05,1,1,KPAMS,8.0
+car987,Tunjuelito,83,"['Tunjuelito', 'Puente Aranda', 'Martires', 'Santa Fe']",0.0002480999974068254,"['Tunjuelito', 'Rafael Uribe']",9.439999848837033e-05,3,1,RU,36.0
+car988,Kennedy,99,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0002358999990974553,"['Kennedy', 'Puente Aranda', 'Santa Fe']",6.639999992330559e-05,2,2,KPAMS,18.5
+car989,Martires,97,"['Martires', 'Santa Fe']",0.00022290000197244808,"['Martires', 'Santa Fe']",5.210000017541461e-05,1,1,KPAMS,8.0
+car990,Usme,61,"['Usme', 'San Cristobal', 'Martires', 'Puente Aranda', 'Santa Fe']",0.00016079999841167592,"['Usme', 'Rafael Uribe']",5.4699998145224527e-05,4,1,RU,25.0
+car991,Usme,76,"['Usme', 'San Cristobal', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00019099999917671084,"['Usme', 'Rafael Uribe']",5.199999941396527e-05,4,1,RU,25.0
+car992,Tunjuelito,98,"['Tunjuelito', 'Puente Aranda', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.00023639999926672317,"['Tunjuelito', 'Rafael Uribe']",6.759999814676121e-05,5,1,RU,36.0
+car993,Tunjuelito,97,"['Tunjuelito', 'Antonio Nariño', 'San Cristobal', 'Martires', 'Santa Fe']",0.00022149999858811498,"['Tunjuelito', 'Rafael Uribe']",6.519999806187116e-05,4,1,RU,36.0
+car994,Bosa,61,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.00031119999766815454,"['Bosa', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.199999916134402e-05,3,3,KPAMS,42.5
+car995,Candelaria,56,"['Candelaria', 'Teusaquillo']",7.220000043162145e-05,"['Candelaria', 'Teusaquillo']",4.8000001697801054e-05,1,1,TFSC,13.3
+car996,Kennedy,69,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00023440000222763047,"['Kennedy', 'Puente Aranda', 'Santa Fe']",5.869999949936755e-05,2,2,KPAMS,18.5
+car997,Antonio Nariño,66,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.00021660000129486434,"['Antonio Nariño', 'Martires', 'Santa Fe']",5.9699999837903306e-05,2,2,KPAMS,18.5
+car998,Barrios Unidos,92,"['Barrios Unidos', 'Engativa', 'Santa Fe']",8.22000001790002e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.3899999329587445e-05,2,2,TFSC,23.5
+car999,San Cristobal,50,"['San Cristobal', 'Martires', 'Santa Fe']",0.00018590000036056153,"['San Cristobal', 'Martires', 'Santa Fe']",5.7600002037361264e-05,2,2,KPAMS,18.5
