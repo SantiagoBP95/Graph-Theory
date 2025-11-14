@@ -194,26 +194,9 @@ class Enrutador:
 	def __init__(self, enrutamiento=None, nodo=None):
 		self.enrutamiento = enrutamiento
 		self.nodo = nodo
-
-	def nodos_adyacentes(self, r, nodo, Gr=None):
-		"""Return neighbors of `nodo` in graph `Gr` that are not in route `r`.
-
-		Parameters
-		- r: iterable of nodes representing a route (to exclude)
-		- nodo: node whose neighbors are queried
-		- Gr: optional NetworkX graph; must be provided (no global fallback)
-		"""
-
-		if Gr is None:
-			raise ValueError("Gr (hierarchical graph) must be provided to nodos_adyacentes")
-		result = []
-		neighbors = list(Gr.neighbors(nodo))
-		if not neighbors:
-			return result
-		for nb in neighbors:
-			if nb not in r:
-				result.append(nb)
-		return result
+	# Note: `nodos_adyacentes` was removed. If neighbor filtering is required,
+	# callers should use direct NetworkX neighbor queries and simple list
+	# comprehensions (e.g. `[v for v in G.neighbors(node) if v not in route]`).
 
 
 class Servidor(Enrutador):

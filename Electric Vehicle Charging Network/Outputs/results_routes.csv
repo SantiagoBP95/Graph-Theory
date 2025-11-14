@@ -1,13 +1,13 @@
 placa,ubicacion,bateria,aoc_route,aoc_time,dijkstra_route,dijkstra_time,aoc_route_len,dijkstra_route_len,nearest_antena,dist_to_antena
-car0,Kennedy,84,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00047090000043681357,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0010734999996202532,2,2,KPAMS,18.5
-car1,San Cristobal,71,"['San Cristobal', 'Martires', 'Santa Fe']",0.0004442999997991137,"['San Cristobal', 'Martires', 'Santa Fe']",0.0001432999997632578,2,2,KPAMS,18.5
-car2,Engativa,53,"['Engativa', 'Santa Fe']",0.0001801999987947056,"['Engativa', 'Teusaquillo']",9.779999891179614e-05,1,1,TFSC,13.3
-car3,San Cristobal,58,"['San Cristobal', 'Martires', 'Santa Fe']",0.00025549999918439426,"['San Cristobal', 'Martires', 'Santa Fe']",0.00010990000009769574,2,2,KPAMS,18.5
-car4,San Cristobal,85,"['San Cristobal', 'Martires', 'Santa Fe']",0.0002807000000757398,"['San Cristobal', 'Martires', 'Santa Fe']",0.00011050000102841295,2,2,KPAMS,18.5
-car5,Martires,94,"['Martires', 'Santa Fe']",0.00035910000042349566,"['Martires', 'Santa Fe']",0.0001322999996773433,1,1,KPAMS,8.0
-car6,Candelaria,60,"['Candelaria', 'Teusaquillo']",0.00013129999933880754,"['Candelaria', 'Teusaquillo']",8.890000026440248e-05,1,1,TFSC,13.3
-car7,Barrios Unidos,77,"['Barrios Unidos', 'Engativa', 'Santa Fe']",0.000167199999850709,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",0.00035570000000006985,2,2,TFSC,23.5
-car8,Antonio Nariño,88,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.0005462999997689622,"['Antonio Nariño', 'Martires', 'Santa Fe']",0.0001578999999765074,2,2,KPAMS,18.5
-car9,Candelaria,54,"['Candelaria', 'Teusaquillo']",0.00012599999899975955,"['Candelaria', 'Teusaquillo']",8.759999946050812e-05,1,1,TFSC,13.3
-car10,Ciudad Bolivar,70,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.000456300000223564,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",0.0001292000015382655,5,3,KPAMS,48.8
-car11,Barrios Unidos,78,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",0.00015670000175305177,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.11999995878432e-05,2,2,TFSC,23.5
+car0,Kennedy,84,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0003291000011813594,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0008791000000201166,2,2,KPAMS,18.5
+car1,San Cristobal,71,"['San Cristobal', 'Martires', 'Santa Fe']",0.0002507999997760635,"['San Cristobal', 'Martires', 'Santa Fe']",7.809999988239724e-05,2,2,KPAMS,18.5
+car2,Engativa,53,"['Engativa', 'Santa Fe']",9.959999988495838e-05,"['Engativa', 'Teusaquillo']",6.0599999414989725e-05,1,1,TFSC,13.3
+car3,San Cristobal,58,"['San Cristobal', 'Martires', 'Santa Fe']",0.0001474999990023207,"['San Cristobal', 'Martires', 'Santa Fe']",6.500000017695129e-05,2,2,KPAMS,18.5
+car4,San Cristobal,85,"['San Cristobal', 'Martires', 'Santa Fe']",0.0001720000000204891,"['San Cristobal', 'Martires', 'Santa Fe']",0.0001004999994620448,2,2,KPAMS,18.5
+car5,Martires,94,"['Martires', 'Santa Fe']",0.0002590000003692694,"['Martires', 'Santa Fe']",5.670000064128544e-05,1,1,KPAMS,8.0
+car6,Candelaria,60,"['Candelaria', 'Teusaquillo']",7.379999988188501e-05,"['Candelaria', 'Teusaquillo']",4.86999997519888e-05,1,1,TFSC,13.3
+car7,Barrios Unidos,77,"['Barrios Unidos', 'Engativa', 'Santa Fe']",9.87999992503319e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.6000000768108293e-05,2,2,TFSC,23.5
+car8,Antonio Nariño,88,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.00025580000146874227,"['Antonio Nariño', 'Martires', 'Santa Fe']",7.17999992048135e-05,2,2,KPAMS,18.5
+car9,Candelaria,54,"['Candelaria', 'Teusaquillo']",7.390000064333435e-05,"['Candelaria', 'Teusaquillo']",4.789999911736231e-05,1,1,TFSC,13.3
+car10,Ciudad Bolivar,70,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.00027940000109083485,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",6.510000093840063e-05,5,3,KPAMS,48.8
+car11,Barrios Unidos,78,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",9.529999988444615e-05,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.469999996421393e-05,2,2,TFSC,23.5
