@@ -34,11 +34,24 @@ def run_example(n=10, G=None, Ga=None, ubicaciones=None, random_seed=None, compu
     # Build a minimal 'ubicaciones' mapping for Ga if not provided. Map every Ga node
     # to a sample node from G (tuple) so Estaciones can pick one location.
     if ubicaciones is None:
-        sample_node = next(iter(G.nodes())) if len(G.nodes()) > 0 else None
-        ubicaciones = {node: (sample_node,) for node in Ga.nodes()}
+        nodes = list(G.nodes())
+        ga_nodes = list(Ga.nodes())
+        # reproducible por seed si fue pasado
+        if random_seed is not None:
+            random.seed(random_seed)
+        # si hay suficientes nodos en G, sampleamos sin reemplazo
+        if len(nodes) >= len(ga_nodes):
+            sampled = random.sample(nodes, k=len(ga_nodes))
+        else:
+            # si no, asignamos aleatoriamente con reemplazo
+            sampled = [random.choice(nodes) for _ in ga_nodes]
+        ubicaciones = {gnode: (sampled[i],) for i, gnode in enumerate(ga_nodes)}
 
-    flota = Flota(n, G=G)
+    # Create Estaciones first so we can avoid placing vehicles at station locations
     estaciones = Estaciones(Ga, ubicaciones)
+    # collect station node locations and ask Flota to avoid them when placing vehicles
+    station_nodes = [e.ubicacion for e in estaciones.total]
+    flota = Flota(n, G=G, exclude_nodes=station_nodes)
 
     routes = []
     if compute_routes:

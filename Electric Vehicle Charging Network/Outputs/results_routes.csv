@@ -1,0 +1,13 @@
+placa,ubicacion,bateria,aoc_route,aoc_time,dijkstra_route,dijkstra_time,aoc_route_len,dijkstra_route_len
+car0,Kennedy,84,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.00030140000126266386,"['Kennedy', 'Puente Aranda', 'Santa Fe']",0.0001114999995479593,2,2
+car1,San Cristobal,71,"['San Cristobal', 'Martires', 'Santa Fe']",0.0002507999997760635,"['San Cristobal', 'Martires', 'Santa Fe']",7.519999962823931e-05,2,2
+car2,Engativa,53,"['Engativa', 'Santa Fe']",0.00010090000068885274,"['Engativa', 'Teusaquillo']",6.229999962670263e-05,1,1
+car3,San Cristobal,58,"['San Cristobal', 'Martires', 'Santa Fe']",0.00015270000039890874,"['San Cristobal', 'Martires', 'Santa Fe']",6.910000047355425e-05,2,2
+car4,San Cristobal,85,"['San Cristobal', 'Martires', 'Santa Fe']",0.00017520000074000563,"['San Cristobal', 'Martires', 'Santa Fe']",6.570000005012844e-05,2,2
+car5,Martires,94,"['Martires', 'Santa Fe']",0.00024289999964821618,"['Martires', 'Santa Fe']",5.79999996261904e-05,1,1
+car6,Candelaria,60,"['Candelaria', 'Teusaquillo']",8.060000072873663e-05,"['Candelaria', 'Teusaquillo']",5.2999999752501026e-05,1,1
+car7,Barrios Unidos,77,"['Barrios Unidos', 'Engativa', 'Santa Fe']",0.00011470000026747584,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",5.980000059935264e-05,2,2
+car8,Antonio Nariño,88,"['Antonio Nariño', 'Puente Aranda', 'Santa Fe']",0.0002612000007502502,"['Antonio Nariño', 'Martires', 'Santa Fe']",6.70000008540228e-05,2,2
+car9,Candelaria,54,"['Candelaria', 'Teusaquillo']",7.720000030531082e-05,"['Candelaria', 'Teusaquillo']",0.00011360000098648015,1,1
+car10,Ciudad Bolivar,70,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Antonio Nariño', 'Martires', 'Santa Fe']",0.0002975999996124301,"['Ciudad Bolivar', 'Kennedy', 'Puente Aranda', 'Santa Fe']",7.6299998909235e-05,5,3
+car11,Barrios Unidos,78,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",0.0001005000012810342,"['Barrios Unidos', 'Engativa', 'Teusaquillo']",6.100000064179767e-05,2,2

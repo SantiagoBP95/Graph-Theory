@@ -1,4 +1,5 @@
 import random
+import math
 import networkx as nx
 import types
 import time
@@ -26,133 +27,118 @@ class Auto:
 	def __repr__(self):
 		return "({0},{1},{2})".format(self.placa, self.bateria, self.ubicacion)
 
-	def AOC(self, n, E, G=None):
-		"""Search for a charging-station route using randomized walks.
-
-		This method performs `n` random walk trials starting from the vehicle's
-		current location. For each walk it accumulates a heuristic score based
-		on inverse edge weight (favoring short/cheap edges). It returns the
-		route (list of nodes) with the highest score. If the vehicle is
-		already located at a station, the current location is returned.
-
-		Parameters
-		- n: number of trials
-		- E: Estaciones-like container with `.total` entries that have an
-			 `ubicacion` attribute
-		- G: optional NetworkX graph to use for neighbors/weights. If not
-			 provided, the function attempts to obtain a global `G` from the
-			 notebook namespace via a helper `_get_global` (used historically).
-
-		Returns
-		- list of node labels representing the chosen route, or the current
-		  ubicacion if no route is found.
+	def AOC(self, n, E, G=None, max_steps=200, epsilon=1e-6):
 		"""
-		G = G or _get_global('G')
+		Randomized-walk search for a route to a charging station.
+		- epsilon: small value to avoid division-by-zero for zero-weight edges.
+		"""
 		if G is None:
-			raise ValueError("G (global city graph) is not defined and was not passed to Auto.AOC")
+			raise ValueError(
+				"G (global city graph) is not defined and was not passed to Auto.AOC"
+			)
 
-		Caminos = []
-		CaminosM = []
-		spc = []
-		# extract station locations from the Estaciones container
 		E_nodos = [x.ubicacion for x in E.total]
+
 		if self.ubicacion in E_nodos:
-			# already at a station: return a route list for consistency
 			return [self.ubicacion]
-		else:
-			for i in range(n):
-				Ch = [self.ubicacion]
-				eCh = 0
-				P = []
-				# perform a random walk, avoiding repeated nodes
-				while Ch[-1] not in E_nodos:
-					vecinos = [a for a in G.neighbors(Ch[-1]) if a not in Ch]
-					if len(vecinos) > 0:
-						j = random.choice(vecinos)
-						dab = G[Ch[-1]][j].get('weight', 1)
-						Ch.append(j)
-						# collect inverse-weight heuristic (guard divide-by-zero)
-						P.append(1 / dab if dab != 0 else 0)
-						eCh += 1
-					else:
-						# no new neighbors: truncated path
-						CaminosM.append(Ch)
-						break
-				Caminos.append(Ch)
-				# compute trial score safely (avoid division by zero)
-				sp = (sum(P) * (100 / eCh)) if eCh != 0 else 0
-				spc.append(sp)
-			if len(spc) == 0:
-				return self.ubicacion
-			indice = spc.index(max(spc))
-			return Caminos[indice]
+
+		best_score = -math.inf
+		best_path = [self.ubicacion]
+
+		for _ in range(n):
+			path = [self.ubicacion]
+			score_terms = []
+			steps = 0
+
+			while steps < max_steps and path[-1] not in E_nodos:
+				current = path[-1]
+				vecinos = [v for v in G.neighbors(current) if v not in path]
+
+				if not vecinos:
+					# camino truncado → descartado
+					score_terms = []
+					break
+
+				nxt = random.choice(vecinos)
+				w = G[current][nxt].get("weight", 1.0)
+
+				# usar epsilon para evitar dividir entre 0 y no inflar scores
+				inv = 1.0 / (w + epsilon)
+				score_terms.append(inv)
+
+				path.append(nxt)
+				steps += 1
+
+			if path[-1] in E_nodos and len(score_terms) > 0:
+				# usar promedio de inversos (estable)
+				score = sum(score_terms) / len(score_terms)
+				# opcional: penalizar rutas muy largas
+				# score = score / (1 + 0.01 * (len(path)-1))
+
+				if score > best_score:
+					best_score = score
+					best_path = path
+
+		return best_path
 
 	def route_dijkstra(self, E, G=None, measure_time: bool = False):
-		"""Find a route to the closest charging station using Dijkstra.
-
-		This method uses the package's `dijkstra` dispatcher where possible and
-		falls back to NetworkX shortest-path reconstruction if predecessor
-		pointers are not provided by the dispatcher for NetworkX graphs.
-
-		Parameters
-		- E: Estaciones-like container with `.total` entries that have `ubicacion`
-			 attributes
-		- G: optional NetworkX graph; if not provided, attempts to obtain global `G`
-		- measure_time: if True returns a tuple (route, elapsed_seconds)
-
-		Returns
-		- route: list of node labels representing the shortest path to the
-		  nearest station (by path length). If measure_time True, returns
-		  (route, elapsed_seconds).
 		"""
-		G = G or _get_global('G')
+		Find a route to the closest charging station using Dijkstra distances.
+		Robust: use the (possibly custom) dijkstra dispatcher only to obtain
+		distances; always reconstruct the final path with NetworkX shortest_path
+		(weight='weight') to avoid different 'prev' formats.
+		Returns route or (route, elapsed_time) if measure_time=True.
+		"""
 		if G is None:
-			raise ValueError("G (global city graph) is not defined and was not passed to route_dijkstra")
+			raise ValueError(
+				"G (global city graph) is not defined and was not passed to route_dijkstra"
+			)
 
 		E_nodos = [x.ubicacion for x in E.total]
+
 		if self.ubicacion in E_nodos:
-			# already at a station: return a route list; when measuring time, return (route_list, 0.0)
 			result = [self.ubicacion]
 			return (result, 0.0) if measure_time else result
 
-		start_time = time.perf_counter() if measure_time else None
+		if measure_time:
+			start_time = time.perf_counter()
 
-		# Use the routing.dijkstra dispatcher to get distances; for NetworkX
-		# graphs the returned 'prev' may be empty, so we handle that case.
-		order, dist, prev = dijkstra(G, self.ubicacion)
-
-		# find nearest station by distance mapping
+		# obtener distancias (intentar dispatcher, si falla usar NetworkX)
 		try:
-			# dist may be a dict-like mapping of distances
-			nearest = min((s for s in E_nodos if s in dist), key=lambda s: dist.get(s, float('inf')))
-		except ValueError:
-			# no reachable stations
-			result = [self.ubicacion]
-			if measure_time:
-				return result, 0.0
-			return result
+			_, dist, _ = dijkstra(G, self.ubicacion)
+		except Exception:
+			dist = nx.single_source_dijkstra_path_length(G, self.ubicacion, weight='weight')
 
-		# reconstruct path: if prev is available use it, otherwise use NetworkX
-		if prev and prev.get(nearest) is not None:
-			# reconstruct via predecessor pointers
-			path = []
-			cur = nearest
-			while cur is not None:
-				path.append(cur)
-				cur = prev.get(cur)
-			path = list(reversed(path))
-		else:
-			# fallback: use NetworkX shortest path (guaranteed if graph connected)
+		# dist debe ser dict-like
+		if not hasattr(dist, "get"):
+			# intentar convertir a dict si es un mapping no típico
 			try:
-				path = nx.shortest_path(G, source=self.ubicacion, target=nearest, weight='weight')
+				dist = dict(dist)
 			except Exception:
-				# if shortest_path fails, return current location
-				path = [self.ubicacion]
+				raise TypeError("dijkstra() returned an invalid dist mapping")
+
+		# filtrar estaciones alcanzables y con distancia finita
+		reachable = [s for s in E_nodos if (s in dist and dist.get(s, float('inf')) < float('inf'))]
+
+		if not reachable:
+			result = [self.ubicacion]
+			return (result, 0.0) if measure_time else result
+
+		# elegir la estación más cercana según distancias
+		nearest = min(reachable, key=lambda s: dist.get(s, float('inf')))
+
+		# reconstruir la ruta con NetworkX (garantiza camino mínimo según 'weight')
+		try:
+			route = nx.shortest_path(G, source=self.ubicacion, target=nearest, weight='weight')
+		except Exception:
+			# fallback defensivo: si falla, devolvemos solo la ubicación actual
+			route = [self.ubicacion]
 
 		if measure_time:
 			elapsed = time.perf_counter() - start_time
-			return path, elapsed
-		return path
+			return route, elapsed
+
+		return route
 
 
 class Flota:
@@ -163,16 +149,28 @@ class Flota:
 	attempted via `_get_global` (historical notebook compatibility).
 	"""
 
-	def __init__(self, total, G=None):
-		# if no G is provided, fall back to global notebook variable
-		G = G or _get_global('G')
+	def __init__(self, total, G=None, exclude_nodes=None):
+		"""Create `total` vehicles and place them at random nodes in `G`.
+
+		Parameters
+		- total: number of vehicles
+		- G: networkx Graph with nodes to place vehicles on
+		- exclude_nodes: optional iterable of node labels to avoid when placing vehicles
+		"""
 		if G is None:
 			raise ValueError("G (global city graph) is not defined and was not passed to Flota.__init__")
+		# prepare candidate nodes excluding any provided station nodes
+		all_nodes = list(G.nodes)
+		exclude_set = set(exclude_nodes) if exclude_nodes is not None else set()
+		candidates = [n for n in all_nodes if n not in exclude_set]
+		# if excluding leaves no candidates, fall back to all nodes (avoid crash)
+		if not candidates:
+			candidates = all_nodes
 		f = []
 		for i in range(total):
 			placa = "car" + str(i)
 			bateria = random.randrange(50, 100)
-			ubicacion = random.choice(list(G.nodes))
+			ubicacion = random.choice(candidates)
 			autoi = Auto(placa, bateria, ubicacion)
 			f.append(autoi)
 		self.total = f
@@ -203,7 +201,7 @@ class Enrutador:
 		- nodo: node whose neighbors are queried
 		- Gr: optional NetworkX graph; falls back to global `Gr` if not provided
 		"""
-		Gr = Gr or _get_global('Gr')
+
 		if Gr is None:
 			raise ValueError("Gr (hierarchical graph) is not defined and was not passed to nodos_adyacentes")
 		l = []
@@ -236,7 +234,6 @@ class Antenas(Enrutador):
 	"""
 
 	def __init__(self, Ga=None):
-		Ga = Ga or _get_global('Ga')
 		if Ga is None:
 			raise ValueError("Ga (aggregated graph) is not defined and was not passed to Antenas.__init__")
 		t = []
@@ -286,8 +283,7 @@ class Estaciones(EstacionCarga):
 	"""
 
 	def __init__(self, Gr=None, ubicaciones=None):
-		Gr = Gr or _get_global('Gr')
-		ubicaciones = ubicaciones or _get_global('ubicaciones')
+
 		if Gr is None:
 			raise ValueError("Gr (hierarchical graph) is not defined and was not passed to Estaciones.__init__")
 		if ubicaciones is None:
