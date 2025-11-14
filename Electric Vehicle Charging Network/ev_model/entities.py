@@ -15,7 +15,7 @@ class Auto:
 	- ubicacion: current node in the city graph G
 
 	Methods
-	- AOC(n, E, G=None): perform a set of random-walk candidate searches for a charging station
+	- AOC(n, E, G=None): perform randomized-walk candidate searches for a charging station
 	  among the stations in `E.total` and return the selected route (list of nodes).
 	"""
 
@@ -55,14 +55,14 @@ class Auto:
 				vecinos = [v for v in G.neighbors(current) if v not in path]
 
 				if not vecinos:
-					# camino truncado → descartado
+					# truncated path -> discard
 					score_terms = []
 					break
 
 				nxt = random.choice(vecinos)
 				w = G[current][nxt].get("weight", 1.0)
 
-				# usar epsilon para evitar dividir entre 0 y no inflar scores
+				# use epsilon to avoid division by zero and to prevent inflated scores
 				inv = 1.0 / (w + epsilon)
 				score_terms.append(inv)
 
@@ -70,9 +70,9 @@ class Auto:
 				steps += 1
 
 			if path[-1] in E_nodos and len(score_terms) > 0:
-				# usar promedio de inversos (estable)
+				# use average of inverses (stable)
 				score = sum(score_terms) / len(score_terms)
-				# opcional: penalizar rutas muy largas
+				# optional: penalize very long routes
 				# score = score / (1 + 0.01 * (len(path)-1))
 
 				if score > best_score:
@@ -84,10 +84,11 @@ class Auto:
 	def route_dijkstra(self, E, G=None, measure_time: bool = False):
 		"""
 		Find a route to the closest charging station using Dijkstra distances.
-		Robust: use the (possibly custom) dijkstra dispatcher only to obtain
-		distances; always reconstruct the final path with NetworkX shortest_path
-		(weight='weight') to avoid different 'prev' formats.
-		Returns route or (route, elapsed_time) if measure_time=True.
+		This implementation is defensive: it uses the (possibly custom)
+		dijkstra dispatcher to obtain distances, then reconstructs the final
+		path with NetworkX's shortest_path (weight='weight') to avoid
+		differences in predecessor formats. Returns route or (route, elapsed_time)
+		if measure_time=True.
 		"""
 		if G is None:
 			raise ValueError(
@@ -103,7 +104,7 @@ class Auto:
 		if measure_time:
 			start_time = time.perf_counter()
 
-		# obtener distancias (intentar dispatcher, si falla usar NetworkX)
+		# obtain distances (try dispatcher, fall back to NetworkX if it fails)
 		try:
 			_, dist, _ = dijkstra(G, self.ubicacion)
 		except Exception:
@@ -117,7 +118,7 @@ class Auto:
 			except Exception:
 				raise TypeError("dijkstra() returned an invalid dist mapping")
 
-		# filtrar estaciones alcanzables y con distancia finita
+		# filter reachable stations with finite distance
 		reachable = [s for s in E_nodos if (s in dist and dist.get(s, float('inf')) < float('inf'))]
 
 		if not reachable:
@@ -127,11 +128,11 @@ class Auto:
 		# elegir la estación más cercana según distancias
 		nearest = min(reachable, key=lambda s: dist.get(s, float('inf')))
 
-		# reconstruir la ruta con NetworkX (garantiza camino mínimo según 'weight')
+		# reconstruct the route with NetworkX (ensures shortest path by 'weight')
 		try:
 			route = nx.shortest_path(G, source=self.ubicacion, target=nearest, weight='weight')
 		except Exception:
-			# fallback defensivo: si falla, devolvemos solo la ubicación actual
+			# defensive fallback: if reconstruction fails, return current location
 			route = [self.ubicacion]
 
 		if measure_time:
@@ -145,8 +146,8 @@ class Flota:
 	"""Fleet container that builds `total` Auto instances.
 
 	Constructor will create `total` vehicles and place them at random nodes
-	on the provided graph `G`. If `G` is not provided the global `G` is
-	attempted via `_get_global` (historical notebook compatibility).
+	on the provided graph `G`. If `G` is not provided the caller must pass
+	G explicitly (historic notebook behavior is not relied upon here).
 	"""
 
 	def __init__(self, total, G=None, exclude_nodes=None):
@@ -158,7 +159,7 @@ class Flota:
 		- exclude_nodes: optional iterable of node labels to avoid when placing vehicles
 		"""
 		if G is None:
-			raise ValueError("G (global city graph) is not defined and was not passed to Flota.__init__")
+			raise ValueError("G (city graph) is required and must be passed to Flota.__init__")
 		# prepare candidate nodes excluding any provided station nodes
 		all_nodes = list(G.nodes)
 		exclude_set = set(exclude_nodes) if exclude_nodes is not None else set()
@@ -182,6 +183,7 @@ class Flota:
 		return pf
 
 
+
 class Enrutador:
 	"""Routing helper base class.
 
@@ -199,19 +201,19 @@ class Enrutador:
 		Parameters
 		- r: iterable of nodes representing a route (to exclude)
 		- nodo: node whose neighbors are queried
-		- Gr: optional NetworkX graph; falls back to global `Gr` if not provided
+		- Gr: optional NetworkX graph; must be provided (no global fallback)
 		"""
 
 		if Gr is None:
-			raise ValueError("Gr (hierarchical graph) is not defined and was not passed to nodos_adyacentes")
-		l = []
-		vecinos = list(Gr.neighbors(nodo))
-		if len(vecinos) == 0:
-			return l
-		for i in vecinos:
-			if i not in r:
-				l.append(i)
-		return l
+			raise ValueError("Gr (hierarchical graph) must be provided to nodos_adyacentes")
+		result = []
+		neighbors = list(Gr.neighbors(nodo))
+		if not neighbors:
+			return result
+		for nb in neighbors:
+			if nb not in r:
+				result.append(nb)
+		return result
 
 
 class Servidor(Enrutador):
@@ -256,8 +258,13 @@ class Antenas(Enrutador):
 class EstacionCarga(Enrutador):
 	"""Represents a single charging station with queue/slots.
 
-	Attributes: capacidad (int), cola (list), slots (list), ubicacion (node),
-	nodo (node id), ip (identifier).
+	Attributes:
+	- capacidad (int): total capacity (number of charging slots)
+	- cola (list): queue of waiting vehicles
+	- slots (list): occupied slots
+	- ubicacion (node): location in the city graph G
+	- nodo (node id): identifier in the hierarchical graph
+	- ip (identifier): optional identifier
 	"""
 
 	def __init__(self, capacidad, cola, slots, ubicacion, nodo, ip, enrutamiento=None):
@@ -271,7 +278,7 @@ class EstacionCarga(Enrutador):
 		self.enrutamiento = enrutamiento
 
 	def __repr__(self):
-		return "ip: {0}, nodo: {2}, Ubicacion: {1},  Slots disponibles: {3}, Autos en cola: {4}".format(self.ip, self.ubicacion, self.nodo, self.capacidad - len(self.slots), len(self.cola))
+		return "ip: {0}, node: {2}, location: {1}, available_slots: {3}, queue_length: {4}".format(self.ip, self.ubicacion, self.nodo, self.capacidad - len(self.slots), len(self.cola))
 
 
 class Estaciones(EstacionCarga):
@@ -285,10 +292,10 @@ class Estaciones(EstacionCarga):
 	def __init__(self, Gr=None, ubicaciones=None):
 
 		if Gr is None:
-			raise ValueError("Gr (hierarchical graph) is not defined and was not passed to Estaciones.__init__")
+			raise ValueError("Gr (hierarchical graph) is required and must be passed to Estaciones.__init__")
 		if ubicaciones is None:
-			raise ValueError("ubicaciones is not defined and was not passed to Estaciones.__init__")
-		# Validation: ensure ubicaciones has keys for Gr nodes
+			raise ValueError("ubicaciones mapping is required and must be passed to Estaciones.__init__")
+		# Validation: ensure 'ubicaciones' has entries for every Gr node
 		missing = [n for n in Gr if n not in ubicaciones]
 		if missing:
 			snippet = missing[:10]

@@ -36,14 +36,14 @@ def run_example(n=10, G=None, Ga=None, ubicaciones=None, random_seed=None, compu
     if ubicaciones is None:
         nodes = list(G.nodes())
         ga_nodes = list(Ga.nodes())
-        # reproducible por seed si fue pasado
+        # make sampling reproducible if a seed was provided
         if random_seed is not None:
             random.seed(random_seed)
-        # si hay suficientes nodos en G, sampleamos sin reemplazo
+        # if there are enough nodes in G, sample without replacement
         if len(nodes) >= len(ga_nodes):
             sampled = random.sample(nodes, k=len(ga_nodes))
         else:
-            # si no, asignamos aleatoriamente con reemplazo
+            # otherwise, assign randomly with replacement
             sampled = [random.choice(nodes) for _ in ga_nodes]
         ubicaciones = {gnode: (sampled[i],) for i, gnode in enumerate(ga_nodes)}
 

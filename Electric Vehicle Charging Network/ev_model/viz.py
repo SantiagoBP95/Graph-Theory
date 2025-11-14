@@ -259,3 +259,107 @@ def compare_routes(
 
 
 __all__.append('compare_routes')
+
+
+def get_positions(G: nx.Graph, seed: Optional[int] = 42):
+    """Return a spring layout position mapping for `G`.
+
+    This helper centralizes layout computation so notebooks and other callers
+    can reuse a single layout for multiple figures.
+    """
+    return nx.spring_layout(G, seed=seed)
+
+
+def draw_vehicle(
+    G: nx.Graph,
+    row: dict,
+    estaciones,
+    rep_map: dict,
+    rep_to_ga: dict,
+    pos=None,
+    layout_seed: Optional[int] = 42,
+    aoc_color: str = 'orange',
+    dij_color: str = 'blue',
+    vehicle_color: str = 'red',
+    station_color: str = 'green',
+    antenna_color: str = 'purple',
+    nearest_color: str = 'magenta',
+    figsize=(9, 6),
+    node_size: int = 300,
+):
+    """Draw a vehicle's AOC vs Dijkstra routes and highlight stations/antennas.
+
+    Parameters:
+    - G: graph
+    - row: dictionary with keys 'ubicacion','aoc_route','dijkstra_route','aoc_time','dijkstra_time'
+    - estaciones: object with .total iterable of station entities (each with .ubicacion)
+    - rep_map: mapping ga_label -> representative node (or None)
+    - rep_to_ga: inverse mapping representative node -> ga_label
+    - pos: optional positions mapping. If None, computed with layout_seed.
+    """
+
+    if pos is None:
+        pos = nx.spring_layout(G, seed=layout_seed)
+
+    aoc_r = row.get('aoc_route') or [row.get('ubicacion')]
+    dij_r = row.get('dijkstra_route') or [row.get('ubicacion')]
+
+    plt.figure(figsize=figsize)
+    nx.draw_networkx_nodes(G, pos, node_color='lightblue', node_size=node_size)
+    nx.draw_networkx_labels(G, pos, font_size=8)
+    nx.draw_networkx_edges(G, pos, edge_color='gray', alpha=0.6)
+
+    def _route_edges(route):
+        if not isinstance(route, (list, tuple)) or len(route) < 2:
+            return []
+        return list(zip(route[:-1], route[1:]))
+
+    aoc_edges = _route_edges(aoc_r)
+    dij_edges = _route_edges(dij_r)
+
+    if aoc_edges:
+        nx.draw_networkx_edges(G, pos, edgelist=aoc_edges, edge_color=aoc_color, width=3.0, alpha=0.9)
+    if dij_edges:
+        nx.draw_networkx_edges(G, pos, edgelist=dij_edges, edge_color=dij_color, width=3.0, alpha=0.9)
+
+    # vehicle node
+    nx.draw_networkx_nodes(G, pos, nodelist=[row.get('ubicacion')], node_color=vehicle_color, node_size=160)
+
+    # stations
+    station_nodes = [e.ubicacion for e in getattr(estaciones, 'total', [])]
+    if station_nodes:
+        nx.draw_networkx_nodes(G, pos, nodelist=station_nodes, node_color=station_color, node_size=200, alpha=0.7)
+
+    # antenna representative nodes (squares, purple)
+    ant_nodes = [v for v in rep_map.values() if v is not None]
+    if ant_nodes:
+        nx.draw_networkx_nodes(G, pos, nodelist=ant_nodes, node_color=antenna_color, node_shape='s', node_size=260, alpha=0.5)
+
+    # nearest antenna rep (magenta square)
+    nearest_label = row.get('nearest_antena')
+    nearest_rep = None
+    if nearest_label:
+        nearest_rep = rep_map.get(nearest_label)
+    if nearest_rep:
+        nx.draw_networkx_nodes(G, pos, nodelist=[nearest_rep], node_color=nearest_color, node_shape='s', node_size=320, alpha=0.9)
+
+    plt.title(f"Vehículo {row.get('placa')} — AOC {row.get('aoc_time', 0.0):.4f}s — Dijkstra {row.get('dijkstra_time', 0.0):.4f}s")
+    handles = [plt.Line2D([0], [0], color=aoc_color, lw=3), plt.Line2D([0], [0], color=dij_color, lw=3), plt.Line2D([0], [0], marker='o', color='w', markerfacecolor=vehicle_color, markersize=8), plt.Line2D([0], [0], marker='o', color='w', markerfacecolor=station_color, markersize=8), plt.Line2D([0], [0], marker='s', color='w', markerfacecolor=antenna_color, markersize=10), plt.Line2D([0], [0], marker='s', color='w', markerfacecolor=nearest_color, markersize=10)]
+    labels = ['AOC route', 'Dijkstra route', 'Vehicle', 'Stations', 'Antenna (rep)', 'Nearest antenna']
+    plt.legend(handles, labels)
+    plt.axis('off')
+    plt.show()
+
+
+def draw_vehicle_by_index(G, rows, estaciones, rep_map, rep_to_ga, idx: int = 0, pos=None, layout_seed: Optional[int] = 42):
+    """Convenience wrapper: draw vehicle at `rows[idx]` using `draw_vehicle`.
+    Keeps notebook code succinct by delegating drawing logic here.
+    """
+    if not rows:
+        raise ValueError('rows is empty')
+    if idx < 0 or idx >= len(rows):
+        raise IndexError('idx out of range')
+    row = rows[idx]
+    return draw_vehicle(G, row, estaciones, rep_map, rep_to_ga, pos=pos, layout_seed=layout_seed)
+
+__all__.extend(['get_positions', 'draw_vehicle', 'draw_vehicle_by_index'])
