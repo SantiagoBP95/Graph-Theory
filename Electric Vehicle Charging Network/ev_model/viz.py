@@ -10,6 +10,10 @@ This module provides a single flexible helper `draw_graph` that supports:
 import matplotlib.pyplot as plt
 import networkx as nx
 from typing import Tuple, Optional
+import os
+import ast
+import pandas as pd
+from collections import Counter
 
 
 def _compute_widths(weights, scale: Tuple[float, float] = (0.8, 4.0)):
@@ -225,4 +229,173 @@ def draw_vehicle_by_index(G, rows, estaciones, rep_map, rep_to_ga, idx: int = 0,
     # arguments here prevents "multiple values for argument 'pos'" TypeErrors.
     return draw_vehicle(G, row, estaciones, rep_map, rep_to_ga, pos, layout_seed)
 
-__all__.extend(['get_positions', 'draw_vehicle', 'draw_vehicle_by_index'])
+def _ensure_plots_dir(path: str = 'outputs/analysis/plots'):
+    os.makedirs(path, exist_ok=True)
+    return path
+
+
+def _load_routes_df(df=None, csv_path: str = 'outputs/results_routes.csv'):
+    if df is not None:
+        return df
+    if os.path.exists(csv_path):
+        d = pd.read_csv(csv_path)
+        # try to literal_eval route lists
+        for col in ('aoc_route', 'dijkstra_route'):
+            if col in d.columns:
+                def _safe(x):
+                    try:
+                        return ast.literal_eval(x) if isinstance(x, str) else x
+                    except Exception:
+                        return x
+                d[col] = d[col].apply(_safe)
+        return d
+    raise FileNotFoundError(f'Could not find routes CSV at: {csv_path}')
+
+
+def plot_runtimes_boxplot(df=None, csv_path: str = 'outputs/results_routes.csv', save_path: str = None, log_scale: bool = True):
+    d = _load_routes_df(df, csv_path)
+    _ensure_plots_dir(os.path.dirname(save_path) if save_path else None or 'outputs/analysis/plots')
+    times = d[[c for c in ('aoc_time', 'dijkstra_time') if c in d.columns]]
+    if times.empty:
+        raise ValueError('No runtime columns found in dataframe')
+    plt.figure(figsize=(6, 4))
+    data = times.melt(var_name='method', value_name='time')
+    plt.boxplot([data.loc[data['method'] == m, 'time'].dropna() for m in data['method'].unique()], labels=data['method'].unique())
+    if log_scale:
+        plt.yscale('log')
+    plt.title('Per-route runtime: AOC vs Dijkstra')
+    plt.tight_layout()
+    if not save_path:
+        save_path = 'outputs/analysis/plots/runtimes_box.png'
+    plt.savefig(save_path, dpi=150)
+    plt.close()
+    return save_path
+
+
+def plot_route_length_kde(df=None, csv_path: str = 'outputs/results_routes.csv', save_path: str = None):
+    d = _load_routes_df(df, csv_path)
+    _ensure_plots_dir(os.path.dirname(save_path) if save_path else None or 'outputs/analysis/plots')
+    a_col = 'aoc_route_len' if 'aoc_route_len' in d.columns else None
+    d_col = 'dijkstra_route_len' if 'dijkstra_route_len' in d.columns else None
+    plt.figure(figsize=(6, 4))
+    if a_col:
+        vals = d[a_col].dropna()
+        if len(vals) > 0:
+            plt.hist(vals, bins=30, alpha=0.5, density=True, label='AOC')
+    if d_col:
+        vals = d[d_col].dropna()
+        if len(vals) > 0:
+            plt.hist(vals, bins=30, alpha=0.5, density=True, label='Dijkstra')
+    plt.legend()
+    plt.xlabel('route length (hops)')
+    plt.title('Route length distribution')
+    plt.tight_layout()
+    if not save_path:
+        save_path = 'outputs/analysis/plots/route_length_hist.png'
+    plt.savefig(save_path, dpi=150)
+    plt.close()
+    return save_path
+
+
+def _compute_visit_counts_from_df(d):
+    visits = Counter()
+    for col in ('aoc_route', 'dijkstra_route'):
+        if col in d.columns:
+            for r in d[col].dropna():
+                if isinstance(r, (list, tuple)):
+                    visits.update(r)
+    return pd.DataFrame.from_records(list(visits.items()), columns=['node', 'visits']).sort_values('visits', ascending=False)
+
+
+def plot_betweenness_vs_visits(centralities_csv: str = 'outputs/analysis/centralities.csv', routes_df=None, routes_csv: str = 'outputs/results_routes.csv', save_path: str = None):
+    if not os.path.exists(centralities_csv):
+        raise FileNotFoundError(f'Centralities CSV not found: {centralities_csv}')
+    cent = pd.read_csv(centralities_csv)
+    if routes_df is None:
+        routes_df = _load_routes_df(None, routes_csv)
+    visits_df = _compute_visit_counts_from_df(routes_df)
+    merged = cent.merge(visits_df, left_on='node', right_on='node', how='left').fillna(0)
+    _ensure_plots_dir(os.path.dirname(save_path) if save_path else None or 'outputs/analysis/plots')
+    plt.figure(figsize=(6, 4))
+    plt.scatter(merged['betweenness'], merged['visits'], alpha=0.7)
+    plt.xlabel('betweenness')
+    plt.ylabel('route visit count')
+    plt.title('Betweenness vs route visit frequency')
+    plt.tight_layout()
+    if not save_path:
+        save_path = 'outputs/analysis/plots/betweenness_vs_visits.png'
+    plt.savefig(save_path, dpi=150)
+    plt.close()
+    return save_path
+
+
+def plot_vehicles_per_antenna(df=None, csv_path: str = 'outputs/results_routes.csv', save_path: str = None, top_n: int = 20):
+    d = _load_routes_df(df, csv_path)
+    if 'nearest_antena' not in d.columns:
+        raise ValueError('nearest_antena column not found in routes dataframe')
+    counts = d['nearest_antena'].value_counts().nlargest(top_n)
+    _ensure_plots_dir(os.path.dirname(save_path) if save_path else None or 'outputs/analysis/plots')
+    plt.figure(figsize=(6, 4))
+    counts.plot(kind='bar')
+    plt.ylabel('vehicles')
+    plt.title('Vehicles per nearest antenna (top {})'.format(top_n))
+    plt.tight_layout()
+    if not save_path:
+        save_path = 'outputs/analysis/plots/vehicles_per_antenna.png'
+    plt.savefig(save_path, dpi=150)
+    plt.close()
+    return save_path
+
+
+def plot_dist_to_antenna_vs_length(df=None, routes_csv: str = 'outputs/results_routes.csv', save_path: str = None):
+    d = _load_routes_df(df, routes_csv)
+    if 'dist_to_antena' not in d.columns:
+        raise ValueError('dist_to_antena column not found in routes dataframe')
+    _ensure_plots_dir(os.path.dirname(save_path) if save_path else None or 'outputs/analysis/plots')
+    plt.figure(figsize=(6, 4))
+    if 'aoc_route_len' in d.columns:
+        plt.scatter(d['dist_to_antena'], d['aoc_route_len'], alpha=0.5, label='AOC length')
+    if 'dijkstra_route_len' in d.columns:
+        plt.scatter(d['dist_to_antena'], d['dijkstra_route_len'], alpha=0.5, label='Dijkstra length')
+    plt.xlabel('distance to antenna')
+    plt.ylabel('route length (hops)')
+    plt.legend()
+    plt.title('Distance to antenna vs route length')
+    plt.tight_layout()
+    if not save_path:
+        save_path = 'outputs/analysis/plots/dist_to_antena_vs_length.png'
+    plt.savefig(save_path, dpi=150)
+    plt.close()
+    return save_path
+
+
+def plot_network_overlay(G: nx.Graph = None, cent_df: pd.DataFrame = None, routes_df=None, routes_csv: str = 'outputs/results_routes.csv', pos=None, top_n: int = 5, save_path: str = None):
+    if G is None:
+        raise ValueError('G (graph) is required for network overlay')
+    if routes_df is None:
+        try:
+            routes_df = _load_routes_df(None, routes_csv)
+        except Exception:
+            routes_df = None
+    visits_df = _compute_visit_counts_from_df(routes_df) if routes_df is not None else pd.DataFrame(columns=['node','visits'])
+    top_nodes = visits_df.head(top_n)['node'].tolist() if not visits_df.empty else []
+    if pos is None:
+        pos = nx.spring_layout(G, seed=42)
+    _ensure_plots_dir(os.path.dirname(save_path) if save_path else None or 'outputs/analysis/plots')
+    plt.figure(figsize=(8, 6))
+    nx.draw_networkx_edges(G, pos, alpha=0.2)
+    nx.draw_networkx_nodes(G, pos, nodelist=list(G.nodes()), node_color='lightgray', node_size=100)
+    if top_nodes:
+        nx.draw_networkx_nodes(G, pos, nodelist=top_nodes, node_color='red', node_size=300)
+    nx.draw_networkx_labels(G, pos, font_size=8)
+    plt.title('Network: top visited nodes highlighted')
+    plt.axis('off')
+    plt.tight_layout()
+    if not save_path:
+        save_path = 'outputs/analysis/plots/network_top_visits.png'
+    plt.savefig(save_path, dpi=150)
+    plt.close()
+    return save_path
+
+
+__all__.extend(['get_positions', 'draw_vehicle', 'draw_vehicle_by_index', 'plot_runtimes_boxplot', 'plot_route_length_kde', 'plot_betweenness_vs_visits', 'plot_vehicles_per_antenna', 'plot_dist_to_antenna_vs_length', 'plot_network_overlay'])

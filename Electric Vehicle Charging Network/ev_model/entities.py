@@ -1,7 +1,5 @@
 import random
-import math
 import networkx as nx
-import types
 import time
 from .routing import dijkstra
 
