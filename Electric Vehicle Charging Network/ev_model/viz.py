@@ -113,7 +113,7 @@ def draw_graph(
     plt.show()
 
 
-__all__ = ['draw_graph']
+__all__ = ['draw_graph', 'export_widget']
 
 def get_positions(G: nx.Graph, seed: Optional[int] = 42):
     """Return a spring layout position mapping for `G`.
@@ -396,6 +396,34 @@ def plot_network_overlay(G: nx.Graph = None, cent_df: pd.DataFrame = None, route
     plt.savefig(save_path, dpi=150)
     plt.close()
     return save_path
+
+
+def export_widget(widget, output_path: str = 'outputs/route_widget.html'):
+    """Export an ipywidgets widget to a standalone HTML file using embed_minimal_html.
+
+    This helper mirrors the small snippet used in the notebook. It performs a safe
+    import of the embedding utility so callers without `ipywidgets` do not fail
+    at import time. The function will create the target directory if missing and
+    return the path on success. It raises an informative exception on failure.
+
+    Parameters:
+    - widget: the ipywidgets widget or view to export (e.g., the `out` returned by interactive_output)
+    - output_path: destination file path for the generated HTML
+    """
+    try:
+        os.makedirs(os.path.dirname(output_path) or 'outputs', exist_ok=True)
+        try:
+            # local import to avoid hard dependency at module import time
+            from ipywidgets.embed import embed_minimal_html
+        except Exception as e:
+            raise ImportError('ipywidgets.embed is not available in this environment') from e
+
+        # embed_minimal_html accepts a filename and a list of views
+        embed_minimal_html(output_path, views=[widget])
+        return output_path
+    except Exception as e:
+        # bubble up with context
+        raise RuntimeError(f'Could not export widget to {output_path}: {e}') from e
 
 
 __all__.extend(['get_positions', 'draw_vehicle', 'draw_vehicle_by_index', 'plot_runtimes_boxplot', 'plot_route_length_kde', 'plot_betweenness_vs_visits', 'plot_vehicles_per_antenna', 'plot_dist_to_antenna_vs_length', 'plot_network_overlay'])
